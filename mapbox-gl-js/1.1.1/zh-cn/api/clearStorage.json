@@ -1,0 +1,191 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "清除浏览器中被mapbox js库使用过的存储。使用该方法冲洗掉正在被这个库所管理的瓦片缓存。在某些情况下，瓦片或许仍旧缓存在浏览器中。",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 15,
+                                "offset": 174
+                            },
+                            "indent": [
+                                1,
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3,
+                        "column": 15,
+                        "offset": 174
+                    },
+                    "indent": [
+                        1,
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 3,
+                "column": 15,
+                "offset": 174
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "function",
+            "description": null,
+            "lineNumber": 5,
+            "name": "clearStorage"
+        },
+        {
+            "title": "param",
+            "description": "有错误时该方法会被调用，同时错误信息将作为参数传入。",
+            "lineNumber": 6,
+            "type": {
+                "type": "NameExpression",
+                "name": "Function"
+            },
+            "name": "callback"
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 110,
+            "column": 4
+        },
+        "end": {
+            "line": 117,
+            "column": 7
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 118,
+                "column": 4
+            },
+            "end": {
+                "line": 120,
+                "column": 5
+            }
+        },
+        "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/index.js",
+        "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/index.js#L118-L120",
+            "path": "src/index.js"
+        }
+    },
+    "augments": [],
+    "examples": [],
+    "params": [
+        {
+            "title": "param",
+            "name": "callback",
+            "lineNumber": 6,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "有错误时该方法会被调用，同时错误信息将作为参数传入。",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 52,
+                                        "offset": 51
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 52,
+                                "offset": 51
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 52,
+                        "offset": 51
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "Function"
+            }
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "function",
+    "name": "clearStorage",
+    "path": [
+        {
+            "name": "clearStorage",
+            "kind": "function"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "clearStorage"
+}

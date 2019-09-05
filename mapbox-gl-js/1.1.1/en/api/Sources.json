@@ -1,0 +1,108 @@
+{
+    "name": "Sources",
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Sources specify the geographic features to be rendered on the map. Source\nobjects may be obtained from ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 30,
+                                "offset": 103
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "Map#getSource",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 30,
+                                "offset": 103
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 45,
+                                "offset": 118
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ".",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 45,
+                                "offset": 118
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 46,
+                                "offset": 119
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 46,
+                        "offset": 119
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 3,
+                "column": 1,
+                "offset": 120
+            }
+        }
+    },
+    "kind": "note",
+    "path": [
+        {
+            "name": "Sources",
+            "kind": "note"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "Sources"
+}

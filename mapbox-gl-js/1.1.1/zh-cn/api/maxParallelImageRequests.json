@@ -1,0 +1,134 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "获取或者设置并行加载图片（raster tiles, sprites, icons等）的最大值，\n该值将影响加载较多栅格瓦片的地图的性能。默认值为16。",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 63,
+                                "offset": 157
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 63,
+                        "offset": 157
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 2,
+                "column": 63,
+                "offset": 157
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "var",
+            "description": null,
+            "lineNumber": 4,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            },
+            "name": "maxParallelImageRequests"
+        },
+        {
+            "title": "example",
+            "description": "mapboxgl.maxParallelImageRequests = 10;",
+            "lineNumber": 5
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 94,
+            "column": 4
+        },
+        "end": {
+            "line": 101,
+            "column": 7
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 102,
+                "column": 4
+            },
+            "end": {
+                "line": 104,
+                "column": 5
+            }
+        },
+        "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/index.js",
+        "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/index.js#L102-L104",
+            "path": "src/index.js"
+        }
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "mapboxgl.maxParallelImageRequests = 10;"
+        }
+    ],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "member",
+    "name": "maxParallelImageRequests",
+    "type": {
+        "type": "NameExpression",
+        "name": "string"
+    },
+    "path": [
+        {
+            "name": "maxParallelImageRequests",
+            "kind": "member"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "maxParallelImageRequests"
+}

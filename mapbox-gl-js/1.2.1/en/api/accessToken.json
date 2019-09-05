@@ -1,0 +1,258 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Gets and sets the map's ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 25,
+                                "offset": 24
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "title": null,
+                        "url": "https://www.mapbox.com/help/define-access-token/",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "access token",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 26,
+                                        "offset": 25
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 38,
+                                        "offset": 37
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 25,
+                                "offset": 24
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 89,
+                                "offset": 88
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ".",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 89,
+                                "offset": 88
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 90,
+                                "offset": 89
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 90,
+                        "offset": 89
+                    },
+                    "indent": []
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 1,
+                "column": 90,
+                "offset": 89
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "var",
+            "description": null,
+            "lineNumber": 3,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            },
+            "name": "accessToken"
+        },
+        {
+            "title": "example",
+            "description": "mapboxgl.accessToken = myAccessToken;",
+            "lineNumber": 4
+        },
+        {
+            "title": "see",
+            "description": "[Display a map](https://www.mapbox.com/mapbox-gl-js/examples/)",
+            "lineNumber": 6
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 46,
+            "column": 4
+        },
+        "end": {
+            "line": 53,
+            "column": 7
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 54,
+                "column": 4
+            },
+            "end": {
+                "line": 56,
+                "column": 5
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/index.js"
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "mapboxgl.accessToken = myAccessToken;"
+        }
+    ],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/examples/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Display a map",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 15,
+                                            "offset": 14
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 63,
+                                    "offset": 62
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 63,
+                            "offset": 62
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 63,
+                    "offset": 62
+                }
+            }
+        }
+    ],
+    "throws": [],
+    "todos": [],
+    "kind": "member",
+    "name": "accessToken",
+    "type": {
+        "type": "NameExpression",
+        "name": "string"
+    },
+    "path": [
+        {
+            "name": "accessToken",
+            "kind": "member"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "accessToken"
+}

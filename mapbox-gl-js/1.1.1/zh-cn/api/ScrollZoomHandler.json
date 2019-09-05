@@ -1,0 +1,1033 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "此 ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 5,
+                                "offset": 4
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "ScrollZoomHandler",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 5,
+                                "offset": 4
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 24,
+                                "offset": 23
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " 能够让用户通过滚动来缩放地图。",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 24,
+                                "offset": 23
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 70,
+                                "offset": 69
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 70,
+                        "offset": 69
+                    },
+                    "indent": []
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 1,
+                "column": 70,
+                "offset": 69
+            }
+        }
+    },
+    "tags": [],
+    "loc": {
+        "start": {
+            "line": 29,
+            "column": 0
+        },
+        "end": {
+            "line": 31,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 32,
+                "column": 0
+            },
+            "end": {
+                "line": 331,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/scroll_zoom.js",
+        "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/handler/scroll_zoom.js#L32-L331",
+            "path": "src/ui/handler/scroll_zoom.js"
+        }
+    },
+    "augments": [],
+    "examples": [],
+    "params": [
+        {
+            "title": "param",
+            "name": "map",
+            "lineNumber": 63,
+            "type": {
+                "type": "NameExpression",
+                "name": "Map"
+            }
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "constructorComment": {
+        "description": "",
+        "tags": [
+            {
+                "title": "private",
+                "description": null,
+                "lineNumber": 1
+            }
+        ],
+        "loc": {
+            "start": {
+                "line": 60,
+                "column": 4
+            },
+            "end": {
+                "line": 62,
+                "column": 7
+            }
+        },
+        "context": {
+            "loc": {
+                "start": {
+                    "line": 63,
+                    "column": 4
+                },
+                "end": {
+                    "line": 78,
+                    "column": 5
+                }
+            },
+            "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/scroll_zoom.js",
+            "sortKey": "!/Users/mapboxchina/projects/mapbox-gl-js/src/index.js:00000003!/Users/mapboxchina/projects/mapbox-gl-js/src/ui/map.js:00000011!/Users/mapboxchina/projects/mapbox-gl-js/src/ui/bind_handlers.js:00000002!/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/scroll_zoom.js 00000063",
+            "code": "{\n    _map: Map;\n    _el: HTMLElement;\n    _enabled: boolean;\n    _active: boolean;\n    _zooming: boolean;\n    _aroundCenter: boolean;\n    _around: Point;\n    _aroundPoint: Point;\n    _type: 'wheel' | 'trackpad' | null;\n    _lastValue: number;\n    _timeout: ?TimeoutID; // used for delayed-handling of a single wheel movement\n    _finishTimeout: ?TimeoutID; // used to delay final '{move,zoom}end' events\n\n    _lastWheelEvent: any;\n    _lastWheelEventTime: number;\n\n    _startZoom: ?number;\n    _targetZoom: ?number;\n    _delta: number;\n    _easing: ?((number) => number);\n    _prevEase: ?{start: number, duration: number, easing: (number) => number};\n\n    _frameId: ?TaskID;\n\n    _defaultZoomRate: number;\n    _wheelZoomRate: number;\n\n    /**\n     * @private\n     */\n    constructor(map: Map) {\n        this._map = map;\n        this._el = map.getCanvasContainer();\n\n        this._delta = 0;\n\n        this._defaultZoomRate = defaultZoomRate;\n        this._wheelZoomRate = wheelZoomRate;\n\n        bindAll([\n            '_onWheel',\n            '_onTimeout',\n            '_onScrollFrame',\n            '_onScrollFinished'\n        ], this);\n    }\n\n    /**\n     * Set the zoom rate of a trackpad\n     * @param {number} [zoomRate = 1/100]\n     */\n    setZoomRate(zoomRate: number) {\n        this._defaultZoomRate = zoomRate;\n    }\n\n    /**\n     * Set the zoom rate of a mouse wheel\n     * @param {number} [wheelZoomRate = 1/450]\n     */\n    setWheelZoomRate(wheelZoomRate: number) {\n        this._wheelZoomRate = wheelZoomRate;\n    }\n\n    /**\n     * Returns a Boolean indicating whether the \"scroll to zoom\" interaction is enabled.\n     *\n     * @returns {boolean} `true` if the \"scroll to zoom\" interaction is enabled.\n     */\n    isEnabled() {\n        return !!this._enabled;\n    }\n\n    /*\n    * Active state is turned on and off with every scroll wheel event and is set back to false before the map\n    * render is called, so _active is not a good candidate for determining if a scroll zoom animation is in\n    * progress.\n    */\n    isActive() {\n        return !!this._active;\n    }\n\n    isZooming() {\n        return !!this._zooming;\n    }\n    /**\n     * Enables the \"scroll to zoom\" interaction.\n     *\n     * @param {Object} [options]\n     * @param {string} [options.around] If \"center\" is passed, map will zoom around center of map\n     *\n     * @example\n     *   map.scrollZoom.enable();\n     * @example\n     *  map.scrollZoom.enable({ around: 'center' })\n     */\n    enable(options: any) {\n        if (this.isEnabled()) return;\n        this._enabled = true;\n        this._aroundCenter = options && options.around === 'center';\n    }\n\n    /**\n     * Disables the \"scroll to zoom\" interaction.\n     *\n     * @example\n     *   map.scrollZoom.disable();\n     */\n    disable() {\n        if (!this.isEnabled()) return;\n        this._enabled = false;\n    }\n\n    onWheel(e: WheelEvent) {\n        if (!this.isEnabled()) return;\n\n        // Remove `any` cast when https://github.com/facebook/flow/issues/4879 is fixed.\n        let value = e.deltaMode === (window.WheelEvent: any).DOM_DELTA_LINE ? e.deltaY * 40 : e.deltaY;\n        const now = browser.now(),\n            timeDelta = now - (this._lastWheelEventTime || 0);\n\n        this._lastWheelEventTime = now;\n\n        if (value !== 0 && (value % wheelZoomDelta) === 0) {\n            // This one is definitely a mouse wheel event.\n            this._type = 'wheel';\n\n        } else if (value !== 0 && Math.abs(value) < 4) {\n            // This one is definitely a trackpad event because it is so small.\n            this._type = 'trackpad';\n\n        } else if (timeDelta > 400) {\n            // This is likely a new scroll action.\n            this._type = null;\n            this._lastValue = value;\n\n            // Start a timeout in case this was a singular event, and dely it by up to 40ms.\n            this._timeout = setTimeout(this._onTimeout, 40, e);\n\n        } else if (!this._type) {\n            // This is a repeating event, but we don't know the type of event just yet.\n            // If the delta per time is small, we assume it's a fast trackpad; otherwise we switch into wheel mode.\n            this._type = (Math.abs(timeDelta * value) < 200) ? 'trackpad' : 'wheel';\n\n            // Make sure our delayed event isn't fired again, because we accumulate\n            // the previous event (which was less than 40ms ago) into this event.\n            if (this._timeout) {\n                clearTimeout(this._timeout);\n                this._timeout = null;\n                value += this._lastValue;\n            }\n        }\n\n        // Slow down zoom if shift key is held for more precise zooming\n        if (e.shiftKey && value) value = value / 4;\n\n        // Only fire the callback if we actually know what type of scrolling device the user uses.\n        if (this._type) {\n            this._lastWheelEvent = e;\n            this._delta -= value;\n            if (!this.isActive()) {\n                this._start(e);\n            }\n        }\n\n        e.preventDefault();\n    }\n\n    _onTimeout(initialEvent: any) {\n        this._type = 'wheel';\n        this._delta -= this._lastValue;\n        if (!this.isActive()) {\n            this._start(initialEvent);\n        }\n    }\n\n    _start(e: any) {\n        if (!this._delta) return;\n\n        if (this._frameId) {\n            this._map._cancelRenderFrame(this._frameId);\n            this._frameId = null;\n        }\n\n        this._active = true;\n        if (!this.isZooming()) {\n            this._zooming = true;\n            this._map.fire(new Event('movestart', {originalEvent: e}));\n            this._map.fire(new Event('zoomstart', {originalEvent: e}));\n        }\n\n        if (this._finishTimeout) {\n            clearTimeout(this._finishTimeout);\n        }\n\n        const pos = DOM.mousePos(this._el, e);\n\n        this._around = LngLat.convert(this._aroundCenter ? this._map.getCenter() : this._map.unproject(pos));\n        this._aroundPoint = this._map.transform.locationPoint(this._around);\n        if (!this._frameId) {\n            this._frameId = this._map._requestRenderFrame(this._onScrollFrame);\n        }\n    }\n\n    _onScrollFrame() {\n        this._frameId = null;\n\n        if (!this.isActive()) return;\n        const tr = this._map.transform;\n\n        // if we've had scroll events since the last render frame, consume the\n        // accumulated delta, and update the target zoom level accordingly\n        if (this._delta !== 0) {\n            // For trackpad events and single mouse wheel ticks, use the default zoom rate\n            const zoomRate = (this._type === 'wheel' && Math.abs(this._delta) > wheelZoomDelta) ? this._wheelZoomRate : this._defaultZoomRate;\n            // Scale by sigmoid of scroll wheel delta.\n            let scale = maxScalePerFrame / (1 + Math.exp(-Math.abs(this._delta * zoomRate)));\n\n            if (this._delta < 0 && scale !== 0) {\n                scale = 1 / scale;\n            }\n\n            const fromScale = typeof this._targetZoom === 'number' ? tr.zoomScale(this._targetZoom) : tr.scale;\n            this._targetZoom = Math.min(tr.maxZoom, Math.max(tr.minZoom, tr.scaleZoom(fromScale * scale)));\n\n            // if this is a mouse wheel, refresh the starting zoom and easing\n            // function we're using to smooth out the zooming between wheel\n            // events\n            if (this._type === 'wheel') {\n                this._startZoom = tr.zoom;\n                this._easing = this._smoothOutEasing(200);\n            }\n\n            this._delta = 0;\n        }\n\n        const targetZoom = typeof this._targetZoom === 'number' ?\n            this._targetZoom : tr.zoom;\n        const startZoom = this._startZoom;\n        const easing = this._easing;\n\n        let finished = false;\n        if (this._type === 'wheel' && startZoom && easing) {\n            assert(easing && typeof startZoom === 'number');\n\n            const t = Math.min((browser.now() - this._lastWheelEventTime) / 200, 1);\n            const k = easing(t);\n            tr.zoom = interpolate(startZoom, targetZoom, k);\n            if (t < 1) {\n                if (!this._frameId) {\n                    this._frameId = this._map._requestRenderFrame(this._onScrollFrame);\n                }\n            } else {\n                finished = true;\n            }\n        } else {\n            tr.zoom = targetZoom;\n            finished = true;\n        }\n\n        tr.setLocationAtPoint(this._around, this._aroundPoint);\n\n        this._map.fire(new Event('move', {originalEvent: this._lastWheelEvent}));\n        this._map.fire(new Event('zoom', {originalEvent: this._lastWheelEvent}));\n\n        if (finished) {\n            this._active = false;\n            this._finishTimeout = setTimeout(() => {\n                this._zooming = false;\n                this._map.fire(new Event('zoomend', {originalEvent: this._lastWheelEvent}));\n                this._map.fire(new Event('moveend', {originalEvent: this._lastWheelEvent}));\n                delete this._targetZoom;\n            }, 200);\n        }\n    }\n\n    _smoothOutEasing(duration: number) {\n        let easing = _ease;\n\n        if (this._prevEase) {\n            const ease = this._prevEase,\n                t = (browser.now() - ease.start) / ease.duration,\n                speed = ease.easing(t + 0.01) - ease.easing(t),\n\n                // Quick hack to make new bezier that is continuous with last\n                x = 0.27 / Math.sqrt(speed * speed + 0.0001) * 0.01,\n                y = Math.sqrt(0.27 * 0.27 - x * x);\n\n            easing = bezier(x, y, 0.25, 1);\n        }\n\n        this._prevEase = {\n            start: browser.now(),\n            duration,\n            easing\n        };\n\n        return easing;\n    }\n}"
+        },
+        "augments": [],
+        "errors": [],
+        "examples": [],
+        "params": [],
+        "properties": [],
+        "returns": [],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "access": "private"
+    },
+    "name": "ScrollZoomHandler",
+    "kind": "class",
+    "path": [
+        {
+            "name": "ScrollZoomHandler",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "设置触摸板的缩放比例",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 32,
+                                            "offset": 31
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 32,
+                                    "offset": 31
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 32,
+                            "offset": 31
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": null,
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "OptionalType",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "number"
+                            }
+                        },
+                        "name": "zoomRate",
+                        "default": "1/100"
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 80,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 83,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 84,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 86,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/scroll_zoom.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/handler/scroll_zoom.js#L84-L86",
+                        "path": "src/ui/handler/scroll_zoom.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "zoomRate",
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        },
+                        "default": "1/100"
+                    }
+                ],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "setZoomRate",
+                "kind": "function",
+                "memberof": "ScrollZoomHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "ScrollZoomHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "setZoomRate",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "ScrollZoomHandler#setZoomRate"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "设置滚动的缩放比例。",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 35,
+                                            "offset": 34
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 35,
+                                    "offset": 34
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 35,
+                            "offset": 34
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": null,
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "OptionalType",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "number"
+                            }
+                        },
+                        "name": "wheelZoomRate",
+                        "default": "1/450"
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 88,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 91,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 92,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 94,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/scroll_zoom.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/handler/scroll_zoom.js#L92-L94",
+                        "path": "src/ui/handler/scroll_zoom.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "wheelZoomRate",
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        },
+                        "default": "1/450"
+                    }
+                ],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "setWheelZoomRate",
+                "kind": "function",
+                "memberof": "ScrollZoomHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "ScrollZoomHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "setWheelZoomRate",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "ScrollZoomHandler#setWheelZoomRate"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "返回一个布尔值，用于表示“滚动缩放”交互是否激活。",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 82,
+                                            "offset": 81
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 82,
+                                    "offset": 81
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 82,
+                            "offset": 81
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "true",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 96,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 100,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 101,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 103,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/scroll_zoom.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/handler/scroll_zoom.js#L101-L103",
+                        "path": "src/ui/handler/scroll_zoom.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "true",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " 表示“滚动缩放”交互已激活。",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 55,
+                                                    "offset": 54
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 55,
+                                            "offset": 54
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 55,
+                                    "offset": 54
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "isEnabled",
+                "kind": "function",
+                "memberof": "ScrollZoomHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "ScrollZoomHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "isEnabled",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "ScrollZoomHandler#isEnabled"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "激活“滚动缩放”交互功能。",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 42,
+                                            "offset": 41
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 42,
+                                    "offset": 41
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 42,
+                            "offset": 41
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": null,
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "OptionalType",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Object"
+                            }
+                        },
+                        "name": "options"
+                    },
+                    {
+                        "title": "param",
+                        "description": "如果传递了“center”，将以当前地图为中心缩放地图。",
+                        "lineNumber": 4,
+                        "type": {
+                            "type": "OptionalType",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "string"
+                            }
+                        },
+                        "name": "options.around"
+                    },
+                    {
+                        "title": "example",
+                        "description": "map.scrollZoom.enable();",
+                        "lineNumber": 6
+                    },
+                    {
+                        "title": "example",
+                        "description": "map.scrollZoom.enable({ around: 'center' })",
+                        "lineNumber": 8
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 117,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 127,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 128,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 132,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/scroll_zoom.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/handler/scroll_zoom.js#L128-L132",
+                        "path": "src/ui/handler/scroll_zoom.js"
+                    }
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "map.scrollZoom.enable();"
+                    },
+                    {
+                        "description": "map.scrollZoom.enable({ around: 'center' })"
+                    }
+                ],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "options",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "OptionalType",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Object"
+                            }
+                        },
+                        "properties": [
+                            {
+                                "title": "param",
+                                "name": "options.around",
+                                "lineNumber": 4,
+                                "description": {
+                                    "type": "root",
+                                    "children": [
+                                        {
+                                            "type": "paragraph",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "如果传递了“center”，将以当前地图为中心缩放地图。",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 1,
+                                                            "column": 1,
+                                                            "offset": 0
+                                                        },
+                                                        "end": {
+                                                            "line": 1,
+                                                            "column": 58,
+                                                            "offset": 57
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 58,
+                                                    "offset": 57
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 58,
+                                            "offset": 57
+                                        }
+                                    }
+                                },
+                                "type": {
+                                    "type": "OptionalType",
+                                    "expression": {
+                                        "type": "NameExpression",
+                                        "name": "string"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "enable",
+                "kind": "function",
+                "memberof": "ScrollZoomHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "ScrollZoomHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "enable",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "ScrollZoomHandler#enable"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "禁用“滚动缩放”交互功能。",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 43,
+                                            "offset": 42
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 43,
+                                    "offset": 42
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 43,
+                            "offset": 42
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "example",
+                        "description": "map.scrollZoom.disable();",
+                        "lineNumber": 3
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 134,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 139,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 140,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 143,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/scroll_zoom.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/handler/scroll_zoom.js#L140-L143",
+                        "path": "src/ui/handler/scroll_zoom.js"
+                    }
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "map.scrollZoom.disable();"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "disable",
+                "kind": "function",
+                "memberof": "ScrollZoomHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "ScrollZoomHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "disable",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "ScrollZoomHandler#disable"
+            }
+        ],
+        "events": [],
+        "static": []
+    },
+    "namespace": "ScrollZoomHandler"
+}

@@ -1,0 +1,90 @@
+{
+    "description": "",
+    "tags": [
+        {
+            "title": "typedef",
+            "description": null,
+            "lineNumber": 1,
+            "type": {
+                "type": "NameExpression",
+                "name": "Object"
+            },
+            "name": "MapBoxZoomEvent"
+        },
+        {
+            "title": "property",
+            "description": null,
+            "lineNumber": 2,
+            "type": {
+                "type": "NameExpression",
+                "name": "MouseEvent"
+            },
+            "name": "originalEvent"
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 216,
+            "column": 0
+        },
+        "end": {
+            "line": 219,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 220,
+                "column": 0
+            },
+            "end": {
+                "line": 226,
+                "column": 2
+            }
+        },
+        "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/events.js",
+        "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/events.js#L216-L219",
+            "path": "src/ui/events.js"
+        }
+    },
+    "augments": [],
+    "examples": [],
+    "params": [],
+    "properties": [
+        {
+            "title": "property",
+            "name": "originalEvent",
+            "lineNumber": 2,
+            "type": {
+                "type": "NameExpression",
+                "name": "MouseEvent"
+            }
+        }
+    ],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "typedef",
+    "name": "MapBoxZoomEvent",
+    "type": {
+        "type": "NameExpression",
+        "name": "Object"
+    },
+    "path": [
+        {
+            "name": "MapBoxZoomEvent",
+            "kind": "typedef"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "MapBoxZoomEvent"
+}

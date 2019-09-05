@@ -1,0 +1,132 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Gets and sets the number of web workers instantiated on a page with GL JS maps.\nBy default, it is set to half the number of CPU cores (capped at 6).\nMake sure to set this property before creating any map instances for it to have effect.",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 88,
+                                "offset": 236
+                            },
+                            "indent": [
+                                1,
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3,
+                        "column": 88,
+                        "offset": 236
+                    },
+                    "indent": [
+                        1,
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 3,
+                "column": 88,
+                "offset": 236
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "var",
+            "description": null,
+            "lineNumber": 5,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            },
+            "name": "workerCount"
+        },
+        {
+            "title": "example",
+            "description": "mapboxgl.workerCount = 2;",
+            "lineNumber": 6
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 77,
+            "column": 4
+        },
+        "end": {
+            "line": 85,
+            "column": 7
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 86,
+                "column": 4
+            },
+            "end": {
+                "line": 88,
+                "column": 5
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/index.js"
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "mapboxgl.workerCount = 2;"
+        }
+    ],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "member",
+    "name": "workerCount",
+    "type": {
+        "type": "NameExpression",
+        "name": "string"
+    },
+    "path": [
+        {
+            "name": "workerCount",
+            "kind": "member"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "workerCount"
+}

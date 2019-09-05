@@ -1,0 +1,126 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Gets and sets the map's default API URL for requesting tiles, styles, sprites, and glyphs",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 90,
+                                "offset": 89
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 90,
+                        "offset": 89
+                    },
+                    "indent": []
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 1,
+                "column": 90,
+                "offset": 89
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "var",
+            "description": null,
+            "lineNumber": 3,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            },
+            "name": "baseApiUrl"
+        },
+        {
+            "title": "example",
+            "description": "mapboxgl.baseApiUrl = 'https://api.mapbox.com';",
+            "lineNumber": 4
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 62,
+            "column": 4
+        },
+        "end": {
+            "line": 68,
+            "column": 7
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 69,
+                "column": 4
+            },
+            "end": {
+                "line": 71,
+                "column": 5
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/index.js"
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "mapboxgl.baseApiUrl = 'https://api.mapbox.com';"
+        }
+    ],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "member",
+    "name": "baseApiUrl",
+    "type": {
+        "type": "NameExpression",
+        "name": "string"
+    },
+    "path": [
+        {
+            "name": "baseApiUrl",
+            "kind": "member"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "baseApiUrl"
+}

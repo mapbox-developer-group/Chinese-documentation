@@ -1,0 +1,1253 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "添加地图交互控件的接口。 这是一份\n开发者编写模块的规范：这不是\n一个 exported 方法或者类",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 29,
+                                "offset": 143
+                            },
+                            "indent": [
+                                1,
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3,
+                        "column": 29,
+                        "offset": 143
+                    },
+                    "indent": [
+                        1,
+                        1
+                    ]
+                }
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "控件必须实现",
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 1,
+                                "offset": 145
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 25,
+                                "offset": 169
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "onAdd",
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 25,
+                                "offset": 169
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 32,
+                                "offset": 176
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " 和 ",
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 32,
+                                "offset": 176
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 37,
+                                "offset": 181
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "onRemove",
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 37,
+                                "offset": 181
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 47,
+                                "offset": 191
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": "方法，并且必须要自带一个\n元素，通常是一个",
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 47,
+                                "offset": 191
+                            },
+                            "end": {
+                                "line": 6,
+                                "column": 27,
+                                "offset": 235
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "div",
+                        "position": {
+                            "start": {
+                                "line": 6,
+                                "column": 27,
+                                "offset": 235
+                            },
+                            "end": {
+                                "line": 6,
+                                "column": 32,
+                                "offset": 240
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": "元素。 为了使用Mapbox GL JS\n默认的控件样式，需要添加",
+                        "position": {
+                            "start": {
+                                "line": 6,
+                                "column": 32,
+                                "offset": 240
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 34,
+                                "offset": 305
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "mapboxgl-ctrl",
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 34,
+                                "offset": 305
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 49,
+                                "offset": 320
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " 类到你的控件\n节点中。",
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 49,
+                                "offset": 320
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 6,
+                                "offset": 350
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 5,
+                        "column": 1,
+                        "offset": 145
+                    },
+                    "end": {
+                        "line": 8,
+                        "column": 6,
+                        "offset": 350
+                    },
+                    "indent": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 8,
+                "column": 6,
+                "offset": 350
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "interface",
+            "description": "IControl",
+            "lineNumber": 10
+        },
+        {
+            "title": "example",
+            "description": "// 用ES6标准实现控件类\nclass HelloWorldControl {\n    onAdd(map) {\n        this._map = map;\n        this._container = document.createElement('div');\n        this._container.className = 'mapboxgl-ctrl';\n        this._container.textContent = 'Hello, world';\n        return this._container;\n    }\n\n    onRemove() {\n        this._container.parentNode.removeChild(this._container);\n        this._map = undefined;\n    }\n}\n\n// 用ES5标准实现控件的原型类\nfunction HelloWorldControl() { }\n\nHelloWorldControl.prototype.onAdd = function(map) {\n    this._map = map;\n    this._container = document.createElement('div');\n    this._container.className = 'mapboxgl-ctrl';\n    this._container.textContent = 'Hello, world';\n    return this._container;\n};\n\nHelloWorldControl.prototype.onRemove = function () {\n     this._container.parentNode.removeChild(this._container);\n     this._map = undefined;\n};",
+            "lineNumber": 11
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 1950,
+            "column": 0
+        },
+        "end": {
+            "line": 1993,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 1944,
+                "column": 0
+            },
+            "end": {
+                "line": 1948,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/map.js",
+        "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/map.js#L1944-L1948",
+            "path": "src/ui/map.js"
+        }
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "// 用ES6标准实现控件类\nclass HelloWorldControl {\n    onAdd(map) {\n        this._map = map;\n        this._container = document.createElement('div');\n        this._container.className = 'mapboxgl-ctrl';\n        this._container.textContent = 'Hello, world';\n        return this._container;\n    }\n\n    onRemove() {\n        this._container.parentNode.removeChild(this._container);\n        this._map = undefined;\n    }\n}\n\n// 用ES5标准实现控件的原型类\nfunction HelloWorldControl() { }\n\nHelloWorldControl.prototype.onAdd = function(map) {\n    this._map = map;\n    this._container = document.createElement('div');\n    this._container.className = 'mapboxgl-ctrl';\n    this._container.textContent = 'Hello, world';\n    return this._container;\n};\n\nHelloWorldControl.prototype.onRemove = function () {\n     this._container.parentNode.removeChild(this._container);\n     this._map = undefined;\n};"
+        }
+    ],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "interface": true,
+    "name": "IControl",
+    "path": [
+        {
+            "name": "IControl"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "可以为该控件提供默认位置。如果这个方法\n已经实现并且 ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 20,
+                                            "offset": 90
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "link",
+                                    "url": "Map#addControl",
+                                    "title": null,
+                                    "jsdoc": true,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "Map#addControl"
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 2,
+                                            "column": 20,
+                                            "offset": 90
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 42,
+                                            "offset": 112
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " 被调用时没有传入",
+                                    "position": {
+                                        "start": {
+                                            "line": 2,
+                                            "column": 42,
+                                            "offset": 112
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 65,
+                                            "offset": 135
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "position",
+                                    "position": {
+                                        "start": {
+                                            "line": 2,
+                                            "column": 65,
+                                            "offset": 135
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 75,
+                                            "offset": 145
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": "\n参数， 那么getDefaultPosition返回的值会被用作\n控件的位置参数。",
+                                    "position": {
+                                        "start": {
+                                            "line": 2,
+                                            "column": 75,
+                                            "offset": 145
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "column": 20,
+                                            "offset": 237
+                                        },
+                                        "indent": [
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 4,
+                                    "column": 20,
+                                    "offset": 237
+                                },
+                                "indent": [
+                                    1,
+                                    1,
+                                    1
+                                ]
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 4,
+                            "column": 20,
+                            "offset": 237
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "function",
+                        "description": null,
+                        "lineNumber": 6,
+                        "name": null
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "IControl",
+                        "lineNumber": 7
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 8
+                    },
+                    {
+                        "title": "name",
+                        "description": null,
+                        "lineNumber": 9,
+                        "name": "getDefaultPosition"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "控件的位置值，addControl有效参数之一。",
+                        "lineNumber": 10,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "string"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2024,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 2035,
+                        "column": 3
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 1944,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 1948,
+                            "column": 1
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/map.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/map.js#L1944-L1948",
+                        "path": "src/ui/map.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "控件的位置值，addControl有效参数之一。",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 59,
+                                                    "offset": 58
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 59,
+                                            "offset": 58
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 59,
+                                    "offset": 58
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "string"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "function",
+                "memberof": "IControl",
+                "scope": "instance",
+                "name": "getDefaultPosition",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "IControl"
+                    },
+                    {
+                        "name": "getDefaultPosition",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "IControl#getDefaultPosition"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "取消注册地图上的交互控件并且使其脱离事件监听\n和资源绑定 。这个方法被",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 41,
+                                            "offset": 119
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "link",
+                                    "url": "Map#removeControl",
+                                    "title": null,
+                                    "jsdoc": true,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "Map#removeControl"
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 2,
+                                            "column": 41,
+                                            "offset": 119
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 66,
+                                            "offset": 144
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": "\n内部调用。",
+                                    "position": {
+                                        "start": {
+                                            "line": 2,
+                                            "column": 66,
+                                            "offset": 144
+                                        },
+                                        "end": {
+                                            "line": 3,
+                                            "column": 12,
+                                            "offset": 156
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 3,
+                                    "column": 12,
+                                    "offset": 156
+                                },
+                                "indent": [
+                                    1,
+                                    1
+                                ]
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3,
+                            "column": 12,
+                            "offset": 156
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "function",
+                        "description": null,
+                        "lineNumber": 5,
+                        "name": null
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "IControl",
+                        "lineNumber": 6
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 7
+                    },
+                    {
+                        "title": "name",
+                        "description": null,
+                        "lineNumber": 8,
+                        "name": "onRemove"
+                    },
+                    {
+                        "title": "param",
+                        "description": "这个控件会从地图上被移除",
+                        "lineNumber": 9,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Map"
+                        },
+                        "name": "map"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "这个方法不要求有返回值",
+                        "lineNumber": 10,
+                        "type": {
+                            "type": "UndefinedLiteral"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2011,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 2022,
+                        "column": 3
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 1944,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 1948,
+                            "column": 1
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/map.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/map.js#L1944-L1948",
+                        "path": "src/ui/map.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "map",
+                        "lineNumber": 9,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "这个控件会从地图上被移除",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 42,
+                                                    "offset": 41
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 42,
+                                            "offset": 41
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 42,
+                                    "offset": 41
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Map"
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "这个方法不要求有返回值",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 50,
+                                                    "offset": 49
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 50,
+                                            "offset": 49
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 50,
+                                    "offset": 49
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "UndefinedLiteral"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "function",
+                "memberof": "IControl",
+                "scope": "instance",
+                "name": "onRemove",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "IControl"
+                    },
+                    {
+                        "name": "onRemove",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "IControl#onRemove"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "在地图上注册一个控件并使其能注册事件监听\n并绑定资源。这个方法被",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 41,
+                                            "offset": 119
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "link",
+                                    "url": "Map#addControl",
+                                    "title": null,
+                                    "jsdoc": true,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "Map#addControl"
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 2,
+                                            "column": 41,
+                                            "offset": 119
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 63,
+                                            "offset": 141
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": "\n内部调用.",
+                                    "position": {
+                                        "start": {
+                                            "line": 2,
+                                            "column": 63,
+                                            "offset": 141
+                                        },
+                                        "end": {
+                                            "line": 3,
+                                            "column": 12,
+                                            "offset": 153
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 3,
+                                    "column": 12,
+                                    "offset": 153
+                                },
+                                "indent": [
+                                    1,
+                                    1
+                                ]
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3,
+                            "column": 12,
+                            "offset": 153
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "function",
+                        "description": null,
+                        "lineNumber": 5,
+                        "name": null
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "IControl",
+                        "lineNumber": 6
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 7
+                    },
+                    {
+                        "title": "name",
+                        "description": null,
+                        "lineNumber": 8,
+                        "name": "onAdd"
+                    },
+                    {
+                        "title": "param",
+                        "description": "控件将被添加到地图上",
+                        "lineNumber": 9,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Map"
+                        },
+                        "name": "map"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "控件容器里的元素，它应该\n由控件生成，由onAdd返回，而不是附加\n到DOM上：如果有必要的话，地图对象会把控件的元素插入到DOM中。",
+                        "lineNumber": 10,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "HTMLElement"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1995,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 2009,
+                        "column": 3
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 1944,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 1948,
+                            "column": 1
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/map.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/map.js#L1944-L1948",
+                        "path": "src/ui/map.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "map",
+                        "lineNumber": 9,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "控件将被添加到地图上",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 38,
+                                                    "offset": 37
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 38,
+                                            "offset": 37
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 38,
+                                    "offset": 37
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Map"
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "控件容器里的元素，它应该\n由控件生成，由onAdd返回，而不是附加\n到DOM上：如果有必要的话，地图对象会把控件的元素插入到DOM中。",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 4,
+                                                    "column": 14,
+                                                    "offset": 196
+                                                },
+                                                "indent": [
+                                                    1,
+                                                    1,
+                                                    1
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "column": 14,
+                                            "offset": 196
+                                        },
+                                        "indent": [
+                                            1,
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 4,
+                                    "column": 14,
+                                    "offset": 196
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "HTMLElement"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "function",
+                "memberof": "IControl",
+                "scope": "instance",
+                "name": "onAdd",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "IControl"
+                    },
+                    {
+                        "name": "onAdd",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "IControl#onAdd"
+            }
+        ],
+        "events": [],
+        "static": []
+    },
+    "namespace": "IControl"
+}

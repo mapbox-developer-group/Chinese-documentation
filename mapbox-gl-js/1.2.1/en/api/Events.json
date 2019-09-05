@@ -1,0 +1,125 @@
+{
+    "name": "Events",
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "inlineCode",
+                        "value": "Map",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 6,
+                                "offset": 5
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " (and some other classes) emit events in response to user interactions or changes in state. ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 6,
+                                "offset": 5
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 98,
+                                "offset": 97
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "Evented",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 98,
+                                "offset": 97
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 107,
+                                "offset": 106
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": "\nis the interface used to bind and unbind listeners for these events.",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 107,
+                                "offset": 106
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 69,
+                                "offset": 175
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 69,
+                        "offset": 175
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 3,
+                "column": 1,
+                "offset": 176
+            }
+        }
+    },
+    "kind": "note",
+    "path": [
+        {
+            "name": "Events",
+            "kind": "note"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "Events"
+}

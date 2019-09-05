@@ -1,0 +1,535 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "地图移动方法所共有的选项，比如",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 72,
+                                "offset": 71
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "url": "Map#panBy",
+                        "title": null,
+                        "jsdoc": true,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Map#panBy"
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 72,
+                                "offset": 71
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 89,
+                                "offset": 88
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " and\n",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 89,
+                                "offset": 88
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 1,
+                                "offset": 93
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "url": "Map#easeTo",
+                        "title": null,
+                        "jsdoc": true,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Map#easeTo"
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 1,
+                                "offset": 93
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 19,
+                                "offset": 111
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ",能够控制动态转换的持续时间和缓动函数。 所有属性均可选。",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 19,
+                                "offset": 111
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 14,
+                                "offset": 204
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3,
+                        "column": 14,
+                        "offset": 204
+                    },
+                    "indent": [
+                        1,
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 3,
+                "column": 14,
+                "offset": 204
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "typedef",
+            "description": null,
+            "lineNumber": 5,
+            "type": {
+                "type": "NameExpression",
+                "name": "Object"
+            },
+            "name": "AnimationOptions"
+        },
+        {
+            "title": "property",
+            "description": "动态转换的持续时间，按毫秒计算。",
+            "lineNumber": 6,
+            "type": {
+                "type": "NameExpression",
+                "name": "number"
+            },
+            "name": "duration"
+        },
+        {
+            "title": "property",
+            "description": "该函数持续的时间在 0~1 之间， 返回一个表示状态的数字，初始状态为 0，最终状态为 1 ",
+            "lineNumber": 7,
+            "type": {
+                "type": "NameExpression",
+                "name": "Function"
+            },
+            "name": "easing"
+        },
+        {
+            "title": "property",
+            "description": "动态转换结束后，目标中心与实际地图容器中心间的偏差。",
+            "lineNumber": 9,
+            "type": {
+                "type": "NameExpression",
+                "name": "PointLike"
+            },
+            "name": "offset"
+        },
+        {
+            "title": "property",
+            "description": "如果为 false ，将不进行动态转换。",
+            "lineNumber": 10,
+            "type": {
+                "type": "NameExpression",
+                "name": "boolean"
+            },
+            "name": "animate"
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 47,
+            "column": 0
+        },
+        "end": {
+            "line": 58,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 59,
+                "column": 0
+            },
+            "end": {
+                "line": 64,
+                "column": 2
+            }
+        },
+        "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/camera.js",
+        "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/camera.js#L47-L58",
+            "path": "src/ui/camera.js"
+        }
+    },
+    "augments": [],
+    "examples": [],
+    "params": [],
+    "properties": [
+        {
+            "title": "property",
+            "name": "duration",
+            "lineNumber": 6,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "动态转换的持续时间，按毫秒计算。",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 52,
+                                        "offset": 51
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 52,
+                                "offset": 51
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 52,
+                        "offset": 51
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "number"
+            }
+        },
+        {
+            "title": "property",
+            "name": "easing",
+            "lineNumber": 7,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "该函数持续的时间在 0~1 之间， 返回一个表示状态的数字，初始状态为 0，最终状态为 1 ",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 2,
+                                        "column": 46,
+                                        "offset": 122
+                                    },
+                                    "indent": [
+                                        1
+                                    ]
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 46,
+                                "offset": 122
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 46,
+                        "offset": 122
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "Function"
+            }
+        },
+        {
+            "title": "property",
+            "name": "offset",
+            "lineNumber": 9,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "动态转换结束后，目标中心与实际地图容器中心间的偏差。",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 84,
+                                        "offset": 83
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 84,
+                                "offset": 83
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 84,
+                        "offset": 83
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "PointLike"
+            }
+        },
+        {
+            "title": "property",
+            "name": "animate",
+            "lineNumber": 10,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "If ",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 4,
+                                        "offset": 3
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "false",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 4,
+                                        "offset": 3
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 11,
+                                        "offset": 10
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ", no animation will occur.",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 11,
+                                        "offset": 10
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 37,
+                                        "offset": 36
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 37,
+                                "offset": 36
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 37,
+                        "offset": 36
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "boolean"
+            }
+        }
+    ],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "typedef",
+    "name": "AnimationOptions",
+    "type": {
+        "type": "NameExpression",
+        "name": "Object"
+    },
+    "path": [
+        {
+            "name": "AnimationOptions",
+            "kind": "typedef"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "AnimationOptions"
+}

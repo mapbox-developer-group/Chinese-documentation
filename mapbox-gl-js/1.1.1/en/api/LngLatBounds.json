@@ -1,0 +1,4092 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "A ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 3,
+                                "offset": 2
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "LngLatBounds",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 3,
+                                "offset": 2
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 17,
+                                "offset": 16
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " object represents a geographical bounding box,\ndefined by its southwest and northeast points in longitude and latitude.",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 17,
+                                "offset": 16
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 73,
+                                "offset": 136
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 73,
+                        "offset": 136
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "If no arguments are provided to the constructor, a ",
+                        "position": {
+                            "start": {
+                                "line": 4,
+                                "column": 1,
+                                "offset": 138
+                            },
+                            "end": {
+                                "line": 4,
+                                "column": 52,
+                                "offset": 189
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "null",
+                        "position": {
+                            "start": {
+                                "line": 4,
+                                "column": 52,
+                                "offset": 189
+                            },
+                            "end": {
+                                "line": 4,
+                                "column": 58,
+                                "offset": 195
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " bounding box is created.",
+                        "position": {
+                            "start": {
+                                "line": 4,
+                                "column": 58,
+                                "offset": 195
+                            },
+                            "end": {
+                                "line": 4,
+                                "column": 83,
+                                "offset": 220
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 4,
+                        "column": 1,
+                        "offset": 138
+                    },
+                    "end": {
+                        "line": 4,
+                        "column": 83,
+                        "offset": 220
+                    },
+                    "indent": []
+                }
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Note that any Mapbox GL method that accepts a ",
+                        "position": {
+                            "start": {
+                                "line": 6,
+                                "column": 1,
+                                "offset": 222
+                            },
+                            "end": {
+                                "line": 6,
+                                "column": 47,
+                                "offset": 268
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "LngLatBounds",
+                        "position": {
+                            "start": {
+                                "line": 6,
+                                "column": 47,
+                                "offset": 268
+                            },
+                            "end": {
+                                "line": 6,
+                                "column": 61,
+                                "offset": 282
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " object as an argument or option\ncan also accept an ",
+                        "position": {
+                            "start": {
+                                "line": 6,
+                                "column": 61,
+                                "offset": 282
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 20,
+                                "offset": 334
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "Array",
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 20,
+                                "offset": 334
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 27,
+                                "offset": 341
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " of two ",
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 27,
+                                "offset": 341
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 35,
+                                "offset": 349
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "url": "LngLatLike",
+                        "title": null,
+                        "jsdoc": true,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "LngLatLike"
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 35,
+                                "offset": 349
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 53,
+                                "offset": 367
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " constructs and will perform an implicit conversion.\nThis flexible type is documented as ",
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 53,
+                                "offset": 367
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 37,
+                                "offset": 456
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "url": "LngLatBoundsLike",
+                        "title": null,
+                        "jsdoc": true,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "LngLatBoundsLike"
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 8,
+                                "column": 37,
+                                "offset": 456
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 61,
+                                "offset": 480
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ".",
+                        "position": {
+                            "start": {
+                                "line": 8,
+                                "column": 61,
+                                "offset": 480
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 62,
+                                "offset": 481
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 6,
+                        "column": 1,
+                        "offset": 222
+                    },
+                    "end": {
+                        "line": 8,
+                        "column": 62,
+                        "offset": 481
+                    },
+                    "indent": [
+                        1,
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 8,
+                "column": 62,
+                "offset": 481
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "param",
+            "description": "The southwest corner of the bounding box.",
+            "lineNumber": 10,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "LngLatLike"
+                }
+            },
+            "name": "sw"
+        },
+        {
+            "title": "param",
+            "description": "The northeast corner of the bounding box.",
+            "lineNumber": 11,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "LngLatLike"
+                }
+            },
+            "name": "ne"
+        },
+        {
+            "title": "example",
+            "description": "var sw = new mapboxgl.LngLat(-73.9876, 40.7661);\nvar ne = new mapboxgl.LngLat(-73.9397, 40.8002);\nvar llb = new mapboxgl.LngLatBounds(sw, ne);",
+            "lineNumber": 12
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 7,
+            "column": 0
+        },
+        "end": {
+            "line": 23,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 24,
+                "column": 0
+            },
+            "end": {
+                "line": 230,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "var sw = new mapboxgl.LngLat(-73.9876, 40.7661);\nvar ne = new mapboxgl.LngLat(-73.9397, 40.8002);\nvar llb = new mapboxgl.LngLatBounds(sw, ne);"
+        }
+    ],
+    "params": [
+        {
+            "title": "param",
+            "name": "sw",
+            "lineNumber": 10,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "The southwest corner of the bounding box.",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 42,
+                                        "offset": 41
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 42,
+                                "offset": 41
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 42,
+                        "offset": 41
+                    }
+                }
+            },
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "LngLatLike"
+                }
+            }
+        },
+        {
+            "title": "param",
+            "name": "ne",
+            "lineNumber": 11,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "The northeast corner of the bounding box.",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 42,
+                                        "offset": 41
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 42,
+                                "offset": 41
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 42,
+                        "offset": 41
+                    }
+                }
+            },
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "LngLatLike"
+                }
+            }
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "name": "LngLatBounds",
+    "kind": "class",
+    "path": [
+        {
+            "name": "LngLatBounds",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Set the northeast corner of the bounding box",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 45,
+                                            "offset": 44
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 45,
+                                    "offset": 44
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 45,
+                            "offset": 44
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": null,
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatLike"
+                        },
+                        "name": "ne"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "`this`",
+                        "lineNumber": 4,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatBounds"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 41,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 46,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 47,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 50,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "ne",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatLike"
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 7,
+                                            "offset": 6
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 7,
+                                    "offset": 6
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatBounds"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "setNorthEast",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "setNorthEast",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#setNorthEast"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Set the southwest corner of the bounding box",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 45,
+                                            "offset": 44
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 45,
+                                    "offset": 44
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 45,
+                            "offset": 44
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": null,
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatLike"
+                        },
+                        "name": "sw"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "`this`",
+                        "lineNumber": 4,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatBounds"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 52,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 57,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 58,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 61,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "sw",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatLike"
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 7,
+                                            "offset": 6
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 7,
+                                    "offset": 6
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatBounds"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "setSouthWest",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "setSouthWest",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#setSouthWest"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Extend the bounds to include a given LngLat or LngLatBounds.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 61,
+                                            "offset": 60
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 61,
+                                    "offset": 60
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 61,
+                            "offset": 60
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": "object to extend to",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "UnionType",
+                            "elements": [
+                                {
+                                    "type": "NameExpression",
+                                    "name": "LngLat"
+                                },
+                                {
+                                    "type": "NameExpression",
+                                    "name": "LngLatBounds"
+                                }
+                            ]
+                        },
+                        "name": "obj"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "`this`",
+                        "lineNumber": 4,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatBounds"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 63,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 68,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 69,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 107,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "obj",
+                        "lineNumber": 3,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "object to extend to",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 20,
+                                                    "offset": 19
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 20,
+                                            "offset": 19
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 20,
+                                    "offset": 19
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "UnionType",
+                            "elements": [
+                                {
+                                    "type": "NameExpression",
+                                    "name": "LngLat"
+                                },
+                                {
+                                    "type": "NameExpression",
+                                    "name": "LngLatBounds"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 7,
+                                            "offset": 6
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 7,
+                                    "offset": 6
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatBounds"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "extend",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "extend",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#extend"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the geographical coordinate equidistant from the bounding box's corners.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 81,
+                                            "offset": 80
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 81,
+                                    "offset": 80
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 81,
+                            "offset": 80
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The bounding box's center.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    },
+                    {
+                        "title": "example",
+                        "description": "var llb = new mapboxgl.LngLatBounds([-73.9876, 40.7661], [-73.9397, 40.8002]);\nllb.getCenter(); // = LngLat {lng: -73.96365, lat: 40.78315}",
+                        "lineNumber": 4
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 109,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 116,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 117,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 119,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "var llb = new mapboxgl.LngLatBounds([-73.9876, 40.7661], [-73.9397, 40.8002]);\nllb.getCenter(); // = LngLat {lng: -73.96365, lat: 40.78315}"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The bounding box's center.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 27,
+                                                    "offset": 26
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 27,
+                                            "offset": 26
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 27,
+                                    "offset": 26
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getCenter",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getCenter",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#getCenter"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the southwest corner of the bounding box.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 50,
+                                            "offset": 49
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 50,
+                                    "offset": 49
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 50,
+                            "offset": 49
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The southwest corner of the bounding box.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 121,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 125,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 126,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 126,
+                            "column": 47
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The southwest corner of the bounding box.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 42,
+                                                    "offset": 41
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 42,
+                                            "offset": 41
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 42,
+                                    "offset": 41
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getSouthWest",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getSouthWest",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#getSouthWest"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the northeast corner of the bounding box.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 50,
+                                            "offset": 49
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 50,
+                                    "offset": 49
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 50,
+                            "offset": 49
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The northeast corner of the bounding box.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 128,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 132,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 133,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 133,
+                            "column": 47
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The northeast corner of the bounding box.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 42,
+                                                    "offset": 41
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 42,
+                                            "offset": 41
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 42,
+                                    "offset": 41
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getNorthEast",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getNorthEast",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#getNorthEast"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the northwest corner of the bounding box.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 50,
+                                            "offset": 49
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 50,
+                                    "offset": 49
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 50,
+                            "offset": 49
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The northwest corner of the bounding box.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 135,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 139,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 140,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 140,
+                            "column": 82
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The northwest corner of the bounding box.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 42,
+                                                    "offset": 41
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 42,
+                                            "offset": 41
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 42,
+                                    "offset": 41
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getNorthWest",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getNorthWest",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#getNorthWest"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the southeast corner of the bounding box.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 50,
+                                            "offset": 49
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 50,
+                                    "offset": 49
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 50,
+                            "offset": 49
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The southeast corner of the bounding box.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 142,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 146,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 147,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 147,
+                            "column": 82
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The southeast corner of the bounding box.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 42,
+                                                    "offset": 41
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 42,
+                                            "offset": 41
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 42,
+                                    "offset": 41
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getSouthEast",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getSouthEast",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#getSouthEast"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the west edge of the bounding box.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 43,
+                                            "offset": 42
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 43,
+                                    "offset": 42
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 43,
+                            "offset": 42
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The west edge of the bounding box.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 149,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 153,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 154,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 154,
+                            "column": 46
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The west edge of the bounding box.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 35,
+                                                    "offset": 34
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 35,
+                                            "offset": 34
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 35,
+                                    "offset": 34
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getWest",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getWest",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#getWest"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the south edge of the bounding box.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 44,
+                                            "offset": 43
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 44,
+                                    "offset": 43
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 44,
+                            "offset": 43
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The south edge of the bounding box.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 156,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 160,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 161,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 161,
+                            "column": 47
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The south edge of the bounding box.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 36,
+                                                    "offset": 35
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 36,
+                                            "offset": 35
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 36,
+                                    "offset": 35
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getSouth",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getSouth",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#getSouth"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the east edge of the bounding box.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 43,
+                                            "offset": 42
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 43,
+                                    "offset": 42
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 43,
+                            "offset": 42
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The east edge of the bounding box.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 163,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 167,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 168,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 168,
+                            "column": 46
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The east edge of the bounding box.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 35,
+                                                    "offset": 34
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 35,
+                                            "offset": 34
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 35,
+                                    "offset": 34
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getEast",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getEast",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#getEast"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the north edge of the bounding box.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 44,
+                                            "offset": 43
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 44,
+                                    "offset": 43
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 44,
+                            "offset": 43
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The north edge of the bounding box.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 170,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 174,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 175,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 175,
+                            "column": 47
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The north edge of the bounding box.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 36,
+                                                    "offset": 35
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 36,
+                                            "offset": 35
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 36,
+                                    "offset": 35
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getNorth",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getNorth",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#getNorth"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the bounding box represented as an array.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 50,
+                                            "offset": 49
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 50,
+                                    "offset": 49
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 50,
+                            "offset": 49
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The bounding box represented as an array, consisting of the\n  southwest and northeast coordinates of the bounding represented as arrays of numbers.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "TypeApplication",
+                                    "expression": {
+                                        "type": "NameExpression",
+                                        "name": "Array"
+                                    },
+                                    "applications": [
+                                        {
+                                            "type": "NameExpression",
+                                            "name": "number"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "example",
+                        "description": "var llb = new mapboxgl.LngLatBounds([-73.9876, 40.7661], [-73.9397, 40.8002]);\nllb.toArray(); // = [[-73.9876, 40.7661], [-73.9397, 40.8002]]",
+                        "lineNumber": 5
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 177,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 185,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 186,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 188,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "var llb = new mapboxgl.LngLatBounds([-73.9876, 40.7661], [-73.9397, 40.8002]);\nllb.toArray(); // = [[-73.9876, 40.7661], [-73.9397, 40.8002]]"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The bounding box represented as an array, consisting of the\n  southwest and northeast coordinates of the bounding represented as arrays of numbers.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 2,
+                                                    "column": 88,
+                                                    "offset": 147
+                                                },
+                                                "indent": [
+                                                    1
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 88,
+                                            "offset": 147
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 2,
+                                    "column": 88,
+                                    "offset": 147
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "TypeApplication",
+                                    "expression": {
+                                        "type": "NameExpression",
+                                        "name": "Array"
+                                    },
+                                    "applications": [
+                                        {
+                                            "type": "NameExpression",
+                                            "name": "number"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "toArray",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "toArray",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#toArray"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Return the bounding box represented as a string.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 49,
+                                            "offset": 48
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 49,
+                                    "offset": 48
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 49,
+                            "offset": 48
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The bounding box represents as a string of the format\n  `'LngLatBounds(LngLat(lng, lat), LngLat(lng, lat))'`.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "string"
+                        }
+                    },
+                    {
+                        "title": "example",
+                        "description": "var llb = new mapboxgl.LngLatBounds([-73.9876, 40.7661], [-73.9397, 40.8002]);\nllb.toString(); // = \"LngLatBounds(LngLat(-73.9876, 40.7661), LngLat(-73.9397, 40.8002))\"",
+                        "lineNumber": 5
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 190,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 198,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 199,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 201,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "var llb = new mapboxgl.LngLatBounds([-73.9876, 40.7661], [-73.9397, 40.8002]);\nllb.toString(); // = \"LngLatBounds(LngLat(-73.9876, 40.7661), LngLat(-73.9397, 40.8002))\""
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The bounding box represents as a string of the format\n  ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 2,
+                                                    "column": 3,
+                                                    "offset": 56
+                                                },
+                                                "indent": [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "'LngLatBounds(LngLat(lng, lat), LngLat(lng, lat))'",
+                                            "position": {
+                                                "start": {
+                                                    "line": 2,
+                                                    "column": 3,
+                                                    "offset": 56
+                                                },
+                                                "end": {
+                                                    "line": 2,
+                                                    "column": 55,
+                                                    "offset": 108
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": ".",
+                                            "position": {
+                                                "start": {
+                                                    "line": 2,
+                                                    "column": 55,
+                                                    "offset": 108
+                                                },
+                                                "end": {
+                                                    "line": 2,
+                                                    "column": 56,
+                                                    "offset": 109
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 56,
+                                            "offset": 109
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 2,
+                                    "column": 56,
+                                    "offset": 109
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "string"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "toString",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "toString",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#toString"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Check if the bounding box is an empty/",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 39,
+                                            "offset": 38
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "null",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 39,
+                                            "offset": 38
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 45,
+                                            "offset": 44
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": "-type box.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 45,
+                                            "offset": 44
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 55,
+                                            "offset": 54
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 55,
+                                    "offset": 54
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 55,
+                            "offset": 54
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "True if bounds have been defined, otherwise false.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 203,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 207,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 208,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 210,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "True if bounds have been defined, otherwise false.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 51,
+                                                    "offset": 50
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 51,
+                                            "offset": 50
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 51,
+                                    "offset": 50
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "isEmpty",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "isEmpty",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLatBounds#isEmpty"
+            }
+        ],
+        "events": [],
+        "static": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Converts an array to a ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 24,
+                                            "offset": 23
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "LngLatBounds",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 24,
+                                            "offset": 23
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 38,
+                                            "offset": 37
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " object.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 38,
+                                            "offset": 37
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 46,
+                                            "offset": 45
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 46,
+                                    "offset": 45
+                                },
+                                "indent": []
+                            }
+                        },
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "If a ",
+                                    "position": {
+                                        "start": {
+                                            "line": 3,
+                                            "column": 1,
+                                            "offset": 47
+                                        },
+                                        "end": {
+                                            "line": 3,
+                                            "column": 6,
+                                            "offset": 52
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "LngLatBounds",
+                                    "position": {
+                                        "start": {
+                                            "line": 3,
+                                            "column": 6,
+                                            "offset": 52
+                                        },
+                                        "end": {
+                                            "line": 3,
+                                            "column": 20,
+                                            "offset": 66
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " object is passed in, the function returns it unchanged.",
+                                    "position": {
+                                        "start": {
+                                            "line": 3,
+                                            "column": 20,
+                                            "offset": 66
+                                        },
+                                        "end": {
+                                            "line": 3,
+                                            "column": 76,
+                                            "offset": 122
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 3,
+                                    "column": 1,
+                                    "offset": 47
+                                },
+                                "end": {
+                                    "line": 3,
+                                    "column": 76,
+                                    "offset": 122
+                                },
+                                "indent": []
+                            }
+                        },
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Internally, the function calls ",
+                                    "position": {
+                                        "start": {
+                                            "line": 5,
+                                            "column": 1,
+                                            "offset": 124
+                                        },
+                                        "end": {
+                                            "line": 5,
+                                            "column": 32,
+                                            "offset": 155
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "LngLat#convert",
+                                    "position": {
+                                        "start": {
+                                            "line": 5,
+                                            "column": 32,
+                                            "offset": 155
+                                        },
+                                        "end": {
+                                            "line": 5,
+                                            "column": 48,
+                                            "offset": 171
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " to convert arrays to ",
+                                    "position": {
+                                        "start": {
+                                            "line": 5,
+                                            "column": 48,
+                                            "offset": 171
+                                        },
+                                        "end": {
+                                            "line": 5,
+                                            "column": 70,
+                                            "offset": 193
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "LngLat",
+                                    "position": {
+                                        "start": {
+                                            "line": 5,
+                                            "column": 70,
+                                            "offset": 193
+                                        },
+                                        "end": {
+                                            "line": 5,
+                                            "column": 78,
+                                            "offset": 201
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " values.",
+                                    "position": {
+                                        "start": {
+                                            "line": 5,
+                                            "column": 78,
+                                            "offset": 201
+                                        },
+                                        "end": {
+                                            "line": 5,
+                                            "column": 86,
+                                            "offset": 209
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 5,
+                                    "column": 1,
+                                    "offset": 124
+                                },
+                                "end": {
+                                    "line": 5,
+                                    "column": 86,
+                                    "offset": 209
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 5,
+                            "column": 86,
+                            "offset": 209
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": "An array of two coordinates to convert, or a `LngLatBounds` object to return.",
+                        "lineNumber": 7,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatBoundsLike"
+                        },
+                        "name": "input"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "A new `LngLatBounds` object, if a conversion occurred, or the original `LngLatBounds` object.",
+                        "lineNumber": 8,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatBounds"
+                        }
+                    },
+                    {
+                        "title": "example",
+                        "description": "var arr = [[-73.9876, 40.7661], [-73.9397, 40.8002]];\nvar llb = mapboxgl.LngLatBounds.convert(arr);\nllb;   // = LngLatBounds {_sw: LngLat {lng: -73.9876, lat: 40.7661}, _ne: LngLat {lng: -73.9397, lat: 40.8002}}",
+                        "lineNumber": 9
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 212,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 225,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 226,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 229,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat_bounds.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "var arr = [[-73.9876, 40.7661], [-73.9397, 40.8002]];\nvar llb = mapboxgl.LngLatBounds.convert(arr);\nllb;   // = LngLatBounds {_sw: LngLat {lng: -73.9876, lat: 40.7661}, _ne: LngLat {lng: -73.9397, lat: 40.8002}}"
+                    }
+                ],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "input",
+                        "lineNumber": 7,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "An array of two coordinates to convert, or a ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 46,
+                                                    "offset": 45
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "LngLatBounds",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 46,
+                                                    "offset": 45
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 60,
+                                                    "offset": 59
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " object to return.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 60,
+                                                    "offset": 59
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 78,
+                                                    "offset": 77
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 78,
+                                            "offset": 77
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 78,
+                                    "offset": 77
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatBoundsLike"
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "A new ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "LngLatBounds",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 21,
+                                                    "offset": 20
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " object, if a conversion occurred, or the original ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 21,
+                                                    "offset": 20
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 72,
+                                                    "offset": 71
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "LngLatBounds",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 72,
+                                                    "offset": 71
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 86,
+                                                    "offset": 85
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " object.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 86,
+                                                    "offset": 85
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 94,
+                                                    "offset": 93
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 94,
+                                            "offset": 93
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 94,
+                                    "offset": 93
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatBounds"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "convert",
+                "kind": "function",
+                "memberof": "LngLatBounds",
+                "scope": "static",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLatBounds",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "convert",
+                        "kind": "function",
+                        "scope": "static"
+                    }
+                ],
+                "namespace": "LngLatBounds.convert"
+            }
+        ]
+    },
+    "namespace": "LngLatBounds"
+}

@@ -1,0 +1,2465 @@
+{
+  "description": {
+    "type": "root",
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "A ",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "indent": []
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "GeolocateControl",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 3,
+                "offset": 2
+              },
+              "end": {
+                "line": 1,
+                "column": 21,
+                "offset": 20
+              },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " GeolocateControl 提供了一个按钮，使用浏览器自带的地理定位API，\n在地图上定位用户。",
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 21,
+                "offset": 20
+              },
+              "end": {
+                "line": 2,
+                "column": 35,
+                "offset": 117
+              },
+              "indent": [
+                1
+              ]
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 35,
+            "offset": 117
+          },
+          "indent": [
+            1
+          ]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "部分浏览器可能不支持地理定位功能，\n  也有部分用户禁用了浏览器的该功能。\n包括Chrome在内的现代浏览器，要求那些调用浏览器地理定位功能的网站使用HTTPS协议。\n如果浏览器的地理定位功能不可用，GeolocateControl按钮将不可见。",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 1,
+                "offset": 119
+              },
+              "end": {
+                "line": 8,
+                "column": 12,
+                "offset": 376
+              },
+              "indent": [
+                1,
+                1,
+                1,
+                1
+              ]
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 119
+          },
+          "end": {
+            "line": 8,
+            "column": 12,
+            "offset": 376
+          },
+          "indent": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "实际采用的缩放层级将取决于终端设备所提供定位服务的精度。",
+            "position": {
+              "start": {
+                "line": 10,
+                "column": 1,
+                "offset": 378
+              },
+              "end": {
+                "line": 10,
+                "column": 94,
+                "offset": 471
+              },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 10,
+            "column": 1,
+            "offset": 378
+          },
+          "end": {
+            "line": 10,
+            "column": 94,
+            "offset": 471
+          },
+          "indent": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": " GeolocateControl 支持两种模式。如果",
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 1,
+                "offset": 473
+              },
+              "end": {
+                "line": 12,
+                "column": 40,
+                "offset": 512
+              },
+              "indent": []
+            }
+          },
+            {
+            "type": "inlineCode",
+            "value": "trackUserLocation",
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 40,
+                "offset": 512
+              },
+              "end": {
+                "line": 12,
+                "column": 59,
+                "offset": 531
+              },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " 是 ",
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 59,
+                "offset": 531
+              },
+              "end": {
+                "line": 12,
+                "column": 63,
+                "offset": 535
+              },
+              "indent": []
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "false",
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 63,
+                "offset": 535
+              },
+              "end": {
+                "line": 12,
+                "column": 70,
+                "offset": 542
+              },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " (默认) 那么控件将变成一个按钮, 初次点击按钮会把地图的镜头设置为指向用户所在的位置。如果用户移动了，地图镜头状态不会更新。对桌面端用户来说这样是非常合适的。如果",
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 70,
+                "offset": 542
+              },
+              "end": {
+                "line": 12,
+                "column": 266,
+                "offset": 738
+              },
+              "indent": []
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "trackUserLocation",
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 266,
+                "offset": 738
+              },
+              "end": {
+                "line": 12,
+                "column": 285,
+                "offset": 757
+              },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": "是",
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 285,
+                "offset": 757
+              },
+              "end": {
+                "line": 12,
+                "column": 289,
+                "offset": 761
+              },
+              "indent": []
+            }
+          },
+          {
+            "type": "inlineCode",
+            "value": "true",
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 289,
+                "offset": 761
+              },
+              "end": {
+                "line": 12,
+                "column": 295,
+                "offset": 767
+              },
+              "indent": []
+            }
+          },
+          {
+            "type": "text",
+            "value": " 那么控件将变成一个切换按钮，当用户的位置处于活动状态时，将对其位置的更改进行主动监视。 在这个模式下，the GeolocateControl有三种状态：",
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 295,
+                "offset": 767
+              },
+              "end": {
+                "line": 12,
+                "column": 455,
+                "offset": 927
+              },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 12,
+            "column": 1,
+            "offset": 473
+          },
+          "end": {
+            "line": 12,
+            "column": 455,
+            "offset": 927
+          },
+          "indent": []
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "loose": false,
+        "children": [
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "active - 当用户的位置发生变化时，地图的相机焦点会自动更新，将其保持在地图的中心位置。",
+                    "position": {
+                      "start": {
+                        "line": 13,
+                        "column": 3,
+                        "offset": 930
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 122,
+                        "offset": 1049
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 13,
+                    "column": 3,
+                    "offset": 930
+                  },
+                  "end": {
+                    "line": 13,
+                    "column": 122,
+                    "offset": 1049
+                  },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 13,
+                "column": 1,
+                "offset": 928
+              },
+              "end": {
+                "line": 13,
+                "column": 122,
+                "offset": 1049
+              },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "passive - 用户的位置点会自动更新，但是地图的相机焦点不会变化。",
+                    "position": {
+                      "start": {
+                        "line": 14,
+                        "column": 3,
+                        "offset": 1052
+                      },
+                      "end": {
+                        "line": 14,
+                        "column": 90,
+                        "offset": 1139
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 14,
+                    "column": 3,
+                    "offset": 1052
+                  },
+                  "end": {
+                    "line": 14,
+                    "column": 90,
+                    "offset": 1139
+                  },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 14,
+                "column": 1,
+                "offset": 1050
+              },
+              "end": {
+                "line": 14,
+                "column": 90,
+                "offset": 1139
+              },
+              "indent": []
+            }
+          },
+          {
+            "type": "listItem",
+            "loose": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "disabled",
+                    "position": {
+                      "start": {
+                        "line": 15,
+                        "column": 3,
+                        "offset": 1142
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 11,
+                        "offset": 1150
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 15,
+                    "column": 3,
+                    "offset": 1142
+                  },
+                  "end": {
+                    "line": 15,
+                    "column": 11,
+                    "offset": 1150
+                  },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 15,
+                "column": 1,
+                "offset": 1140
+              },
+              "end": {
+                "line": 15,
+                "column": 11,
+                "offset": 1150
+              },
+              "indent": []
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 13,
+            "column": 1,
+            "offset": 928
+          },
+          "end": {
+            "line": 15,
+            "column": 11,
+            "offset": 1150
+          },
+          "indent": [
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 15,
+        "column": 11,
+        "offset": 1150
+      }
+    }
+  },
+  "tags": [
+    {
+      "title": "implements",
+      "description": null,
+      "lineNumber": 17,
+      "type": {
+        "type": "NameExpression",
+        "name": "IControl"
+      }
+    },
+    {
+      "title": "param",
+      "description": null,
+      "lineNumber": 18,
+      "type": {
+        "type": "OptionalType",
+        "expression": {
+          "type": "NameExpression",
+          "name": "Object"
+        }
+      },
+      "name": "options"
+    },
+    {
+      "title": "param",
+      "description": "地理定位 API [PositionOptions](https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions) 对象。",
+      "lineNumber": 19,
+      "type": {
+        "type": "OptionalType",
+        "expression": {
+          "type": "NameExpression",
+          "name": "Object"
+        }
+      },
+      "name": "options.positionOptions",
+      "default": "{enableHighAccuracy:false,timeout:6000}"
+    },
+    {
+      "title": "param",
+      "description": "当地图平移缩放到用户位置时，使用[`fitBounds`](#map#fitbounds)这个可选对象。默认把`maxZoom`的值设置成15，来限制地图的最大缩放精度。",
+      "lineNumber": 20,
+      "type": {
+        "type": "OptionalType",
+        "expression": {
+          "type": "NameExpression",
+          "name": "Object"
+        }
+      },
+      "name": "options.fitBoundsOptions",
+      "default": "{maxZoom:15}"
+    },
+    {
+      "title": "param",
+      "description": "如果是 `true`，Geolocate控件变成一个切换按钮，当激活时，地图将在用户位置发生更改时接收到更新。",
+      "lineNumber": 21,
+      "type": {
+        "type": "OptionalType",
+        "expression": {
+          "type": "NameExpression",
+          "name": "Object"
+        }
+      },
+      "name": "options.trackUserLocation",
+      "default": "false"
+    },
+    {
+      "title": "param",
+      "description": "默认情况下，地图会在用户所在位置上显示一个点。设置`false`时禁用该功能。",
+      "lineNumber": 22,
+      "type": {
+        "type": "OptionalType",
+        "expression": {
+          "type": "NameExpression",
+          "name": "Object"
+        }
+      },
+      "name": "options.showUserLocation",
+      "default": "true"
+    },
+    {
+      "title": "example",
+      "description": "map.addControl(new mapboxgl.GeolocateControl({\n    positionOptions: {\n        enableHighAccuracy: true\n    },\n    trackUserLocation: true\n}));",
+      "lineNumber": 24
+    },
+    {
+      "title": "see",
+      "description": "[Locate the user](https://www.mapbox.com/mapbox-gl-js/example/locate-user/)",
+      "lineNumber": 31
+    }
+  ],
+  "loc": {
+    "start": {
+      "line": 57,
+      "column": 0
+    },
+    "end": {
+      "line": 89,
+      "column": 3
+    }
+  },
+  "context": {
+    "loc": {
+      "start": {
+        "line": 90,
+        "column": 0
+      },
+      "end": {
+        "line": 416,
+        "column": 1
+      }
+    },
+    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/control/geolocate_control.js",
+    "github": {
+      "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/control/geolocate_control.js#L90-L416",
+      "path": "src/ui/control/geolocate_control.js"
+    }
+  },
+  "augments": [
+    {
+      "title": "augments",
+      "name": "Evented"
+    }
+  ],
+  "examples": [
+    {
+      "description": "map.addControl(new mapboxgl.GeolocateControl({\n    positionOptions: {\n        enableHighAccuracy: true\n    },\n    trackUserLocation: true\n}));"
+    }
+  ],
+  "params": [
+    {
+      "title": "param",
+      "name": "options",
+      "lineNumber": 18,
+      "type": {
+        "type": "OptionalType",
+        "expression": {
+          "type": "NameExpression",
+          "name": "Object"
+        }
+      },
+      "properties": [
+        {
+          "title": "param",
+          "name": "options.positionOptions",
+          "lineNumber": 19,
+          "description": {
+            "type": "root",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "A Geolocation API ",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 19,
+                        "offset": 18
+                      },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions",
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "PositionOptions",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 20,
+                            "offset": 19
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 35,
+                            "offset": 34
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 19,
+                        "offset": 18
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 102,
+                        "offset": 101
+                      },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " 对象.",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 102,
+                        "offset": 101
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 110,
+                        "offset": 109
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 110,
+                    "offset": 109
+                  },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 110,
+                "offset": 109
+              }
+            }
+          },
+          "type": {
+            "type": "NameExpression",
+            "name": "Object"
+          },
+          "default": "{enableHighAccuracy:false,timeout:6000}"
+        },
+        {
+          "title": "param",
+          "name": "options.fitBoundsOptions",
+          "lineNumber": 20,
+          "description": {
+            "type": "root",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "A ",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 3,
+                        "offset": 2
+                      },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "title": null,
+                    "url": "#map#fitbounds",
+                    "children": [
+                      {
+                        "type": "inlineCode",
+                        "value": "fitBounds",
+                        "position": {
+                          "start": {
+                            "line": 1,
+                            "column": 4,
+                            "offset": 3
+                          },
+                          "end": {
+                            "line": 1,
+                            "column": 15,
+                            "offset": 14
+                          },
+                          "indent": []
+                        }
+                      }
+                    ],
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 3,
+                        "offset": 2
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 32,
+                        "offset": 31
+                      },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " 当地图平移缩放到用户位置时，使用这个可选对象。默认是把",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 32,
+                        "offset": 31
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 137,
+                        "offset": 136
+                      },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "maxZoom",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 137,
+                        "offset": 136
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 146,
+                        "offset": 145
+                      },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": "设置成15，来限制地图的最大缩放精度。",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 146,
+                        "offset": 145
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 219,
+                        "offset": 218
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 219,
+                    "offset": 218
+                  },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 219,
+                "offset": 218
+              }
+            }
+          },
+          "type": {
+            "type": "NameExpression",
+            "name": "Object"
+          },
+          "default": "{maxZoom:15}"
+        },
+        {
+          "title": "param",
+          "name": "options.trackUserLocation",
+          "lineNumber": 21,
+          "description": {
+            "type": "root",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "If ",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 4,
+                        "offset": 3
+                      },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "true",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 4,
+                        "offset": 3
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 10,
+                        "offset": 9
+                      },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": "Geolocate控件变成一个切换按钮，当激活时，地图将在用户位置发生更改时接收到更新。",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 10,
+                        "offset": 9
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 139,
+                        "offset": 138
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 139,
+                    "offset": 138
+                  },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 139,
+                "offset": 138
+              }
+            }
+          },
+          "type": {
+            "type": "NameExpression",
+            "name": "Object"
+          },
+          "default": "false"
+        },
+        {
+          "title": "param",
+          "name": "options.showUserLocation",
+          "lineNumber": 22,
+          "description": {
+            "type": "root",
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "默认情况下，地图会在用户所在位置上显示一个点。设置为",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 74,
+                        "offset": 73
+                      },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "inlineCode",
+                    "value": "false",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 74,
+                        "offset": 73
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 81,
+                        "offset": 80
+                      },
+                      "indent": []
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "value": " 禁用。",
+                    "position": {
+                      "start": {
+                        "line": 1,
+                        "column": 81,
+                        "offset": 80
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 93,
+                        "offset": 92
+                      },
+                      "indent": []
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 93,
+                    "offset": 92
+                  },
+                  "indent": []
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 93,
+                "offset": 92
+              }
+            }
+          },
+          "type": {
+            "type": "NameExpression",
+            "name": "Object"
+          },
+          "default": "true"
+        }
+      ]
+    }
+  ],
+  "properties": [],
+  "returns": [],
+  "sees": [
+    {
+      "type": "root",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://www.mapbox.com/mapbox-gl-js/example/locate-user/",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "定位用户",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 2,
+                      "offset": 1
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 17,
+                      "offset": 16
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 76,
+                  "offset": 75
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 76,
+              "offset": 75
+            },
+            "indent": []
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 76,
+          "offset": 75
+        }
+      }
+    }
+  ],
+  "throws": [],
+  "todos": [],
+  "name": "GeolocateControl",
+  "kind": "class",
+  "path": [
+    {
+      "name": "GeolocateControl",
+      "kind": "class"
+    }
+  ],
+  "members": {
+    "global": [],
+    "inner": [],
+    "instance": [
+      {
+        "description": {
+          "type": "root",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "触发地理定位",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 22,
+                      "offset": 21
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 22,
+                  "offset": 21
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 22,
+              "offset": 21
+            }
+          }
+        },
+        "tags": [
+          {
+            "title": "returns",
+            "description": "如果在控件加入地图前调用，返回 `false` ，否则返回`true`。",
+            "lineNumber": 3,
+            "type": {
+              "type": "NameExpression",
+              "name": "boolean"
+            }
+          }
+        ],
+        "loc": {
+          "start": {
+            "line": 309,
+            "column": 4
+          },
+          "end": {
+            "line": 313,
+            "column": 7
+          }
+        },
+        "context": {
+          "loc": {
+            "start": {
+              "line": 314,
+              "column": 4
+            },
+            "end": {
+              "line": 403,
+              "column": 5
+            }
+          },
+          "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/control/geolocate_control.js",
+          "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/control/geolocate_control.js#L314-L403",
+            "path": "src/ui/control/geolocate_control.js"
+          }
+        },
+        "augments": [],
+        "examples": [],
+        "params": [],
+        "properties": [],
+        "returns": [
+          {
+            "description": {
+              "type": "root",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Returns ",
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 9,
+                          "offset": 8
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "false",
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 9,
+                          "offset": 8
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 16,
+                          "offset": 15
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " 如果在控件加入地图前调用，否则返回",
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 16,
+                          "offset": 15
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 80,
+                          "offset": 79
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "true",
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 80,
+                          "offset": 79
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 86,
+                          "offset": 85
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": "。",
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 86,
+                          "offset": 85
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 87,
+                          "offset": 86
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 87,
+                      "offset": 86
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 87,
+                  "offset": 86
+                }
+              }
+            },
+            "title": "returns",
+            "type": {
+              "type": "NameExpression",
+              "name": "boolean"
+            }
+          }
+        ],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "name": "trigger",
+        "kind": "function",
+        "memberof": "GeolocateControl",
+        "scope": "instance",
+        "members": {
+          "global": [],
+          "inner": [],
+          "instance": [],
+          "events": [],
+          "static": []
+        },
+        "path": [
+          {
+            "name": "GeolocateControl",
+            "kind": "class"
+          },
+          {
+            "name": "trigger",
+            "kind": "function",
+            "scope": "instance"
+          }
+        ],
+        "namespace": "GeolocateControl#trigger"
+      }
+    ],
+    "events": [
+      {
+        "description": {
+          "type": "root",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "在每次Geolocation API获取的位置更新时触发，返回值为success。",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 73,
+                      "offset": 72
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 73,
+                  "offset": 72
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 73,
+              "offset": 72
+            }
+          }
+        },
+        "tags": [
+          {
+            "title": "event",
+            "description": "geolocate",
+            "lineNumber": 3
+          },
+          {
+            "title": "memberof",
+            "description": "GeolocateControl",
+            "lineNumber": 4
+          },
+          {
+            "title": "instance",
+            "description": null,
+            "lineNumber": 5
+          },
+          {
+            "title": "property",
+            "description": "返回的 [Position](https://developer.mozilla.org/en-US/docs/Web/API/Position) 对象来自[Geolocation.getCurrentPosition()](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) 或者 [Geolocation.watchPosition()](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition)的回调。",
+            "lineNumber": 6,
+            "type": {
+              "type": "NameExpression",
+              "name": "Position"
+            },
+            "name": "data"
+          }
+        ],
+        "loc": {
+          "start": {
+            "line": 437,
+            "column": 0
+          },
+          "end": {
+            "line": 445,
+            "column": 3
+          }
+        },
+        "context": {
+          "loc": {
+            "start": {
+              "line": 418,
+              "column": 0
+            },
+            "end": {
+              "line": 418,
+              "column": 32
+            }
+          },
+          "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/control/geolocate_control.js",
+          "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/control/geolocate_control.js#L418-L418",
+            "path": "src/ui/control/geolocate_control.js"
+          }
+        },
+        "augments": [],
+        "examples": [],
+        "params": [],
+        "properties": [
+          {
+            "title": "property",
+            "name": "data",
+            "lineNumber": 6,
+            "description": {
+              "type": "root",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "返回的 ",
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 14,
+                          "offset": 13
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Position",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Position",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 15,
+                              "offset": 14
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 23,
+                              "offset": 22
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 14,
+                          "offset": 13
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 83,
+                          "offset": 82
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " 来自回调的对象",
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 83,
+                          "offset": 82
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 112,
+                          "offset": 111
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Geolocation.getCurrentPosition()",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 113,
+                              "offset": 112
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 145,
+                              "offset": 144
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 112,
+                          "offset": 111
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 227,
+                          "offset": 226
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " or ",
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 227,
+                          "offset": 226
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 231,
+                          "offset": 230
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Geolocation.watchPosition()",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 232,
+                              "offset": 231
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 259,
+                              "offset": 258
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 231,
+                          "offset": 230
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 336,
+                          "offset": 335
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": ".",
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 336,
+                          "offset": 335
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 337,
+                          "offset": 336
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 337,
+                      "offset": 336
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 337,
+                  "offset": 336
+                }
+              }
+            },
+            "type": {
+              "type": "NameExpression",
+              "name": "Position"
+            }
+          }
+        ],
+        "returns": [],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "kind": "event",
+        "name": "geolocate",
+        "memberof": "GeolocateControl",
+        "scope": "instance",
+        "members": {
+          "global": [],
+          "inner": [],
+          "instance": [],
+          "events": [],
+          "static": []
+        },
+        "path": [
+          {
+            "name": "GeolocateControl",
+            "kind": "class"
+          },
+          {
+            "name": "geolocate",
+            "kind": "event",
+            "scope": "instance"
+          }
+        ],
+        "namespace": "GeolocateControl.event:geolocate"
+      },
+      {
+        "description": {
+          "type": "root",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "在每次Geolocation API获取的位置更新时触发，返回值为error。",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 74,
+                      "offset": 73
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 74,
+                  "offset": 73
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 74,
+              "offset": 73
+            }
+          }
+        },
+        "tags": [
+          {
+            "title": "event",
+            "description": "error",
+            "lineNumber": 3
+          },
+          {
+            "title": "memberof",
+            "description": "GeolocateControl",
+            "lineNumber": 4
+          },
+          {
+            "title": "instance",
+            "description": null,
+            "lineNumber": 5
+          },
+          {
+            "title": "property",
+            "description": "返回的[PositionError](https://developer.mozilla.org/en-US/docs/Web/API/PositionError) 对象来自于[Geolocation.getCurrentPosition()](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) or [Geolocation.watchPosition()](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition)的回调。",
+            "lineNumber": 6,
+            "type": {
+              "type": "NameExpression",
+              "name": "PositionError"
+            },
+            "name": "data"
+          }
+        ],
+        "loc": {
+          "start": {
+            "line": 447,
+            "column": 0
+          },
+          "end": {
+            "line": 455,
+            "column": 3
+          }
+        },
+        "context": {
+          "loc": {
+            "start": {
+              "line": 418,
+              "column": 0
+            },
+            "end": {
+              "line": 418,
+              "column": 32
+            }
+          },
+          "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/control/geolocate_control.js",
+          "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/control/geolocate_control.js#L418-L418",
+            "path": "src/ui/control/geolocate_control.js"
+          }
+        },
+        "augments": [],
+        "examples": [],
+        "params": [],
+        "properties": [
+          {
+            "title": "property",
+            "name": "data",
+            "lineNumber": 6,
+            "description": {
+              "type": "root",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "返回的 ",
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 1,
+                          "offset": 0
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 14,
+                          "offset": 13
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://developer.mozilla.org/en-US/docs/Web/API/PositionError",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "PositionError",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 15,
+                              "offset": 14
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 28,
+                              "offset": 27
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 14,
+                          "offset": 13
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 93,
+                          "offset": 92
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " 来自回调的对象",
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 93,
+                          "offset": 92
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 122,
+                          "offset": 121
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Geolocation.getCurrentPosition()",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 123,
+                              "offset": 122
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 155,
+                              "offset": 154
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 122,
+                          "offset": 121
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 237,
+                          "offset": 236
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " 或 ",
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 237,
+                          "offset": 236
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 241,
+                          "offset": 240
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Geolocation.watchPosition()",
+                          "position": {
+                            "start": {
+                              "line": 1,
+                              "column": 242,
+                              "offset": 241
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 269,
+                              "offset": 268
+                            },
+                            "indent": []
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 241,
+                          "offset": 240
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 346,
+                          "offset": 345
+                        },
+                        "indent": []
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": "。",
+                      "position": {
+                        "start": {
+                          "line": 1,
+                          "column": 346,
+                          "offset": 345
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 347,
+                          "offset": 346
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 347,
+                      "offset": 346
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 347,
+                  "offset": 346
+                }
+              }
+            },
+            "type": {
+              "type": "NameExpression",
+              "name": "PositionError"
+            }
+          }
+        ],
+        "returns": [],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "kind": "event",
+        "name": "error",
+        "memberof": "GeolocateControl",
+        "scope": "instance",
+        "members": {
+          "global": [],
+          "inner": [],
+          "instance": [],
+          "events": [],
+          "static": []
+        },
+        "path": [
+          {
+            "name": "GeolocateControl",
+            "kind": "class"
+          },
+          {
+            "name": "error",
+            "kind": "event",
+            "scope": "instance"
+          }
+        ],
+        "namespace": "GeolocateControl.event:error"
+      },
+      {
+        "description": {
+          "type": "root",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "该事件当 Geolocate控件的状态锁定为active时触发。有两种情况：在控件首次为用户成功获得 Geolocation API的定位时会锁定为active状态(随后冒泡Geolocate事件)；当用户在Geolocate控件为background状态时点击按钮，该控件会使用最后一个已知的位置点作为地图中心并进入active锁定模式(只有用户的位置发生更改，才会冒泡geolocate事件)" ,
+                  "position": {
+                  "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 415,
+                      "offset": 414
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 415,
+                  "offset": 414
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 415,
+              "offset": 414
+            }
+          }
+        },
+        "tags": [
+          {
+            "title": "event",
+            "description": "trackuserlocationstart",
+            "lineNumber": 3
+          },
+          {
+            "title": "memberof",
+            "description": "GeolocateControl",
+            "lineNumber": 4
+          },
+          {
+            "title": "instance",
+            "description": null,
+            "lineNumber": 5
+          }
+        ],
+        "loc": {
+          "start": {
+            "line": 457,
+            "column": 0
+          },
+          "end": {
+            "line": 464,
+            "column": 3
+          }
+        },
+        "context": {
+          "loc": {
+            "start": {
+              "line": 418,
+              "column": 0
+            },
+            "end": {
+              "line": 418,
+              "column": 32
+            }
+          },
+          "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/control/geolocate_control.js",
+          "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/control/geolocate_control.js#L418-L418",
+            "path": "src/ui/control/geolocate_control.js"
+          }
+        },
+        "augments": [],
+        "examples": [],
+        "params": [],
+        "properties": [],
+        "returns": [],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "kind": "event",
+        "name": "trackuserlocationstart",
+        "memberof": "GeolocateControl",
+        "scope": "instance",
+        "members": {
+          "global": [],
+          "inner": [],
+          "instance": [],
+          "events": [],
+          "static": []
+        },
+        "path": [
+          {
+            "name": "GeolocateControl",
+            "kind": "class"
+          },
+          {
+            "name": "trackuserlocationstart",
+            "kind": "event",
+            "scope": "instance"
+          }
+        ],
+        "namespace": "GeolocateControl.event:trackuserlocationstart"
+      },
+      {
+        "description": {
+          "type": "root",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "用户在锁定活动点期间改变镜头时Geolocate控件会变成background状态，这时会触发该事件。该效果只有当 trackUserLocation 为 true时才会应用。在 background 的状态时 ,地图上的点位会随着位置的变化而更新，但是地图的镜头则不会。",
+                  "position": {
+                    "start": {
+                      "line": 1,
+                      "column": 1,
+                      "offset": 0
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 296,
+                      "offset": 295
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 296,
+                  "offset": 295
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 296,
+              "offset": 295
+            }
+          }
+        },
+        "tags": [
+          {
+            "title": "event",
+            "description": "trackuserlocationend",
+            "lineNumber": 3
+          },
+          {
+            "title": "memberof",
+            "description": "GeolocateControl",
+            "lineNumber": 4
+          },
+          {
+            "title": "instance",
+            "description": null,
+            "lineNumber": 5
+          }
+        ],
+        "loc": {
+          "start": {
+            "line": 466,
+            "column": 0
+          },
+          "end": {
+            "line": 473,
+            "column": 3
+          }
+        },
+        "context": {
+          "loc": {
+            "start": {
+              "line": 418,
+              "column": 0
+            },
+            "end": {
+              "line": 418,
+              "column": 32
+            }
+          },
+          "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/control/geolocate_control.js",
+          "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/control/geolocate_control.js#L418-L418",
+            "path": "src/ui/control/geolocate_control.js"
+          }
+        },
+        "augments": [],
+        "examples": [],
+        "params": [],
+        "properties": [],
+        "returns": [],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "kind": "event",
+        "name": "trackuserlocationend",
+        "memberof": "GeolocateControl",
+        "scope": "instance",
+        "members": {
+          "global": [],
+          "inner": [],
+          "instance": [],
+          "events": [],
+          "static": []
+        },
+        "path": [
+          {
+            "name": "GeolocateControl",
+            "kind": "class"
+          },
+          {
+            "name": "trackuserlocationend",
+            "kind": "event",
+            "scope": "instance"
+          }
+        ],
+        "namespace": "GeolocateControl.event:trackuserlocationend"
+      }
+    ],
+    "static": []
+  },
+  "namespace": "GeolocateControl"
+}

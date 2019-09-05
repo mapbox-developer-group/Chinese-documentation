@@ -1,0 +1,672 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "A ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 3,
+                                "offset": 2
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "NavigationControl",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 3,
+                                "offset": 2
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 22,
+                                "offset": 21
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " 控件包括缩放按钮和一个指南针.",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 22,
+                                "offset": 21
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 67,
+                                "offset": 66
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 67,
+                        "offset": 66
+                    },
+                    "indent": []
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 1,
+                "column": 67,
+                "offset": 66
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "implements",
+            "description": null,
+            "lineNumber": 3,
+            "type": {
+                "type": "NameExpression",
+                "name": "IControl"
+            }
+        },
+        {
+            "title": "param",
+            "description": null,
+            "lineNumber": 4,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "name": "options"
+        },
+        {
+            "title": "param",
+            "description": "如果值为`true`则引入一个指南针按钮.",
+            "lineNumber": 5,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Boolean"
+                }
+            },
+            "name": "options.showCompass",
+            "default": "true"
+        },
+        {
+            "title": "param",
+            "description": "如果值为`true`则引入放大和缩小按钮.",
+            "lineNumber": 6,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Boolean"
+                }
+            },
+            "name": "options.showZoom",
+            "default": "true"
+        },
+        {
+            "title": "param",
+            "description": "如果值为`true`则会通过旋转指南针的Y轴来显示俯仰角度.",
+            "lineNumber": 7,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Boolean"
+                }
+            },
+            "name": "options.visualizePitch",
+            "default": "false"
+        },
+        {
+            "title": "example",
+            "description": "var nav = new mapboxgl.NavigationControl();\nmap.addControl(nav, 'top-left');",
+            "lineNumber": 8
+        },
+        {
+            "title": "see",
+            "description": "[显示地图导航控件](https://www.mapbox.com/mapbox-gl-js/example/navigation/)",
+            "lineNumber": 11
+        },
+        {
+            "title": "see",
+            "description": "[添加第三方矢量切片数据源](https://www.mapbox.com/mapbox-gl-js/example/third-party/)",
+            "lineNumber": 12
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 21,
+            "column": 0
+        },
+        "end": {
+            "line": 34,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 35,
+                "column": 0
+            },
+            "end": {
+                "line": 142,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/control/navigation_control.js",
+        "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/control/navigation_control.js#L35-L142",
+            "path": "src/ui/control/navigation_control.js"
+        }
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "var nav = new mapboxgl.NavigationControl();\nmap.addControl(nav, 'top-left');"
+        }
+    ],
+    "params": [
+        {
+            "title": "param",
+            "name": "options",
+            "lineNumber": 4,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "properties": [
+                {
+                    "title": "param",
+                    "name": "options.showCompass",
+                    "lineNumber": 5,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "If ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 4,
+                                                "offset": 3
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "true",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 4,
+                                                "offset": 3
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 10,
+                                                "offset": 9
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " 引入指南针按钮.",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 10,
+                                                "offset": 9
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 42,
+                                                "offset": 41
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 42,
+                                        "offset": 41
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 42,
+                                "offset": 41
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "NameExpression",
+                        "name": "Boolean"
+                    },
+                    "default": "true"
+                },
+                {
+                    "title": "param",
+                    "name": "options.showZoom",
+                    "lineNumber": 6,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "If ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 4,
+                                                "offset": 3
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "true",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 4,
+                                                "offset": 3
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 10,
+                                                "offset": 9
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " 引入放大和缩小按钮.",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 10,
+                                                "offset": 9
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 57,
+                                                "offset": 56
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 57,
+                                        "offset": 56
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 57,
+                                "offset": 56
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "NameExpression",
+                        "name": "Boolean"
+                    },
+                    "default": "true"
+                },
+                {
+                    "title": "param",
+                    "name": "options.visualizePitch",
+                    "lineNumber": 7,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "If ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 4,
+                                                "offset": 3
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "true",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 4,
+                                                "offset": 3
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 10,
+                                                "offset": 9
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " 旋转指南针的Y轴来显示俯仰角度.",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 10,
+                                                "offset": 9
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 65,
+                                                "offset": 64
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 65,
+                                        "offset": 64
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 65,
+                                "offset": 64
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "NameExpression",
+                        "name": "Boolean"
+                    },
+                    "default": "false"
+                }
+            ]
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/example/navigation/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "显示地图导航控件",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 33,
+                                            "offset": 32
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 91,
+                                    "offset": 90
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 91,
+                            "offset": 90
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 91,
+                    "offset": 90
+                }
+            }
+        },
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/example/third-party/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "添加第三方矢量切片数据源",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 38,
+                                            "offset": 37
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 97,
+                                    "offset": 96
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 97,
+                            "offset": 96
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 97,
+                    "offset": 96
+                }
+            }
+        }
+    ],
+    "throws": [],
+    "todos": [],
+    "name": "NavigationControl",
+    "kind": "class",
+    "path": [
+        {
+            "name": "NavigationControl",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "NavigationControl"
+}

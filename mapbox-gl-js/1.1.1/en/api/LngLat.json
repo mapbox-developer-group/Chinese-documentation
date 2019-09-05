@@ -1,0 +1,2477 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "A ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 3,
+                                "offset": 2
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "LngLat",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 3,
+                                "offset": 2
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 11,
+                                "offset": 10
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " object represents a given longitude and latitude coordinate, measured in degrees.",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 11,
+                                "offset": 10
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 93,
+                                "offset": 92
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 93,
+                        "offset": 92
+                    },
+                    "indent": []
+                }
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Mapbox GL uses longitude, latitude coordinate order (as opposed to latitude, longitude) to match GeoJSON.",
+                        "position": {
+                            "start": {
+                                "line": 3,
+                                "column": 1,
+                                "offset": 94
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 106,
+                                "offset": 199
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 3,
+                        "column": 1,
+                        "offset": 94
+                    },
+                    "end": {
+                        "line": 3,
+                        "column": 106,
+                        "offset": 199
+                    },
+                    "indent": []
+                }
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Note that any Mapbox GL method that accepts a ",
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 1,
+                                "offset": 201
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 47,
+                                "offset": 247
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "LngLat",
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 47,
+                                "offset": 247
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 55,
+                                "offset": 255
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " object as an argument or option\ncan also accept an ",
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 55,
+                                "offset": 255
+                            },
+                            "end": {
+                                "line": 6,
+                                "column": 20,
+                                "offset": 307
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "Array",
+                        "position": {
+                            "start": {
+                                "line": 6,
+                                "column": 20,
+                                "offset": 307
+                            },
+                            "end": {
+                                "line": 6,
+                                "column": 27,
+                                "offset": 314
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " of two numbers and will perform an implicit conversion.\nThis flexible type is documented as ",
+                        "position": {
+                            "start": {
+                                "line": 6,
+                                "column": 27,
+                                "offset": 314
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 37,
+                                "offset": 407
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "url": "LngLatLike",
+                        "title": null,
+                        "jsdoc": true,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "LngLatLike"
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 37,
+                                "offset": 407
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 55,
+                                "offset": 425
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ".",
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 55,
+                                "offset": 425
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 56,
+                                "offset": 426
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 5,
+                        "column": 1,
+                        "offset": 201
+                    },
+                    "end": {
+                        "line": 7,
+                        "column": 56,
+                        "offset": 426
+                    },
+                    "indent": [
+                        1,
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 7,
+                "column": 56,
+                "offset": 426
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "param",
+            "description": "Longitude, measured in degrees.",
+            "lineNumber": 9,
+            "type": {
+                "type": "NameExpression",
+                "name": "number"
+            },
+            "name": "lng"
+        },
+        {
+            "title": "param",
+            "description": "Latitude, measured in degrees.",
+            "lineNumber": 10,
+            "type": {
+                "type": "NameExpression",
+                "name": "number"
+            },
+            "name": "lat"
+        },
+        {
+            "title": "example",
+            "description": "var ll = new mapboxgl.LngLat(-73.9749, 40.7736);",
+            "lineNumber": 11
+        },
+        {
+            "title": "see",
+            "description": "[Get coordinates of the mouse pointer](https://www.mapbox.com/mapbox-gl-js/example/mouse-position/)",
+            "lineNumber": 13
+        },
+        {
+            "title": "see",
+            "description": "[Display a popup](https://www.mapbox.com/mapbox-gl-js/example/popup/)",
+            "lineNumber": 14
+        },
+        {
+            "title": "see",
+            "description": "[Highlight features within a bounding box](https://www.mapbox.com/mapbox-gl-js/example/using-box-queryrenderedfeatures/)",
+            "lineNumber": 15
+        },
+        {
+            "title": "see",
+            "description": "[Create a timeline animation](https://www.mapbox.com/mapbox-gl-js/example/timeline-animation/)",
+            "lineNumber": 16
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 6,
+            "column": 0
+        },
+        "end": {
+            "line": 23,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 24,
+                "column": 0
+            },
+            "end": {
+                "line": 123,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat.js"
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "var ll = new mapboxgl.LngLat(-73.9749, 40.7736);"
+        }
+    ],
+    "params": [
+        {
+            "title": "param",
+            "name": "lng",
+            "lineNumber": 9,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Longitude, measured in degrees.",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 32,
+                                        "offset": 31
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 32,
+                                "offset": 31
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 32,
+                        "offset": 31
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "number"
+            }
+        },
+        {
+            "title": "param",
+            "name": "lat",
+            "lineNumber": 10,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Latitude, measured in degrees.",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 31,
+                                        "offset": 30
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 31,
+                                "offset": 30
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 31,
+                        "offset": 30
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "number"
+            }
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/example/mouse-position/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Get coordinates of the mouse pointer",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 38,
+                                            "offset": 37
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 100,
+                                    "offset": 99
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 100,
+                            "offset": 99
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 100,
+                    "offset": 99
+                }
+            }
+        },
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/example/popup/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Display a popup",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 17,
+                                            "offset": 16
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 70,
+                                    "offset": 69
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 70,
+                            "offset": 69
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 70,
+                    "offset": 69
+                }
+            }
+        },
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/example/using-box-queryrenderedfeatures/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Highlight features within a bounding box",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 42,
+                                            "offset": 41
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 121,
+                                    "offset": 120
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 121,
+                            "offset": 120
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 121,
+                    "offset": 120
+                }
+            }
+        },
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/example/timeline-animation/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Create a timeline animation",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 29,
+                                            "offset": 28
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 95,
+                                    "offset": 94
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 95,
+                            "offset": 94
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 95,
+                    "offset": 94
+                }
+            }
+        }
+    ],
+    "throws": [],
+    "todos": [],
+    "name": "LngLat",
+    "kind": "class",
+    "path": [
+        {
+            "name": "LngLat",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns a new ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 15,
+                                            "offset": 14
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "LngLat",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 15,
+                                            "offset": 14
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 23,
+                                            "offset": 22
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " object whose longitude is wrapped to the range (-180, 180).",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 23,
+                                            "offset": 22
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 83,
+                                            "offset": 82
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 83,
+                                    "offset": 82
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 83,
+                            "offset": 82
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The wrapped `LngLat` object.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    },
+                    {
+                        "title": "example",
+                        "description": "var ll = new mapboxgl.LngLat(286.0251, 40.7736);\nvar wrapped = ll.wrap();\nwrapped.lng; // = -73.9749",
+                        "lineNumber": 4
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 39,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 47,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 48,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 50,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "var ll = new mapboxgl.LngLat(286.0251, 40.7736);\nvar wrapped = ll.wrap();\nwrapped.lng; // = -73.9749"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The wrapped ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 13,
+                                                    "offset": 12
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "LngLat",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 13,
+                                                    "offset": 12
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 21,
+                                                    "offset": 20
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " object.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 21,
+                                                    "offset": 20
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 29,
+                                                    "offset": 28
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 29,
+                                            "offset": 28
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 29,
+                                    "offset": 28
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "wrap",
+                "kind": "function",
+                "memberof": "LngLat",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLat",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "wrap",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLat#wrap"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the coordinates represented as an array of two numbers.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 64,
+                                            "offset": 63
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 64,
+                                    "offset": 63
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 64,
+                            "offset": 63
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The coordinates represeted as an array of longitude and latitude.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "NameExpression",
+                                    "name": "number"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "example",
+                        "description": "var ll = new mapboxgl.LngLat(-73.9749, 40.7736);\nll.toArray(); // = [-73.9749, 40.7736]",
+                        "lineNumber": 4
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 52,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 59,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 60,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 62,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "var ll = new mapboxgl.LngLat(-73.9749, 40.7736);\nll.toArray(); // = [-73.9749, 40.7736]"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The coordinates represeted as an array of longitude and latitude.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 66,
+                                                    "offset": 65
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 66,
+                                            "offset": 65
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 66,
+                                    "offset": 65
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "NameExpression",
+                                    "name": "number"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "toArray",
+                "kind": "function",
+                "memberof": "LngLat",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLat",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "toArray",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLat#toArray"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the coordinates represent as a string.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 47,
+                                            "offset": 46
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 47,
+                                    "offset": 46
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 47,
+                            "offset": 46
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The coordinates represented as a string of the format `'LngLat(lng, lat)'`.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "string"
+                        }
+                    },
+                    {
+                        "title": "example",
+                        "description": "var ll = new mapboxgl.LngLat(-73.9749, 40.7736);\nll.toString(); // = \"LngLat(-73.9749, 40.7736)\"",
+                        "lineNumber": 4
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 64,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 71,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 72,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 74,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "var ll = new mapboxgl.LngLat(-73.9749, 40.7736);\nll.toString(); // = \"LngLat(-73.9749, 40.7736)\""
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The coordinates represented as a string of the format ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 55,
+                                                    "offset": 54
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "'LngLat(lng, lat)'",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 55,
+                                                    "offset": 54
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 75,
+                                                    "offset": 74
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": ".",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 75,
+                                                    "offset": 74
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 76,
+                                                    "offset": 75
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 76,
+                                            "offset": 75
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 76,
+                                    "offset": 75
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "string"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "toString",
+                "kind": "function",
+                "memberof": "LngLat",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLat",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "toString",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLat#toString"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns a ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 11,
+                                            "offset": 10
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "LngLatBounds",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 11,
+                                            "offset": 10
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 25,
+                                            "offset": 24
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " from the coordinates extended by a given ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 25,
+                                            "offset": 24
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 67,
+                                            "offset": 66
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "radius",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 67,
+                                            "offset": 66
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 75,
+                                            "offset": 74
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": ".",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 75,
+                                            "offset": 74
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 76,
+                                            "offset": 75
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 76,
+                                    "offset": 75
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 76,
+                            "offset": 75
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": "Distance in meters from the coordinates to extend the bounds.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "OptionalType",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "number"
+                            }
+                        },
+                        "name": "radius",
+                        "default": "0"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "A new `LngLatBounds` object representing the coordinates extended by the `radius`.",
+                        "lineNumber": 4,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatBounds"
+                        }
+                    },
+                    {
+                        "title": "example",
+                        "description": "var ll = new mapboxgl.LngLat(-73.9749, 40.7736);\nll.toBounds(100).toArray(); // = [[-73.97501862141328, 40.77351016847229], [-73.97478137858673, 40.77368983152771]]",
+                        "lineNumber": 5
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 76,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 84,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 85,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 92,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "var ll = new mapboxgl.LngLat(-73.9749, 40.7736);\nll.toBounds(100).toArray(); // = [[-73.97501862141328, 40.77351016847229], [-73.97478137858673, 40.77368983152771]]"
+                    }
+                ],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "radius",
+                        "lineNumber": 3,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "Distance in meters from the coordinates to extend the bounds.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 62,
+                                                    "offset": 61
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 62,
+                                            "offset": 61
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 62,
+                                    "offset": 61
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        },
+                        "default": "0"
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "A new ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "LngLatBounds",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 21,
+                                                    "offset": 20
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " object representing the coordinates extended by the ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 21,
+                                                    "offset": 20
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 74,
+                                                    "offset": 73
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "radius",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 74,
+                                                    "offset": 73
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 82,
+                                                    "offset": 81
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": ".",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 82,
+                                                    "offset": 81
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 83,
+                                                    "offset": 82
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 83,
+                                            "offset": 82
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 83,
+                                    "offset": 82
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatBounds"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "toBounds",
+                "kind": "function",
+                "memberof": "LngLat",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLat",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "toBounds",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "LngLat#toBounds"
+            }
+        ],
+        "events": [],
+        "static": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Converts an array of two numbers or an object with ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 52,
+                                            "offset": 51
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "lng",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 52,
+                                            "offset": 51
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 57,
+                                            "offset": 56
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " and ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 57,
+                                            "offset": 56
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 62,
+                                            "offset": 61
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "lat",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 62,
+                                            "offset": 61
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 67,
+                                            "offset": 66
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " or ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 67,
+                                            "offset": 66
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 71,
+                                            "offset": 70
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "lon",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 71,
+                                            "offset": 70
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 76,
+                                            "offset": 75
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " and ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 76,
+                                            "offset": 75
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 81,
+                                            "offset": 80
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "lat",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 81,
+                                            "offset": 80
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 86,
+                                            "offset": 85
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " properties\nto a ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 86,
+                                            "offset": 85
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 6,
+                                            "offset": 102
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "LngLat",
+                                    "position": {
+                                        "start": {
+                                            "line": 2,
+                                            "column": 6,
+                                            "offset": 102
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 14,
+                                            "offset": 110
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " object.",
+                                    "position": {
+                                        "start": {
+                                            "line": 2,
+                                            "column": 14,
+                                            "offset": 110
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 22,
+                                            "offset": 118
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 2,
+                                    "column": 22,
+                                    "offset": 118
+                                },
+                                "indent": [
+                                    1
+                                ]
+                            }
+                        },
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "If a ",
+                                    "position": {
+                                        "start": {
+                                            "line": 4,
+                                            "column": 1,
+                                            "offset": 120
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "column": 6,
+                                            "offset": 125
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "LngLat",
+                                    "position": {
+                                        "start": {
+                                            "line": 4,
+                                            "column": 6,
+                                            "offset": 125
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "column": 14,
+                                            "offset": 133
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " object is passed in, the function returns it unchanged.",
+                                    "position": {
+                                        "start": {
+                                            "line": 4,
+                                            "column": 14,
+                                            "offset": 133
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "column": 70,
+                                            "offset": 189
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 4,
+                                    "column": 1,
+                                    "offset": 120
+                                },
+                                "end": {
+                                    "line": 4,
+                                    "column": 70,
+                                    "offset": 189
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 4,
+                            "column": 70,
+                            "offset": 189
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": "An array of two numbers or object to convert, or a `LngLat` object to return.",
+                        "lineNumber": 6,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatLike"
+                        },
+                        "name": "input"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "A new `LngLat` object, if a conversion occurred, or the original `LngLat` object.",
+                        "lineNumber": 7,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    },
+                    {
+                        "title": "example",
+                        "description": "var arr = [-73.9749, 40.7736];\nvar ll = mapboxgl.LngLat.convert(arr);\nll;   // = LngLat {lng: -73.9749, lat: 40.7736}",
+                        "lineNumber": 8
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 94,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 106,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 107,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 122,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/geo/lng_lat.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "var arr = [-73.9749, 40.7736];\nvar ll = mapboxgl.LngLat.convert(arr);\nll;   // = LngLat {lng: -73.9749, lat: 40.7736}"
+                    }
+                ],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "input",
+                        "lineNumber": 6,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "An array of two numbers or object to convert, or a ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 52,
+                                                    "offset": 51
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "LngLat",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 52,
+                                                    "offset": 51
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 60,
+                                                    "offset": 59
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " object to return.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 60,
+                                                    "offset": 59
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 78,
+                                                    "offset": 77
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 78,
+                                            "offset": 77
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 78,
+                                    "offset": 77
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatLike"
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "A new ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "LngLat",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 15,
+                                                    "offset": 14
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " object, if a conversion occurred, or the original ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 15,
+                                                    "offset": 14
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 66,
+                                                    "offset": 65
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "LngLat",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 66,
+                                                    "offset": 65
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 74,
+                                                    "offset": 73
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " object.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 74,
+                                                    "offset": 73
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 82,
+                                                    "offset": 81
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 82,
+                                            "offset": 81
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 82,
+                                    "offset": 81
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "convert",
+                "kind": "function",
+                "memberof": "LngLat",
+                "scope": "static",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "LngLat",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "convert",
+                        "kind": "function",
+                        "scope": "static"
+                    }
+                ],
+                "namespace": "LngLat.convert"
+            }
+        ]
+    },
+    "namespace": "LngLat"
+}

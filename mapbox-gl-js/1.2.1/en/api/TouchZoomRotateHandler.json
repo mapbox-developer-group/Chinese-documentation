@@ -1,0 +1,985 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "The ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 5,
+                                "offset": 4
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "TouchZoomRotateHandler",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 5,
+                                "offset": 4
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 29,
+                                "offset": 28
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " allows the user to zoom and rotate the map by\npinching on a touchscreen.",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 29,
+                                "offset": 28
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 27,
+                                "offset": 101
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 27,
+                        "offset": 101
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 2,
+                "column": 27,
+                "offset": 101
+            }
+        }
+    },
+    "tags": [],
+    "loc": {
+        "start": {
+            "line": 21,
+            "column": 0
+        },
+        "end": {
+            "line": 24,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 25,
+                "column": 0
+            },
+            "end": {
+                "line": 287,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/touch_zoom_rotate.js"
+    },
+    "augments": [],
+    "examples": [],
+    "params": [
+        {
+            "title": "param",
+            "name": "map",
+            "lineNumber": 43,
+            "type": {
+                "type": "NameExpression",
+                "name": "Map"
+            }
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "constructorComment": {
+        "description": "",
+        "tags": [
+            {
+                "title": "private",
+                "description": null,
+                "lineNumber": 1
+            }
+        ],
+        "loc": {
+            "start": {
+                "line": 40,
+                "column": 4
+            },
+            "end": {
+                "line": 42,
+                "column": 7
+            }
+        },
+        "context": {
+            "loc": {
+                "start": {
+                    "line": 43,
+                    "column": 4
+                },
+                "end": {
+                    "line": 52,
+                    "column": 5
+                }
+            },
+            "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/touch_zoom_rotate.js",
+            "sortKey": "!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/index.js:00000003!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/map.js:00000011!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/bind_handlers.js:00000008!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/touch_zoom_rotate.js 00000043",
+            "code": "{\n    _map: Map;\n    _el: HTMLElement;\n    _enabled: boolean;\n    _aroundCenter: boolean;\n    _rotationDisabled: boolean;\n    _startVec: Point;\n    _startAround: LngLat;\n    _startScale: number;\n    _startBearing: number;\n    _gestureIntent: 'rotate' | 'zoom' | void;\n    _inertia: Array<[number, number, Point]>;\n    _lastTouchEvent: TouchEvent;\n    _frameId: ?TaskID;\n\n    /**\n     * @private\n     */\n    constructor(map: Map) {\n        this._map = map;\n        this._el = map.getCanvasContainer();\n\n        bindAll([\n            '_onMove',\n            '_onEnd',\n            '_onTouchFrame'\n        ], this);\n    }\n\n    /**\n     * Returns a Boolean indicating whether the \"pinch to rotate and zoom\" interaction is enabled.\n     *\n     * @returns {boolean} `true` if the \"pinch to rotate and zoom\" interaction is enabled.\n     */\n    isEnabled() {\n        return !!this._enabled;\n    }\n\n    /**\n     * Enables the \"pinch to rotate and zoom\" interaction.\n     *\n     * @param {Object} [options]\n     * @param {string} [options.around] If \"center\" is passed, map will zoom around the center\n     *\n     * @example\n     *   map.touchZoomRotate.enable();\n     * @example\n     *   map.touchZoomRotate.enable({ around: 'center' });\n     */\n    enable(options: ?{around?: 'center'}) {\n        if (this.isEnabled()) return;\n        this._el.classList.add('mapboxgl-touch-zoom-rotate');\n        this._enabled = true;\n        this._aroundCenter = !!options && options.around === 'center';\n    }\n\n    /**\n     * Disables the \"pinch to rotate and zoom\" interaction.\n     *\n     * @example\n     *   map.touchZoomRotate.disable();\n     */\n    disable() {\n        if (!this.isEnabled()) return;\n        this._el.classList.remove('mapboxgl-touch-zoom-rotate');\n        this._enabled = false;\n    }\n\n    /**\n     * Disables the \"pinch to rotate\" interaction, leaving the \"pinch to zoom\"\n     * interaction enabled.\n     *\n     * @example\n     *   map.touchZoomRotate.disableRotation();\n     */\n    disableRotation() {\n        this._rotationDisabled = true;\n    }\n\n    /**\n     * Enables the \"pinch to rotate\" interaction.\n     *\n     * @example\n     *   map.touchZoomRotate.enable();\n     *   map.touchZoomRotate.enableRotation();\n     */\n    enableRotation() {\n        this._rotationDisabled = false;\n    }\n\n    onStart(e: TouchEvent) {\n        if (!this.isEnabled()) return;\n        if (e.touches.length !== 2) return;\n\n        const p0 = DOM.mousePos(this._el, e.touches[0]),\n            p1 = DOM.mousePos(this._el, e.touches[1]),\n            center = p0.add(p1).div(2);\n\n        this._startVec = p0.sub(p1);\n        this._startAround = this._map.transform.pointLocation(center);\n        this._gestureIntent = undefined;\n        this._inertia = [];\n\n        DOM.addEventListener(window.document, 'touchmove', this._onMove, {passive: false});\n        DOM.addEventListener(window.document, 'touchend', this._onEnd);\n    }\n\n    _getTouchEventData(e: TouchEvent) {\n        const p0 = DOM.mousePos(this._el, e.touches[0]),\n            p1 = DOM.mousePos(this._el, e.touches[1]);\n\n        const vec = p0.sub(p1);\n        return {\n            vec,\n            center: p0.add(p1).div(2),\n            scale: vec.mag() / this._startVec.mag(),\n            bearing: this._rotationDisabled ? 0 : vec.angleWith(this._startVec) * 180 / Math.PI\n        };\n    }\n\n    _onMove(e: TouchEvent) {\n        if (e.touches.length !== 2) return;\n\n        const {vec, scale, bearing} = this._getTouchEventData(e);\n\n        // Determine 'intent' by whichever threshold is surpassed first,\n        // then keep that state for the duration of this gesture.\n        if (!this._gestureIntent) {\n            // when rotation is disabled, any scale change triggers the zoom gesture to start\n            const scalingSignificantly = (this._rotationDisabled && scale !== 1) || (Math.abs(1 - scale) > significantScaleThreshold),\n                rotatingSignificantly = (Math.abs(bearing) > significantRotateThreshold);\n\n            if (rotatingSignificantly) {\n                this._gestureIntent = 'rotate';\n            } else if (scalingSignificantly) {\n                this._gestureIntent = 'zoom';\n            }\n\n            if (this._gestureIntent) {\n                this._map.fire(new Event(`${this._gestureIntent}start`, { originalEvent: e }));\n                this._map.fire(new Event('movestart', { originalEvent: e }));\n                this._startVec = vec;\n            }\n        }\n\n        this._lastTouchEvent = e;\n        if (!this._frameId) {\n            this._frameId = this._map._requestRenderFrame(this._onTouchFrame);\n        }\n\n        e.preventDefault();\n    }\n\n    _onTouchFrame() {\n        this._frameId = null;\n\n        const gestureIntent = this._gestureIntent;\n        if (!gestureIntent) return;\n\n        const tr = this._map.transform;\n\n        if (!this._startScale) {\n            this._startScale = tr.scale;\n            this._startBearing = tr.bearing;\n        }\n\n        const {center, bearing, scale} = this._getTouchEventData(this._lastTouchEvent);\n        const around = tr.pointLocation(center);\n        const aroundPoint = tr.locationPoint(around);\n\n        if (gestureIntent === 'rotate') {\n            tr.bearing = this._startBearing + bearing;\n        }\n\n        tr.zoom = tr.scaleZoom(this._startScale * scale);\n\n        tr.setLocationAtPoint(this._startAround, aroundPoint);\n\n        this._map.fire(new Event(gestureIntent, {originalEvent: this._lastTouchEvent}));\n        this._map.fire(new Event('move', {originalEvent: this._lastTouchEvent}));\n\n        this._drainInertiaBuffer();\n        this._inertia.push([browser.now(), scale, center]);\n    }\n\n    _onEnd(e: TouchEvent) {\n        DOM.removeEventListener(window.document, 'touchmove', this._onMove, {passive: false});\n        DOM.removeEventListener(window.document, 'touchend', this._onEnd);\n\n        const gestureIntent = this._gestureIntent;\n        const startScale = this._startScale;\n\n        if (this._frameId) {\n            this._map._cancelRenderFrame(this._frameId);\n            this._frameId = null;\n        }\n        delete this._gestureIntent;\n        delete this._startScale;\n        delete this._startBearing;\n        delete this._lastTouchEvent;\n\n        if (!gestureIntent) return;\n\n        this._map.fire(new Event(`${gestureIntent}end`, { originalEvent: e }));\n\n        this._drainInertiaBuffer();\n\n        const inertia = this._inertia,\n            map = this._map;\n\n        if (inertia.length < 2) {\n            map.snapToNorth({}, { originalEvent: e });\n            return;\n        }\n\n        const last = inertia[inertia.length - 1],\n            first = inertia[0],\n            lastScale = map.transform.scaleZoom(startScale * last[1]),\n            firstScale = map.transform.scaleZoom(startScale * first[1]),\n            scaleOffset = lastScale - firstScale,\n            scaleDuration = (last[0] - first[0]) / 1000,\n            p = last[2];\n\n        if (scaleDuration === 0 || lastScale === firstScale) {\n            map.snapToNorth({}, { originalEvent: e });\n            return;\n        }\n\n        // calculate scale/s speed and adjust for increased initial animation speed when easing\n        let speed = scaleOffset * inertiaLinearity / scaleDuration; // scale/s\n\n        if (Math.abs(speed) > inertiaMaxSpeed) {\n            if (speed > 0) {\n                speed = inertiaMaxSpeed;\n            } else {\n                speed = -inertiaMaxSpeed;\n            }\n        }\n\n        const duration = Math.abs(speed / (inertiaDeceleration * inertiaLinearity)) * 1000;\n        let targetScale = lastScale + speed * duration / 2000;\n\n        if (targetScale < 0) {\n            targetScale = 0;\n        }\n\n        map.easeTo({\n            zoom: targetScale,\n            duration,\n            easing: inertiaEasing,\n            around: this._aroundCenter ? map.getCenter() : map.unproject(p),\n            noMoveStart: true\n        }, { originalEvent: e });\n    }\n\n    _drainInertiaBuffer() {\n        const inertia = this._inertia,\n            now = browser.now(),\n            cutoff = 160; // msec\n\n        while (inertia.length > 2 && now - inertia[0][0] > cutoff) inertia.shift();\n    }\n}"
+        },
+        "augments": [],
+        "errors": [],
+        "examples": [],
+        "params": [],
+        "properties": [],
+        "returns": [],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "access": "private"
+    },
+    "name": "TouchZoomRotateHandler",
+    "kind": "class",
+    "path": [
+        {
+            "name": "TouchZoomRotateHandler",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns a Boolean indicating whether the \"pinch to rotate and zoom\" interaction is enabled.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 92,
+                                            "offset": 91
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 92,
+                                    "offset": 91
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 92,
+                            "offset": 91
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "`true` if the \"pinch to rotate and zoom\" interaction is enabled.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 54,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 58,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 59,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 61,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/touch_zoom_rotate.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "true",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " if the \"pinch to rotate and zoom\" interaction is enabled.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 65,
+                                                    "offset": 64
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 65,
+                                            "offset": 64
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 65,
+                                    "offset": 64
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "isEnabled",
+                "kind": "function",
+                "memberof": "TouchZoomRotateHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "TouchZoomRotateHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "isEnabled",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "TouchZoomRotateHandler#isEnabled"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Enables the \"pinch to rotate and zoom\" interaction.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 52,
+                                            "offset": 51
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 52,
+                                    "offset": 51
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 52,
+                            "offset": 51
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": null,
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "OptionalType",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Object"
+                            }
+                        },
+                        "name": "options"
+                    },
+                    {
+                        "title": "param",
+                        "description": "If \"center\" is passed, map will zoom around the center",
+                        "lineNumber": 4,
+                        "type": {
+                            "type": "OptionalType",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "string"
+                            }
+                        },
+                        "name": "options.around"
+                    },
+                    {
+                        "title": "example",
+                        "description": "map.touchZoomRotate.enable();",
+                        "lineNumber": 6
+                    },
+                    {
+                        "title": "example",
+                        "description": "map.touchZoomRotate.enable({ around: 'center' });",
+                        "lineNumber": 8
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 63,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 73,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 74,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 79,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/touch_zoom_rotate.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "map.touchZoomRotate.enable();"
+                    },
+                    {
+                        "description": "map.touchZoomRotate.enable({ around: 'center' });"
+                    }
+                ],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "options",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "OptionalType",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Object"
+                            }
+                        },
+                        "properties": [
+                            {
+                                "title": "param",
+                                "name": "options.around",
+                                "lineNumber": 4,
+                                "description": {
+                                    "type": "root",
+                                    "children": [
+                                        {
+                                            "type": "paragraph",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "If \"center\" is passed, map will zoom around the center",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 1,
+                                                            "column": 1,
+                                                            "offset": 0
+                                                        },
+                                                        "end": {
+                                                            "line": 1,
+                                                            "column": 55,
+                                                            "offset": 54
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 55,
+                                                    "offset": 54
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 55,
+                                            "offset": 54
+                                        }
+                                    }
+                                },
+                                "type": {
+                                    "type": "OptionalType",
+                                    "expression": {
+                                        "type": "NameExpression",
+                                        "name": "string"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "enable",
+                "kind": "function",
+                "memberof": "TouchZoomRotateHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "TouchZoomRotateHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "enable",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "TouchZoomRotateHandler#enable"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Disables the \"pinch to rotate and zoom\" interaction.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 53,
+                                            "offset": 52
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 53,
+                                    "offset": 52
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 53,
+                            "offset": 52
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "example",
+                        "description": "map.touchZoomRotate.disable();",
+                        "lineNumber": 3
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 81,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 86,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 87,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 91,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/touch_zoom_rotate.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "map.touchZoomRotate.disable();"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "disable",
+                "kind": "function",
+                "memberof": "TouchZoomRotateHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "TouchZoomRotateHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "disable",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "TouchZoomRotateHandler#disable"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Disables the \"pinch to rotate\" interaction, leaving the \"pinch to zoom\"\ninteraction enabled.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 21,
+                                            "offset": 92
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 2,
+                                    "column": 21,
+                                    "offset": 92
+                                },
+                                "indent": [
+                                    1
+                                ]
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 2,
+                            "column": 21,
+                            "offset": 92
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "example",
+                        "description": "map.touchZoomRotate.disableRotation();",
+                        "lineNumber": 4
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 93,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 99,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 100,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 102,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/touch_zoom_rotate.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "map.touchZoomRotate.disableRotation();"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "disableRotation",
+                "kind": "function",
+                "memberof": "TouchZoomRotateHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "TouchZoomRotateHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "disableRotation",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "TouchZoomRotateHandler#disableRotation"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Enables the \"pinch to rotate\" interaction.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 43,
+                                            "offset": 42
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 43,
+                                    "offset": 42
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 43,
+                            "offset": 42
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "example",
+                        "description": "map.touchZoomRotate.enable();\n  map.touchZoomRotate.enableRotation();",
+                        "lineNumber": 3
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 104,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 110,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 111,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 113,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/touch_zoom_rotate.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "map.touchZoomRotate.enable();\n  map.touchZoomRotate.enableRotation();"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "enableRotation",
+                "kind": "function",
+                "memberof": "TouchZoomRotateHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "TouchZoomRotateHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "enableRotation",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "TouchZoomRotateHandler#enableRotation"
+            }
+        ],
+        "events": [],
+        "static": []
+    },
+    "namespace": "TouchZoomRotateHandler"
+}

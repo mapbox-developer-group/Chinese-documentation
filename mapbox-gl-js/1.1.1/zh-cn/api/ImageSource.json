@@ -1,0 +1,1093 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "包含图像的数据源。\n（请参阅 ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 10,
+                                "offset": 44
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "title": null,
+                        "url": "https://www.mapbox.com/mapbox-gl-style-spec/#sources-image",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Style Specification",
+                                "position": {
+                                    "start": {
+                                        "line": 2,
+                                        "column": 11,
+                                        "offset": 45
+                                    },
+                                    "end": {
+                                        "line": 2,
+                                        "column": 30,
+                                        "offset": 64
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 10,
+                                "offset": 44
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 91,
+                                "offset": 125
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " 查看有关选项的详细文档。）",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 91,
+                                "offset": 125
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 131,
+                                "offset": 165
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 131,
+                        "offset": 165
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 2,
+                "column": 131,
+                "offset": 165
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "example",
+            "description": "// 添加至地图\nmap.addSource('some id', {\n   type: 'image',\n   url: 'https://www.mapbox.com/images/foo.png',\n   coordinates: [\n       [-76.54, 39.18],\n       [-76.52, 39.18],\n       [-76.52, 39.17],\n       [-76.54, 39.17]\n   ]\n});\n\n// 更新坐标点\nvar mySource = map.getSource('some id');\nmySource.setCoordinates([\n    [-76.54335737228394, 39.18579907229748],\n    [-76.52803659439087, 39.1838364847587],\n    [-76.5295386314392, 39.17683392507606],\n    [-76.54520273208618, 39.17876344106642]\n]);\n\n// 同时更新图像地址和坐标点\nmySource.updateImage({\n   url: 'https://www.mapbox.com/images/bar.png',\n   coordinates: [\n       [-76.54335737228394, 39.18579907229748],\n       [-76.52803659439087, 39.1838364847587],\n       [-76.5295386314392, 39.17683392507606],\n       [-76.54520273208618, 39.17876344106642]\n   ]\n})\n\nmap.removeSource('some id');  // 移除",
+            "lineNumber": 4
+        },
+        {
+            "title": "see",
+            "description": "[Add an image](https://www.mapbox.com/mapbox-gl-js/example/image-on-a-map/)",
+            "lineNumber": 38
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 27,
+            "column": 0
+        },
+        "end": {
+            "line": 66,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 67,
+                "column": 0
+            },
+            "end": {
+                "line": 266,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/source/image_source.js",
+        "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/source/image_source.js#L67-L266",
+            "path": "src/source/image_source.js"
+        }
+    },
+    "augments": [
+        {
+            "title": "augments",
+            "name": "Evented"
+        }
+    ],
+    "examples": [
+        {
+            "description": "// 添加至地图\nmap.addSource('some id', {\n   type: 'image',\n   url: 'https://www.mapbox.com/images/foo.png',\n   coordinates: [\n       [-76.54, 39.18],\n       [-76.52, 39.18],\n       [-76.52, 39.17],\n       [-76.54, 39.17]\n   ]\n});\n\n// 更新坐标点\nvar mySource = map.getSource('some id');\nmySource.setCoordinates([\n    [-76.54335737228394, 39.18579907229748],\n    [-76.52803659439087, 39.1838364847587],\n    [-76.5295386314392, 39.17683392507606],\n    [-76.54520273208618, 39.17876344106642]\n]);\n\n// 同时更新图像地址和坐标点\nmySource.updateImage({\n   url: 'https://www.mapbox.com/images/bar.png',\n   coordinates: [\n       [-76.54335737228394, 39.18579907229748],\n       [-76.52803659439087, 39.1838364847587],\n       [-76.5295386314392, 39.17683392507606],\n       [-76.54520273208618, 39.17876344106642]\n   ]\n})\n\nmap.removeSource('some id');  // 移除"
+        }
+    ],
+    "params": [
+        {
+            "title": "param",
+            "name": "id",
+            "lineNumber": 90,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            }
+        },
+        {
+            "title": "param",
+            "name": "options",
+            "lineNumber": 90,
+            "type": {
+                "type": "UnionType",
+                "elements": [
+                    {
+                        "type": "NameExpression",
+                        "name": "ImageSourceSpecification"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "VideoSourceSpecification"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "CanvasSourceSpecification"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "param",
+            "name": "dispatcher",
+            "lineNumber": 90,
+            "type": {
+                "type": "NameExpression",
+                "name": "Dispatcher"
+            }
+        },
+        {
+            "title": "param",
+            "name": "eventedParent",
+            "lineNumber": 90,
+            "type": {
+                "type": "NameExpression",
+                "name": "Evented"
+            }
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/example/image-on-a-map/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "添加图像",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 14,
+                                            "offset": 13
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 76,
+                                    "offset": 75
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 76,
+                            "offset": 75
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 76,
+                    "offset": 75
+                }
+            }
+        }
+    ],
+    "throws": [],
+    "todos": [],
+    "constructorComment": {
+        "description": "",
+        "tags": [
+            {
+                "title": "private",
+                "description": null,
+                "lineNumber": 1
+            }
+        ],
+        "loc": {
+            "start": {
+                "line": 87,
+                "column": 4
+            },
+            "end": {
+                "line": 89,
+                "column": 7
+            }
+        },
+        "context": {
+            "loc": {
+                "start": {
+                    "line": 90,
+                    "column": 4
+                },
+                "end": {
+                    "line": 105,
+                    "column": 5
+                }
+            },
+            "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/source/image_source.js",
+            "sortKey": "!/Users/mapboxchina/projects/mapbox-gl-js/src/index.js:00000011!/Users/mapboxchina/projects/mapbox-gl-js/src/style/style.js:00000015!/Users/mapboxchina/projects/mapbox-gl-js/src/source/source.js:00000007!/Users/mapboxchina/projects/mapbox-gl-js/src/source/image_source.js 00000090",
+            "code": "{\n    type: string;\n    id: string;\n    minzoom: number;\n    maxzoom: number;\n    tileSize: number;\n    url: string;\n\n    coordinates: Coordinates;\n    tiles: {[string]: Tile};\n    options: any;\n    dispatcher: Dispatcher;\n    map: Map;\n    texture: Texture | null;\n    image: HTMLImageElement;\n    tileID: CanonicalTileID;\n    _boundsArray: RasterBoundsArray;\n    boundsBuffer: VertexBuffer;\n    boundsSegments: SegmentVector;\n\n    /**\n     * @private\n     */\n    constructor(id: string, options: ImageSourceSpecification | VideoSourceSpecification | CanvasSourceSpecification, dispatcher: Dispatcher, eventedParent: Evented) {\n        super();\n        this.id = id;\n        this.dispatcher = dispatcher;\n        this.coordinates = options.coordinates;\n\n        this.type = 'image';\n        this.minzoom = 0;\n        this.maxzoom = 22;\n        this.tileSize = 512;\n        this.tiles = {};\n\n        this.setEventedParent(eventedParent);\n\n        this.options = options;\n    }\n\n    load(newCoordinates?: Coordinates, successCallback?: () => void) {\n        this.fire(new Event('dataloading', {dataType: 'source'}));\n\n        this.url = this.options.url;\n\n        getImage(this.map._requestManager.transformRequest(this.url, ResourceType.Image), (err, image) => {\n            if (err) {\n                this.fire(new ErrorEvent(err));\n            } else if (image) {\n                this.image = image;\n                if (newCoordinates) {\n                    this.coordinates = newCoordinates;\n                }\n                if (successCallback) {\n                    successCallback();\n                }\n                this._finishLoading();\n            }\n        });\n    }\n\n    /**\n     * 更新图像URL和坐标(可选)。为了避免更换后图像闪烁,\n     * 将栅格图层上的 `raster-fade-duration` 画笔属性设置为0。\n     *\n     * @param {Object} options\n     * @param {string} [options.url] 所需的图像URL。\n     * @param {Array<Array<number>>} [options.coordinates] 4个地理坐标,\n     *   以经纬度数数组的形式表示，定义了图像的四个角。\n     *   坐标从图像的左上角起，呈顺时针方向。\n     *    坐标集合不一定非要为一个矩形。\n     * @returns {ImageSource} this\n     */\n    updateImage(options: {url: string, coordinates?: Coordinates}) {\n        if (!this.image || !options.url) {\n            return this;\n        }\n        this.options.url = options.url;\n        this.load(options.coordinates, () => { this.texture = null; });\n        return this;\n    }\n\n    _finishLoading() {\n        if (this.map) {\n            this.setCoordinates(this.coordinates);\n            this.fire(new Event('data', {dataType: 'source', sourceDataType: 'metadata'}));\n        }\n    }\n\n    onAdd(map: Map) {\n        this.map = map;\n        this.load();\n    }\n\n    /**\n     * 设置图像的坐标并重新渲染地图。\n     *\n     * @param {Array<Array<number>>} coordinates 4个地理坐标,\n     *   以经纬度数数组的形式表示，定义了图像的四个角。\n     *   坐标从图像的左上角起，呈顺时针方向。\n     *   坐标集合不一定非要为一个矩形。\n     * @returns {ImageSource} this\n     */\n    setCoordinates(coordinates: Coordinates) {\n        this.coordinates = coordinates;\n\n        // Calculate which mercator tile is suitable for rendering the video in\n        // and create a buffer with the corner coordinates. These coordinates\n        // may be outside the tile, because raster tiles aren't clipped when rendering.\n\n        // transform the geo coordinates into (zoom 0) tile space coordinates\n        const cornerCoords = coordinates.map(MercatorCoordinate.fromLngLat);\n\n        // Compute the coordinates of the tile we'll use to hold this image's\n        // render data\n        this.tileID = getCoordinatesCenterTileID(cornerCoords);\n\n        // Constrain min/max zoom to our tile's zoom level in order to force\n        // SourceCache to request this tile (no matter what the map's zoom\n        // level)\n        this.minzoom = this.maxzoom = this.tileID.z;\n\n        // Transform the corner coordinates into the coordinate space of our\n        // tile.\n        const tileCoords = cornerCoords.map((coord) => this.tileID.getTilePoint(coord)._round());\n\n        this._boundsArray = new RasterBoundsArray();\n        this._boundsArray.emplaceBack(tileCoords[0].x, tileCoords[0].y, 0, 0);\n        this._boundsArray.emplaceBack(tileCoords[1].x, tileCoords[1].y, EXTENT, 0);\n        this._boundsArray.emplaceBack(tileCoords[3].x, tileCoords[3].y, 0, EXTENT);\n        this._boundsArray.emplaceBack(tileCoords[2].x, tileCoords[2].y, EXTENT, EXTENT);\n\n        if (this.boundsBuffer) {\n            this.boundsBuffer.destroy();\n            delete this.boundsBuffer;\n        }\n\n        this.fire(new Event('data', {dataType:'source', sourceDataType: 'content'}));\n        return this;\n    }\n\n    prepare() {\n        if (Object.keys(this.tiles).length === 0 || !this.image) {\n            return;\n        }\n\n        const context = this.map.painter.context;\n        const gl = context.gl;\n\n        if (!this.boundsBuffer) {\n            this.boundsBuffer = context.createVertexBuffer(this._boundsArray, rasterBoundsAttributes.members);\n        }\n\n        if (!this.boundsSegments) {\n            this.boundsSegments = SegmentVector.simpleSegment(0, 0, 4, 2);\n        }\n\n        if (!this.texture) {\n            this.texture = new Texture(context, this.image, gl.RGBA);\n            this.texture.bind(gl.LINEAR, gl.CLAMP_TO_EDGE);\n        }\n\n        for (const w in this.tiles) {\n            const tile = this.tiles[w];\n            if (tile.state !== 'loaded') {\n                tile.state = 'loaded';\n                tile.texture = this.texture;\n            }\n        }\n    }\n\n    loadTile(tile: Tile, callback: Callback<void>) {\n        // We have a single tile -- whoose coordinates are this.tileID -- that\n        // covers the image we want to render.  If that's the one being\n        // requested, set it up with the image; otherwise, mark the tile as\n        // `errored` to indicate that we have no data for it.\n        // If the world wraps, we may have multiple \"wrapped\" copies of the\n        // single tile.\n        if (this.tileID && this.tileID.equals(tile.tileID.canonical)) {\n            this.tiles[String(tile.tileID.wrap)] = tile;\n            tile.buckets = {};\n            callback(null);\n        } else {\n            tile.state = 'errored';\n            callback(null);\n        }\n    }\n\n    serialize(): Object {\n        return {\n            type: 'image',\n            url: this.options.url,\n            coordinates: this.coordinates\n        };\n    }\n\n    hasTransition() {\n        return false;\n    }\n}"
+        },
+        "augments": [],
+        "errors": [],
+        "examples": [],
+        "params": [],
+        "properties": [],
+        "returns": [],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "access": "private"
+    },
+    "name": "ImageSource",
+    "kind": "class",
+    "path": [
+        {
+            "name": "ImageSource",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "更新图像URL和坐标(可选)。为了避免更换后图像闪烁,\n将栅格图层上的 ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 9,
+                                            "offset": 112
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "raster-fade-duration",
+                                    "position": {
+                                        "start": {
+                                            "line": 2,
+                                            "column": 9,
+                                            "offset": 112
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 31,
+                                            "offset": 134
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " 画笔属性设置为0。",
+                                    "position": {
+                                        "start": {
+                                            "line": 2,
+                                            "column": 31,
+                                            "offset": 134
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 72,
+                                            "offset": 175
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 2,
+                                    "column": 72,
+                                    "offset": 175
+                                },
+                                "indent": [
+                                    1
+                                ]
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 2,
+                            "column": 72,
+                            "offset": 175
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": null,
+                        "lineNumber": 4,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Object"
+                        },
+                        "name": "options"
+                    },
+                    {
+                        "title": "param",
+                        "description": "所需的图像URL。",
+                        "lineNumber": 5,
+                        "type": {
+                            "type": "OptionalType",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "string"
+                            }
+                        },
+                        "name": "options.url"
+                    },
+                    {
+                        "title": "param",
+                        "description": "4个地理坐标,\n  以经纬度数数组的形式表示，定义了图像的四个角。\n 坐标从图像的左上角起，呈顺时针方向。\n  坐标集合不一定非要为一个矩形。",
+                        "lineNumber": 6,
+                        "type": {
+                            "type": "OptionalType",
+                            "expression": {
+                                "type": "TypeApplication",
+                                "expression": {
+                                    "type": "NameExpression",
+                                    "name": "Array"
+                                },
+                                "applications": [
+                                    {
+                                        "type": "TypeApplication",
+                                        "expression": {
+                                            "type": "NameExpression",
+                                            "name": "Array"
+                                        },
+                                        "applications": [
+                                            {
+                                                "type": "NameExpression",
+                                                "name": "number"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "name": "options.coordinates"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "this",
+                        "lineNumber": 10,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "ImageSource"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 128,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 139,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 140,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 147,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/source/image_source.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/source/image_source.js#L140-L147",
+                        "path": "src/source/image_source.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "options",
+                        "lineNumber": 4,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Object"
+                        },
+                        "properties": [
+                            {
+                                "title": "param",
+                                "name": "options.url",
+                                "lineNumber": 5,
+                                "description": {
+                                    "type": "root",
+                                    "children": [
+                                        {
+                                            "type": "paragraph",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "所需的图像URL。",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 1,
+                                                            "column": 1,
+                                                            "offset": 0
+                                                        },
+                                                        "end": {
+                                                            "line": 1,
+                                                            "column": 20,
+                                                            "offset": 19
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 20,
+                                                    "offset": 19
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 20,
+                                            "offset": 19
+                                        }
+                                    }
+                                },
+                                "type": {
+                                    "type": "OptionalType",
+                                    "expression": {
+                                        "type": "NameExpression",
+                                        "name": "string"
+                                    }
+                                }
+                            },
+                            {
+                                "title": "param",
+                                "name": "options.coordinates",
+                                "lineNumber": 6,
+                                "description": {
+                                    "type": "root",
+                                    "children": [
+                                        {
+                                            "type": "paragraph",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "4个地理坐标,\n  以经纬度数数组的形式表示，定义了图像的四个角。\n 坐标从图像的左上角起，呈顺时针方向。\n  坐标集合不一定非要为一个矩形。",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 1,
+                                                            "column": 1,
+                                                            "offset": 0
+                                                        },
+                                                        "end": {
+                                                            "line": 4,
+                                                            "column": 45,
+                                                            "offset": 265
+                                                        },
+                                                        "indent": [
+                                                            1,
+                                                            1,
+                                                            1
+                                                        ]
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 4,
+                                                    "column": 45,
+                                                    "offset": 265
+                                                },
+                                                "indent": [
+                                                    1,
+                                                    1,
+                                                    1
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "column": 45,
+                                            "offset": 265
+                                        }
+                                    }
+                                },
+                                "type": {
+                                    "type": "OptionalType",
+                                    "expression": {
+                                        "type": "TypeApplication",
+                                        "expression": {
+                                            "type": "NameExpression",
+                                            "name": "Array"
+                                        },
+                                        "applications": [
+                                            {
+                                                "type": "TypeApplication",
+                                                "expression": {
+                                                    "type": "NameExpression",
+                                                    "name": "Array"
+                                                },
+                                                "applications": [
+                                                    {
+                                                        "type": "NameExpression",
+                                                        "name": "number"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 5,
+                                                    "offset": 4
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 5,
+                                            "offset": 4
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 5,
+                                    "offset": 4
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "ImageSource"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "updateImage",
+                "kind": "function",
+                "memberof": "ImageSource",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "ImageSource",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "updateImage",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "ImageSource#updateImage"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "设置图像的坐标并重新渲染地图。",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 53,
+                                            "offset": 52
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 53,
+                                    "offset": 52
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 53,
+                            "offset": 52
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": "4个地理坐标,\n  以经纬度数数组的形式表示，定义了图像的四个角。\n 坐标从图像的左上角起，呈顺时针方向。\n  坐标集合不一定非要为一个矩形。",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "TypeApplication",
+                                    "expression": {
+                                        "type": "NameExpression",
+                                        "name": "Array"
+                                    },
+                                    "applications": [
+                                        {
+                                            "type": "NameExpression",
+                                            "name": "number"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "name": "coordinates"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "this",
+                        "lineNumber": 7,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "ImageSource"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 161,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 169,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 170,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 206,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/source/image_source.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/source/image_source.js#L170-L206",
+                        "path": "src/source/image_source.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "coordinates",
+                        "lineNumber": 3,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "4个地理坐标,\n  以经纬度数数组的形式表示，定义了图像的四个角。\n 坐标从图像的左上角起，呈顺时针方向。\n  坐标集合不一定非要为一个矩形。",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 4,
+                                                    "column": 45,
+                                                    "offset": 265
+                                                },
+                                                "indent": [
+                                                    1,
+                                                    1,
+                                                    1
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "column": 45,
+                                            "offset": 265
+                                        },
+                                        "indent": [
+                                            1,
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 4,
+                                    "column": 45,
+                                    "offset": 265
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "TypeApplication",
+                                    "expression": {
+                                        "type": "NameExpression",
+                                        "name": "Array"
+                                    },
+                                    "applications": [
+                                        {
+                                            "type": "NameExpression",
+                                            "name": "number"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 5,
+                                                    "offset": 4
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 5,
+                                            "offset": 4
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 5,
+                                    "offset": 4
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "ImageSource"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "setCoordinates",
+                "kind": "function",
+                "memberof": "ImageSource",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "ImageSource",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "setCoordinates",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "ImageSource#setCoordinates"
+            }
+        ],
+        "events": [],
+        "static": []
+    },
+    "namespace": "ImageSource"
+}

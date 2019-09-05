@@ -1,0 +1,2441 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "A ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 3,
+                                "offset": 2
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "GeolocateControl",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 3,
+                                "offset": 2
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 21,
+                                "offset": 20
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " control provides a button that uses the browser's geolocation\nAPI to locate the user on the map.",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 21,
+                                "offset": 20
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 35,
+                                "offset": 117
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 35,
+                        "offset": 117
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Not all browsers support geolocation,\nand some users may disable the feature. Geolocation support for modern\nbrowsers including Chrome requires sites to be served over HTTPS. If\ngeolocation support is not available, the GeolocateControl will not\nbe visible.",
+                        "position": {
+                            "start": {
+                                "line": 4,
+                                "column": 1,
+                                "offset": 119
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 12,
+                                "offset": 376
+                            },
+                            "indent": [
+                                1,
+                                1,
+                                1,
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 4,
+                        "column": 1,
+                        "offset": 119
+                    },
+                    "end": {
+                        "line": 8,
+                        "column": 12,
+                        "offset": 376
+                    },
+                    "indent": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "The zoom level applied will depend on the accuracy of the geolocation provided by the device.",
+                        "position": {
+                            "start": {
+                                "line": 10,
+                                "column": 1,
+                                "offset": 378
+                            },
+                            "end": {
+                                "line": 10,
+                                "column": 94,
+                                "offset": 471
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 10,
+                        "column": 1,
+                        "offset": 378
+                    },
+                    "end": {
+                        "line": 10,
+                        "column": 94,
+                        "offset": 471
+                    },
+                    "indent": []
+                }
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "The GeolocateControl has two modes. If ",
+                        "position": {
+                            "start": {
+                                "line": 12,
+                                "column": 1,
+                                "offset": 473
+                            },
+                            "end": {
+                                "line": 12,
+                                "column": 40,
+                                "offset": 512
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "trackUserLocation",
+                        "position": {
+                            "start": {
+                                "line": 12,
+                                "column": 40,
+                                "offset": 512
+                            },
+                            "end": {
+                                "line": 12,
+                                "column": 59,
+                                "offset": 531
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " is ",
+                        "position": {
+                            "start": {
+                                "line": 12,
+                                "column": 59,
+                                "offset": 531
+                            },
+                            "end": {
+                                "line": 12,
+                                "column": 63,
+                                "offset": 535
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "false",
+                        "position": {
+                            "start": {
+                                "line": 12,
+                                "column": 63,
+                                "offset": 535
+                            },
+                            "end": {
+                                "line": 12,
+                                "column": 70,
+                                "offset": 542
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " (default) the control acts as a button, which when pressed will set the map's camera to target the user location. If the user moves, the map won't update. This is most suited for the desktop. If ",
+                        "position": {
+                            "start": {
+                                "line": 12,
+                                "column": 70,
+                                "offset": 542
+                            },
+                            "end": {
+                                "line": 12,
+                                "column": 266,
+                                "offset": 738
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "trackUserLocation",
+                        "position": {
+                            "start": {
+                                "line": 12,
+                                "column": 266,
+                                "offset": 738
+                            },
+                            "end": {
+                                "line": 12,
+                                "column": 285,
+                                "offset": 757
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " is ",
+                        "position": {
+                            "start": {
+                                "line": 12,
+                                "column": 285,
+                                "offset": 757
+                            },
+                            "end": {
+                                "line": 12,
+                                "column": 289,
+                                "offset": 761
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "true",
+                        "position": {
+                            "start": {
+                                "line": 12,
+                                "column": 289,
+                                "offset": 761
+                            },
+                            "end": {
+                                "line": 12,
+                                "column": 295,
+                                "offset": 767
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " the control acts as a toggle button that when active the user's location is actively monitored for changes. In this mode the GeolocateControl has three states:",
+                        "position": {
+                            "start": {
+                                "line": 12,
+                                "column": 295,
+                                "offset": 767
+                            },
+                            "end": {
+                                "line": 12,
+                                "column": 455,
+                                "offset": 927
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 12,
+                        "column": 1,
+                        "offset": 473
+                    },
+                    "end": {
+                        "line": 12,
+                        "column": 455,
+                        "offset": 927
+                    },
+                    "indent": []
+                }
+            },
+            {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "loose": false,
+                "children": [
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "active - the map's camera automatically updates as the user's location changes, keeping the location dot in the center.",
+                                        "position": {
+                                            "start": {
+                                                "line": 13,
+                                                "column": 3,
+                                                "offset": 930
+                                            },
+                                            "end": {
+                                                "line": 13,
+                                                "column": 122,
+                                                "offset": 1049
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 13,
+                                        "column": 3,
+                                        "offset": 930
+                                    },
+                                    "end": {
+                                        "line": 13,
+                                        "column": 122,
+                                        "offset": 1049
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 13,
+                                "column": 1,
+                                "offset": 928
+                            },
+                            "end": {
+                                "line": 13,
+                                "column": 122,
+                                "offset": 1049
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "passive - the user's location dot automatically updates, but the map's camera does not.",
+                                        "position": {
+                                            "start": {
+                                                "line": 14,
+                                                "column": 3,
+                                                "offset": 1052
+                                            },
+                                            "end": {
+                                                "line": 14,
+                                                "column": 90,
+                                                "offset": 1139
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 14,
+                                        "column": 3,
+                                        "offset": 1052
+                                    },
+                                    "end": {
+                                        "line": 14,
+                                        "column": 90,
+                                        "offset": 1139
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 14,
+                                "column": 1,
+                                "offset": 1050
+                            },
+                            "end": {
+                                "line": 14,
+                                "column": 90,
+                                "offset": 1139
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "disabled",
+                                        "position": {
+                                            "start": {
+                                                "line": 15,
+                                                "column": 3,
+                                                "offset": 1142
+                                            },
+                                            "end": {
+                                                "line": 15,
+                                                "column": 11,
+                                                "offset": 1150
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 15,
+                                        "column": 3,
+                                        "offset": 1142
+                                    },
+                                    "end": {
+                                        "line": 15,
+                                        "column": 11,
+                                        "offset": 1150
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 15,
+                                "column": 1,
+                                "offset": 1140
+                            },
+                            "end": {
+                                "line": 15,
+                                "column": 11,
+                                "offset": 1150
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 13,
+                        "column": 1,
+                        "offset": 928
+                    },
+                    "end": {
+                        "line": 15,
+                        "column": 11,
+                        "offset": 1150
+                    },
+                    "indent": [
+                        1,
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 15,
+                "column": 11,
+                "offset": 1150
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "implements",
+            "description": null,
+            "lineNumber": 17,
+            "type": {
+                "type": "NameExpression",
+                "name": "IControl"
+            }
+        },
+        {
+            "title": "param",
+            "description": null,
+            "lineNumber": 18,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "name": "options"
+        },
+        {
+            "title": "param",
+            "description": "A Geolocation API [PositionOptions](https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions) object.",
+            "lineNumber": 19,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "name": "options.positionOptions",
+            "default": "{enableHighAccuracy:false,timeout:6000}"
+        },
+        {
+            "title": "param",
+            "description": "A [`fitBounds`](#map#fitbounds) options object to use when the map is panned and zoomed to the user's location. The default is to use a `maxZoom` of 15 to limit how far the map will zoom in for very accurate locations.",
+            "lineNumber": 20,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "name": "options.fitBoundsOptions",
+            "default": "{maxZoom:15}"
+        },
+        {
+            "title": "param",
+            "description": "If `true` the Geolocate Control becomes a toggle button and when active the map will receive updates to the user's location as it changes.",
+            "lineNumber": 21,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "name": "options.trackUserLocation",
+            "default": "false"
+        },
+        {
+            "title": "param",
+            "description": "By default a dot will be shown on the map at the user's location. Set to `false` to disable.",
+            "lineNumber": 22,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "name": "options.showUserLocation",
+            "default": "true"
+        },
+        {
+            "title": "example",
+            "description": "map.addControl(new mapboxgl.GeolocateControl({\n    positionOptions: {\n        enableHighAccuracy: true\n    },\n    trackUserLocation: true\n}));",
+            "lineNumber": 24
+        },
+        {
+            "title": "see",
+            "description": "[Locate the user](https://www.mapbox.com/mapbox-gl-js/example/locate-user/)",
+            "lineNumber": 31
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 57,
+            "column": 0
+        },
+        "end": {
+            "line": 89,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 90,
+                "column": 0
+            },
+            "end": {
+                "line": 416,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/control/geolocate_control.js"
+    },
+    "augments": [
+        {
+            "title": "augments",
+            "name": "Evented"
+        }
+    ],
+    "examples": [
+        {
+            "description": "map.addControl(new mapboxgl.GeolocateControl({\n    positionOptions: {\n        enableHighAccuracy: true\n    },\n    trackUserLocation: true\n}));"
+        }
+    ],
+    "params": [
+        {
+            "title": "param",
+            "name": "options",
+            "lineNumber": 18,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "properties": [
+                {
+                    "title": "param",
+                    "name": "options.positionOptions",
+                    "lineNumber": 19,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "A Geolocation API ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 19,
+                                                "offset": 18
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "link",
+                                        "title": null,
+                                        "url": "https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions",
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "PositionOptions",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 1,
+                                                        "column": 20,
+                                                        "offset": 19
+                                                    },
+                                                    "end": {
+                                                        "line": 1,
+                                                        "column": 35,
+                                                        "offset": 34
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 19,
+                                                "offset": 18
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 102,
+                                                "offset": 101
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " object.",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 102,
+                                                "offset": 101
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 110,
+                                                "offset": 109
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 110,
+                                        "offset": 109
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 110,
+                                "offset": 109
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "NameExpression",
+                        "name": "Object"
+                    },
+                    "default": "{enableHighAccuracy:false,timeout:6000}"
+                },
+                {
+                    "title": "param",
+                    "name": "options.fitBoundsOptions",
+                    "lineNumber": 20,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "A ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 3,
+                                                "offset": 2
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "link",
+                                        "title": null,
+                                        "url": "#map#fitbounds",
+                                        "children": [
+                                            {
+                                                "type": "inlineCode",
+                                                "value": "fitBounds",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 1,
+                                                        "column": 4,
+                                                        "offset": 3
+                                                    },
+                                                    "end": {
+                                                        "line": 1,
+                                                        "column": 15,
+                                                        "offset": 14
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 3,
+                                                "offset": 2
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 32,
+                                                "offset": 31
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " options object to use when the map is panned and zoomed to the user's location. The default is to use a ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 32,
+                                                "offset": 31
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 137,
+                                                "offset": 136
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "maxZoom",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 137,
+                                                "offset": 136
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 146,
+                                                "offset": 145
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " of 15 to limit how far the map will zoom in for very accurate locations.",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 146,
+                                                "offset": 145
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 219,
+                                                "offset": 218
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 219,
+                                        "offset": 218
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 219,
+                                "offset": 218
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "NameExpression",
+                        "name": "Object"
+                    },
+                    "default": "{maxZoom:15}"
+                },
+                {
+                    "title": "param",
+                    "name": "options.trackUserLocation",
+                    "lineNumber": 21,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "If ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 4,
+                                                "offset": 3
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "true",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 4,
+                                                "offset": 3
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 10,
+                                                "offset": 9
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " the Geolocate Control becomes a toggle button and when active the map will receive updates to the user's location as it changes.",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 10,
+                                                "offset": 9
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 139,
+                                                "offset": 138
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 139,
+                                        "offset": 138
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 139,
+                                "offset": 138
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "NameExpression",
+                        "name": "Object"
+                    },
+                    "default": "false"
+                },
+                {
+                    "title": "param",
+                    "name": "options.showUserLocation",
+                    "lineNumber": 22,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "By default a dot will be shown on the map at the user's location. Set to ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 74,
+                                                "offset": 73
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "false",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 74,
+                                                "offset": 73
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 81,
+                                                "offset": 80
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " to disable.",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 81,
+                                                "offset": 80
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 93,
+                                                "offset": 92
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 93,
+                                        "offset": 92
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 93,
+                                "offset": 92
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "NameExpression",
+                        "name": "Object"
+                    },
+                    "default": "true"
+                }
+            ]
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/example/locate-user/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Locate the user",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 17,
+                                            "offset": 16
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 76,
+                                    "offset": 75
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 76,
+                            "offset": 75
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 76,
+                    "offset": 75
+                }
+            }
+        }
+    ],
+    "throws": [],
+    "todos": [],
+    "name": "GeolocateControl",
+    "kind": "class",
+    "path": [
+        {
+            "name": "GeolocateControl",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Trigger a geolocation",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 22,
+                                            "offset": 21
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 22,
+                                    "offset": 21
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 22,
+                            "offset": 21
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "Returns `false` if called before control was added to a map, otherwise returns `true`.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 309,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 313,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 314,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 403,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/control/geolocate_control.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "Returns ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 9,
+                                                    "offset": 8
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "false",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 9,
+                                                    "offset": 8
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 16,
+                                                    "offset": 15
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " if called before control was added to a map, otherwise returns ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 16,
+                                                    "offset": 15
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 80,
+                                                    "offset": 79
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "true",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 80,
+                                                    "offset": 79
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 86,
+                                                    "offset": 85
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": ".",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 86,
+                                                    "offset": 85
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 87,
+                                                    "offset": 86
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 87,
+                                            "offset": 86
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 87,
+                                    "offset": 86
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "trigger",
+                "kind": "function",
+                "memberof": "GeolocateControl",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "GeolocateControl",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "trigger",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "GeolocateControl#trigger"
+            }
+        ],
+        "events": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Fired when the Geolocate Control changes to the background state, which happens when a user changes the camera during an active position lock. This only applies when trackUserLocation is true. In the background state, the dot on the map will update with location updates but the camera will not.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 296,
+                                            "offset": 295
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 296,
+                                    "offset": 295
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 296,
+                            "offset": 295
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "event",
+                        "description": "trackuserlocationend",
+                        "lineNumber": 3
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "GeolocateControl",
+                        "lineNumber": 4
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 5
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 467,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 474,
+                        "column": 3
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 418,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 418,
+                            "column": 32
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/control/geolocate_control.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "event",
+                "name": "trackuserlocationend",
+                "memberof": "GeolocateControl",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "GeolocateControl",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "trackuserlocationend",
+                        "kind": "event",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "GeolocateControl.event:trackuserlocationend"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Fired when the Geolocate Control changes to the active lock state, which happens either upon first obtaining a successful Geolocation API position for the user (a geolocate event will follow), or the user clicks the geolocate button when in the background state which uses the last known position to recenter the map and enter active lock state (no geolocate event will follow unless the users's location changes).",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 415,
+                                            "offset": 414
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 415,
+                                    "offset": 414
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 415,
+                            "offset": 414
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "event",
+                        "description": "trackuserlocationstart",
+                        "lineNumber": 3
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "GeolocateControl",
+                        "lineNumber": 4
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 5
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 458,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 465,
+                        "column": 3
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 418,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 418,
+                            "column": 32
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/control/geolocate_control.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "event",
+                "name": "trackuserlocationstart",
+                "memberof": "GeolocateControl",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "GeolocateControl",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "trackuserlocationstart",
+                        "kind": "event",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "GeolocateControl.event:trackuserlocationstart"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Fired on each Geolocation API position update which returned as an error.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 74,
+                                            "offset": 73
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 74,
+                                    "offset": 73
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 74,
+                            "offset": 73
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "event",
+                        "description": "error",
+                        "lineNumber": 3
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "GeolocateControl",
+                        "lineNumber": 4
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 5
+                    },
+                    {
+                        "title": "property",
+                        "description": "The returned [PositionError](https://developer.mozilla.org/en-US/docs/Web/API/PositionError) object from the callback in [Geolocation.getCurrentPosition()](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) or [Geolocation.watchPosition()](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition).",
+                        "lineNumber": 6,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "PositionError"
+                        },
+                        "name": "data"
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 448,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 456,
+                        "column": 3
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 418,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 418,
+                            "column": 32
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/control/geolocate_control.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [
+                    {
+                        "title": "property",
+                        "name": "data",
+                        "lineNumber": 6,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The returned ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 14,
+                                                    "offset": 13
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "link",
+                                            "title": null,
+                                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/PositionError",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "PositionError",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 1,
+                                                            "column": 15,
+                                                            "offset": 14
+                                                        },
+                                                        "end": {
+                                                            "line": 1,
+                                                            "column": 28,
+                                                            "offset": 27
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 14,
+                                                    "offset": 13
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 93,
+                                                    "offset": 92
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " object from the callback in ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 93,
+                                                    "offset": 92
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 122,
+                                                    "offset": 121
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "link",
+                                            "title": null,
+                                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "Geolocation.getCurrentPosition()",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 1,
+                                                            "column": 123,
+                                                            "offset": 122
+                                                        },
+                                                        "end": {
+                                                            "line": 1,
+                                                            "column": 155,
+                                                            "offset": 154
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 122,
+                                                    "offset": 121
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 237,
+                                                    "offset": 236
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " or ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 237,
+                                                    "offset": 236
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 241,
+                                                    "offset": 240
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "link",
+                                            "title": null,
+                                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "Geolocation.watchPosition()",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 1,
+                                                            "column": 242,
+                                                            "offset": 241
+                                                        },
+                                                        "end": {
+                                                            "line": 1,
+                                                            "column": 269,
+                                                            "offset": 268
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 241,
+                                                    "offset": 240
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 346,
+                                                    "offset": 345
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": ".",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 346,
+                                                    "offset": 345
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 347,
+                                                    "offset": 346
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 347,
+                                            "offset": 346
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 347,
+                                    "offset": 346
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "PositionError"
+                        }
+                    }
+                ],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "event",
+                "name": "error",
+                "memberof": "GeolocateControl",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "GeolocateControl",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "error",
+                        "kind": "event",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "GeolocateControl.event:error"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Fired on each Geolocation API position update which returned as success.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 73,
+                                            "offset": 72
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 73,
+                                    "offset": 72
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 73,
+                            "offset": 72
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "event",
+                        "description": "geolocate",
+                        "lineNumber": 3
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "GeolocateControl",
+                        "lineNumber": 4
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 5
+                    },
+                    {
+                        "title": "property",
+                        "description": "The returned [Position](https://developer.mozilla.org/en-US/docs/Web/API/Position) object from the callback in [Geolocation.getCurrentPosition()](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) or [Geolocation.watchPosition()](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition).",
+                        "lineNumber": 6,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Position"
+                        },
+                        "name": "data"
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 438,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 446,
+                        "column": 3
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 418,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 418,
+                            "column": 32
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/control/geolocate_control.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [
+                    {
+                        "title": "property",
+                        "name": "data",
+                        "lineNumber": 6,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The returned ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 14,
+                                                    "offset": 13
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "link",
+                                            "title": null,
+                                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Position",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "Position",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 1,
+                                                            "column": 15,
+                                                            "offset": 14
+                                                        },
+                                                        "end": {
+                                                            "line": 1,
+                                                            "column": 23,
+                                                            "offset": 22
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 14,
+                                                    "offset": 13
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 83,
+                                                    "offset": 82
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " object from the callback in ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 83,
+                                                    "offset": 82
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 112,
+                                                    "offset": 111
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "link",
+                                            "title": null,
+                                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "Geolocation.getCurrentPosition()",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 1,
+                                                            "column": 113,
+                                                            "offset": 112
+                                                        },
+                                                        "end": {
+                                                            "line": 1,
+                                                            "column": 145,
+                                                            "offset": 144
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 112,
+                                                    "offset": 111
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 227,
+                                                    "offset": 226
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " or ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 227,
+                                                    "offset": 226
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 231,
+                                                    "offset": 230
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "link",
+                                            "title": null,
+                                            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "Geolocation.watchPosition()",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 1,
+                                                            "column": 232,
+                                                            "offset": 231
+                                                        },
+                                                        "end": {
+                                                            "line": 1,
+                                                            "column": 259,
+                                                            "offset": 258
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 231,
+                                                    "offset": 230
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 336,
+                                                    "offset": 335
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": ".",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 336,
+                                                    "offset": 335
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 337,
+                                                    "offset": 336
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 337,
+                                            "offset": 336
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 337,
+                                    "offset": 336
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Position"
+                        }
+                    }
+                ],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "event",
+                "name": "geolocate",
+                "memberof": "GeolocateControl",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "GeolocateControl",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "geolocate",
+                        "kind": "event",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "GeolocateControl.event:geolocate"
+            }
+        ],
+        "static": []
+    },
+    "namespace": "GeolocateControl"
+}

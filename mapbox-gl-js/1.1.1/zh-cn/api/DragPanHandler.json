@@ -1,0 +1,866 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 5,
+                                "offset": 4
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "DragPanHandler",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 5,
+                                "offset": 4
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 21,
+                                "offset": 20
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " 允许用户通过点击并且拖拽光标来平移地图。",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 21,
+                                "offset": 20
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 12,
+                                "offset": 88
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 12,
+                        "offset": 88
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 2,
+                "column": 12,
+                "offset": 88
+            }
+        }
+    },
+    "tags": [],
+    "loc": {
+        "start": {
+            "line": 19,
+            "column": 0
+        },
+        "end": {
+            "line": 22,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 23,
+                "column": 0
+            },
+            "end": {
+                "line": 324,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/drag_pan.js",
+        "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/handler/drag_pan.js#L23-L324",
+            "path": "src/ui/handler/drag_pan.js"
+        }
+    },
+    "augments": [],
+    "examples": [],
+    "params": [
+        {
+            "title": "param",
+            "name": "map",
+            "lineNumber": 39,
+            "type": {
+                "type": "NameExpression",
+                "name": "Map"
+            }
+        },
+        {
+            "title": "param",
+            "name": "options",
+            "lineNumber": 39,
+            "type": {
+                "type": "RecordType",
+                "fields": [
+                    {
+                        "type": "FieldType",
+                        "key": "clickTolerance",
+                        "value": {
+                            "type": "OptionalType",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "number"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "constructorComment": {
+        "description": "",
+        "tags": [
+            {
+                "title": "private",
+                "description": null,
+                "lineNumber": 1
+            }
+        ],
+        "loc": {
+            "start": {
+                "line": 36,
+                "column": 4
+            },
+            "end": {
+                "line": 38,
+                "column": 7
+            }
+        },
+        "context": {
+            "loc": {
+                "start": {
+                    "line": 39,
+                    "column": 4
+                },
+                "end": {
+                    "line": 54,
+                    "column": 5
+                }
+            },
+            "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/drag_pan.js",
+            "sortKey": "!/Users/mapboxchina/projects/mapbox-gl-js/src/index.js:00000003!/Users/mapboxchina/projects/mapbox-gl-js/src/ui/map.js:00000011!/Users/mapboxchina/projects/mapbox-gl-js/src/ui/bind_handlers.js:00000005!/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/drag_pan.js 00000039",
+            "code": "{\n    _map: Map;\n    _el: HTMLElement;\n    _state: 'disabled' | 'enabled' | 'pending' | 'active';\n    _startPos: Point;\n    _mouseDownPos: Point;\n    _prevPos: Point;\n    _lastPos: Point;\n    _lastMoveEvent: MouseEvent | TouchEvent | void;\n    _inertia: Array<[number, Point]>;\n    _frameId: ?TaskID;\n    _clickTolerance: number;\n\n    /**\n     * @private\n     */\n    constructor(map: Map, options: {\n        clickTolerance?: number\n    }) {\n        this._map = map;\n        this._el = map.getCanvasContainer();\n        this._state = 'disabled';\n        this._clickTolerance = options.clickTolerance || 1;\n\n        bindAll([\n            '_onMove',\n            '_onMouseUp',\n            '_onTouchEnd',\n            '_onBlur',\n            '_onDragFrame'\n        ], this);\n    }\n\n    /**\n     * Returns a Boolean indicating whether the \"drag to pan\" interaction is enabled.\n     *\n     * @returns {boolean} `true` if the \"drag to pan\" interaction is enabled.\n     */\n    isEnabled() {\n        return this._state !== 'disabled';\n    }\n\n    /**\n     * Returns a Boolean indicating whether the \"drag to pan\" interaction is active, i.e. currently being used.\n     *\n     * @returns {boolean} `true` if the \"drag to pan\" interaction is active.\n     */\n    isActive() {\n        return this._state === 'active';\n    }\n\n    /**\n     * Enables the \"drag to pan\" interaction.\n     *\n     * @example\n     * map.dragPan.enable();\n     */\n    enable() {\n        if (this.isEnabled()) return;\n        this._el.classList.add('mapboxgl-touch-drag-pan');\n        this._state = 'enabled';\n    }\n\n    /**\n     * Disables the \"drag to pan\" interaction.\n     *\n     * @example\n     * map.dragPan.disable();\n     */\n    disable() {\n        if (!this.isEnabled()) return;\n        this._el.classList.remove('mapboxgl-touch-drag-pan');\n        switch (this._state) {\n        case 'active':\n            this._state = 'disabled';\n            this._unbind();\n            this._deactivate();\n            this._fireEvent('dragend');\n            this._fireEvent('moveend');\n            break;\n        case 'pending':\n            this._state = 'disabled';\n            this._unbind();\n            break;\n        default:\n            this._state = 'disabled';\n            break;\n        }\n    }\n\n    onMouseDown(e: MouseEvent) {\n        if (this._state !== 'enabled') return;\n        if (e.ctrlKey || DOM.mouseButton(e) !== 0) return;\n\n        // Bind window-level event listeners for mousemove/up events. In the absence of\n        // the pointer capture API, which is not supported by all necessary platforms,\n        // window-level event listeners give us the best shot at capturing events that\n        // fall outside the map canvas element. Use `{capture: true}` for the move event\n        // to prevent map move events from being fired during a drag.\n        DOM.addEventListener(window.document, 'mousemove', this._onMove, {capture: true});\n        DOM.addEventListener(window.document, 'mouseup', this._onMouseUp);\n\n        this._start(e);\n    }\n\n    onTouchStart(e: TouchEvent) {\n        if (this._state !== 'enabled') return;\n        if (e.touches.length > 1) return;\n\n        // Bind window-level event listeners for touchmove/end events. In the absence of\n        // the pointer capture API, which is not supported by all necessary platforms,\n        // window-level event listeners give us the best shot at capturing events that\n        // fall outside the map canvas element. Use `{capture: true}` for the move event\n        // to prevent map move events from being fired during a drag.\n        DOM.addEventListener(window.document, 'touchmove', this._onMove, {capture: true, passive: false});\n        DOM.addEventListener(window.document, 'touchend', this._onTouchEnd);\n\n        this._start(e);\n    }\n\n    _start(e: MouseEvent | TouchEvent) {\n        // Deactivate when the window loses focus. Otherwise if a mouseup occurs when the window\n        // isn't in focus, dragging will continue even though the mouse is no longer pressed.\n        window.addEventListener('blur', this._onBlur);\n\n        this._state = 'pending';\n        this._startPos = this._mouseDownPos = this._prevPos = this._lastPos = DOM.mousePos(this._el, e);\n        this._inertia = [[browser.now(), this._startPos]];\n    }\n\n    _onMove(e: MouseEvent | TouchEvent) {\n        e.preventDefault();\n\n        const pos = DOM.mousePos(this._el, e);\n        if (this._lastPos.equals(pos) || (this._state === 'pending' && pos.dist(this._mouseDownPos) < this._clickTolerance)) {\n            return;\n        }\n\n        this._lastMoveEvent = e;\n        this._lastPos = pos;\n        this._drainInertiaBuffer();\n        this._inertia.push([browser.now(), this._lastPos]);\n\n        if (this._state === 'pending') {\n            // we treat the first move event (rather than the mousedown event)\n            // as the start of the drag\n            this._state = 'active';\n            this._fireEvent('dragstart', e);\n            this._fireEvent('movestart', e);\n        }\n\n        if (!this._frameId) {\n            this._frameId = this._map._requestRenderFrame(this._onDragFrame);\n        }\n    }\n\n    /**\n     * Called in each render frame while dragging is happening.\n     * @private\n     */\n    _onDragFrame() {\n        this._frameId = null;\n\n        const e = this._lastMoveEvent;\n        if (!e) return;\n        const tr = this._map.transform;\n        tr.setLocationAtPoint(tr.pointLocation(this._prevPos), this._lastPos);\n        this._fireEvent('drag', e);\n        this._fireEvent('move', e);\n\n        this._prevPos = this._lastPos;\n        delete this._lastMoveEvent;\n    }\n\n    _onMouseUp(e: MouseEvent) {\n        if (DOM.mouseButton(e) !== 0) return;\n        switch (this._state) {\n        case 'active':\n            this._state = 'enabled';\n            DOM.suppressClick();\n            this._unbind();\n            this._deactivate();\n            this._inertialPan(e);\n            break;\n        case 'pending':\n            this._state = 'enabled';\n            this._unbind();\n            break;\n        default:\n            assert(false);\n            break;\n        }\n    }\n\n    _onTouchEnd(e: TouchEvent) {\n        switch (this._state) {\n        case 'active':\n            this._state = 'enabled';\n            this._unbind();\n            this._deactivate();\n            this._inertialPan(e);\n            break;\n        case 'pending':\n            this._state = 'enabled';\n            this._unbind();\n            break;\n        default:\n            assert(false);\n            break;\n        }\n    }\n\n    _onBlur(e: FocusEvent) {\n        switch (this._state) {\n        case 'active':\n            this._state = 'enabled';\n            this._unbind();\n            this._deactivate();\n            this._fireEvent('dragend', e);\n            this._fireEvent('moveend', e);\n            break;\n        case 'pending':\n            this._state = 'enabled';\n            this._unbind();\n            break;\n        default:\n            assert(false);\n            break;\n        }\n    }\n\n    _unbind() {\n        DOM.removeEventListener(window.document, 'touchmove', this._onMove, {capture: true, passive: false});\n        DOM.removeEventListener(window.document, 'touchend', this._onTouchEnd);\n        DOM.removeEventListener(window.document, 'mousemove', this._onMove, {capture: true});\n        DOM.removeEventListener(window.document, 'mouseup', this._onMouseUp);\n        DOM.removeEventListener(window, 'blur', this._onBlur);\n    }\n\n    _deactivate() {\n        if (this._frameId) {\n            this._map._cancelRenderFrame(this._frameId);\n            this._frameId = null;\n        }\n        delete this._lastMoveEvent;\n        delete this._startPos;\n        delete this._prevPos;\n        delete this._mouseDownPos;\n        delete this._lastPos;\n    }\n\n    _inertialPan(e: MouseEvent | TouchEvent) {\n        this._fireEvent('dragend', e);\n\n        this._drainInertiaBuffer();\n        const inertia = this._inertia;\n        if (inertia.length < 2) {\n            this._fireEvent('moveend', e);\n            return;\n        }\n\n        const last = inertia[inertia.length - 1],\n            first = inertia[0],\n            flingOffset = last[1].sub(first[1]),\n            flingDuration = (last[0] - first[0]) / 1000;\n\n        if (flingDuration === 0 || last[1].equals(first[1])) {\n            this._fireEvent('moveend', e);\n            return;\n        }\n\n        // calculate px/s velocity & adjust for increased initial animation speed when easing out\n        const velocity = flingOffset.mult(inertiaLinearity / flingDuration);\n        let speed = velocity.mag(); // px/s\n\n        if (speed > inertiaMaxSpeed) {\n            speed = inertiaMaxSpeed;\n            velocity._unit()._mult(speed);\n        }\n\n        const duration = speed / (inertiaDeceleration * inertiaLinearity),\n            offset = velocity.mult(-duration / 2);\n\n        this._map.panBy(offset, {\n            duration: duration * 1000,\n            easing: inertiaEasing,\n            noMoveStart: true\n        }, { originalEvent: e });\n    }\n\n    _fireEvent(type: string, e: *) {\n        return this._map.fire(new Event(type, e ? { originalEvent: e } : {}));\n    }\n\n    _drainInertiaBuffer() {\n        const inertia = this._inertia,\n            now = browser.now(),\n            cutoff = 160;   // msec\n\n        while (inertia.length > 0 && now - inertia[0][0] > cutoff) inertia.shift();\n    }\n}"
+        },
+        "augments": [],
+        "errors": [],
+        "examples": [],
+        "params": [],
+        "properties": [],
+        "returns": [],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "access": "private"
+    },
+    "name": "DragPanHandler",
+    "kind": "class",
+    "path": [
+        {
+            "name": "DragPanHandler",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "返回一个布尔值，该布尔值表明 \"拖拽平移\" 交互功能是否被启用。",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 79,
+                                            "offset": 78
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 79,
+                                    "offset": 78
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 79,
+                            "offset": 78
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "如果\"拖拽平移\" 交互功能被开启，返回`true`。",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 56,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 60,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 61,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 63,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/drag_pan.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/handler/drag_pan.js#L61-L63",
+                        "path": "src/ui/handler/drag_pan.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "true",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " 如果\"拖拽平移\" 交互功能被开启。",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 52,
+                                                    "offset": 51
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 52,
+                                            "offset": 51
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 52,
+                                    "offset": 51
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "isEnabled",
+                "kind": "function",
+                "memberof": "DragPanHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "DragPanHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "isEnabled",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "DragPanHandler#isEnabled"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "返回一个布尔值，该布尔值表示\"拖拽平移\" 交互功能是否为活动的（也就是说当前正在被使用）。",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 105,
+                                            "offset": 104
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 105,
+                                    "offset": 104
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 105,
+                            "offset": 104
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": " 如果 \"拖拽平移\"  交互是正在运行的，返回`true`。",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 65,
+                        "column": 4
+                    },
+                    "end": {
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 70,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 72,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/drag_pan.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/handler/drag_pan.js#L70-L72",
+                        "path": "src/ui/handler/drag_pan.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "true",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " 如果 \"拖拽平移\" 交互正在运行中。",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 51,
+                                                    "offset": 50
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 51,
+                                            "offset": 50
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 51,
+                                    "offset": 50
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "isActive",
+                "kind": "function",
+                "memberof": "DragPanHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "DragPanHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "isActive",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "DragPanHandler#isActive"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "开启 \"拖拽平移\" 交互功能。",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 39,
+                                            "offset": 38
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 39,
+                                    "offset": 38
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 39,
+                            "offset": 38
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "example",
+                        "description": "map.dragPan.enable();",
+                        "lineNumber": 3
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 74,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 79,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 80,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 84,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/drag_pan.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/handler/drag_pan.js#L80-L84",
+                        "path": "src/ui/handler/drag_pan.js"
+                    }
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "map.dragPan.enable();"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "enable",
+                "kind": "function",
+                "memberof": "DragPanHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "DragPanHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "enable",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "DragPanHandler#enable"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "禁用 \"拖拽平移\" 交互功能。",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 40,
+                                            "offset": 39
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 40,
+                                    "offset": 39
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 40,
+                            "offset": 39
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "example",
+                        "description": "map.dragPan.disable();",
+                        "lineNumber": 3
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 86,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 91,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 92,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 111,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/ui/handler/drag_pan.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/ui/handler/drag_pan.js#L92-L111",
+                        "path": "src/ui/handler/drag_pan.js"
+                    }
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "map.dragPan.disable();"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "disable",
+                "kind": "function",
+                "memberof": "DragPanHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "DragPanHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "disable",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "DragPanHandler#disable"
+            }
+        ],
+        "events": [],
+        "static": []
+    },
+    "namespace": "DragPanHandler"
+}

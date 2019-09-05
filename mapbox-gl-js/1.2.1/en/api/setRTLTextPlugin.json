@@ -1,0 +1,397 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Sets the map's ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 16,
+                                "offset": 15
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "title": null,
+                        "url": "https://www.mapbox.com/mapbox-gl-js/plugins/#mapbox-gl-rtl-text",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "RTL text plugin",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 17,
+                                        "offset": 16
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 32,
+                                        "offset": 31
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 16,
+                                "offset": 15
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 98,
+                                "offset": 97
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ".\nNecessary for supporting the Arabic and Hebrew languages, which are written right-to-left. Mapbox Studio loads this plugin by default.",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 98,
+                                "offset": 97
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 135,
+                                "offset": 233
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 135,
+                        "offset": 233
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 2,
+                "column": 135,
+                "offset": 233
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "function",
+            "description": null,
+            "lineNumber": 4,
+            "name": "setRTLTextPlugin"
+        },
+        {
+            "title": "param",
+            "description": "URL pointing to the Mapbox RTL text plugin source.",
+            "lineNumber": 5,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            },
+            "name": "pluginURL"
+        },
+        {
+            "title": "param",
+            "description": "Called with an error argument if there is an error.",
+            "lineNumber": 6,
+            "type": {
+                "type": "NameExpression",
+                "name": "Function"
+            },
+            "name": "callback"
+        },
+        {
+            "title": "example",
+            "description": "mapboxgl.setRTLTextPlugin('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.0/mapbox-gl-rtl-text.js');",
+            "lineNumber": 7
+        },
+        {
+            "title": "see",
+            "description": "[Add support for right-to-left scripts](https://www.mapbox.com/mapbox-gl-js/example/mapbox-gl-rtl-text/)",
+            "lineNumber": 9
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 146,
+            "column": 0
+        },
+        "end": {
+            "line": 156,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 158,
+                "column": 0
+            },
+            "end": {
+                "line": 158,
+                "column": 24
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/index.js"
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "mapboxgl.setRTLTextPlugin('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.0/mapbox-gl-rtl-text.js');"
+        }
+    ],
+    "params": [
+        {
+            "title": "param",
+            "name": "pluginURL",
+            "lineNumber": 5,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "URL pointing to the Mapbox RTL text plugin source.",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 51,
+                                        "offset": 50
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 51,
+                                "offset": 50
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 51,
+                        "offset": 50
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            }
+        },
+        {
+            "title": "param",
+            "name": "callback",
+            "lineNumber": 6,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Called with an error argument if there is an error.",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 52,
+                                        "offset": 51
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 52,
+                                "offset": 51
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 52,
+                        "offset": 51
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "Function"
+            }
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/example/mapbox-gl-rtl-text/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Add support for right-to-left scripts",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 39,
+                                            "offset": 38
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 105,
+                                    "offset": 104
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 105,
+                            "offset": 104
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 105,
+                    "offset": 104
+                }
+            }
+        }
+    ],
+    "throws": [],
+    "todos": [],
+    "kind": "function",
+    "name": "setRTLTextPlugin",
+    "path": [
+        {
+            "name": "setRTLTextPlugin",
+            "kind": "function"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "setRTLTextPlugin"
+}

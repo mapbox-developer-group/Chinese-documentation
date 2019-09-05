@@ -1,0 +1,637 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "给地图添加画布数据源类型的配置",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 48,
+                                "offset": 47
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 48,
+                        "offset": 47
+                    },
+                    "indent": []
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 1,
+                "column": 48,
+                "offset": 47
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "typedef",
+            "description": null,
+            "lineNumber": 3,
+            "type": {
+                "type": "NameExpression",
+                "name": "Object"
+            },
+            "name": "CanvasSourceOptions"
+        },
+        {
+            "title": "property",
+            "description": "数据源类型，必须是 `\"canvas\"`。",
+            "lineNumber": 4,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            },
+            "name": "type"
+        },
+        {
+            "title": "property",
+            "description": "画布的数据源从中读取像素。可以是一组代表画布元素ID的字符串，或者是HTMLCanvasElement本身。",
+            "lineNumber": 5,
+            "type": {
+                "type": "UnionType",
+                "elements": [
+                    {
+                        "type": "NameExpression",
+                        "name": "string"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "HTMLCanvasElement"
+                    }
+                ]
+            },
+            "name": "canvas"
+        },
+        {
+            "title": "property",
+            "description": "四个地理坐标表示画布的四个角，用[longitude, latitude]这样的一对坐标对表示。",
+            "lineNumber": 6,
+            "type": {
+                "type": "TypeApplication",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Array"
+                },
+                "applications": [
+                    {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "type": "NameExpression",
+                                "name": "number"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name": "coordinates"
+        },
+        {
+            "title": "property",
+            "description": "代表该画布的数据源是否被激活。如果画布是静态的（不用在每个框架下去读取像素值）,该属性应该被设置为false来增强显示。",
+            "lineNumber": 7,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "boolean"
+                }
+            },
+            "name": "animate",
+            "default": "true"
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 23,
+            "column": 0
+        },
+        "end": {
+            "line": 31,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 61,
+                "column": 0
+            },
+            "end": {
+                "line": 235,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/source/canvas_source.js",
+        "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/source/canvas_source.js#L23-L31",
+            "path": "src/source/canvas_source.js"
+        }
+    },
+    "augments": [],
+    "examples": [],
+    "params": [],
+    "properties": [
+        {
+            "title": "property",
+            "name": "type",
+            "lineNumber": 4,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "数据源类型，必须是",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 22,
+                                        "offset": 21
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "画布",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 22,
+                                        "offset": 21
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 32,
+                                        "offset": 31
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": "",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 32,
+                                        "offset": 31
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 33,
+                                        "offset": 32
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 33,
+                                "offset": 32
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 33,
+                        "offset": 32
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            }
+        },
+        {
+            "title": "property",
+            "name": "canvas",
+            "lineNumber": 5,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "从像素值中读取到画布的数据源。可以是代表画布元素ID的字符串，或",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 108,
+                                        "offset": 107
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "HTMLCanvasElement",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 108,
+                                        "offset": 107
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 127,
+                                        "offset": 126
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": "元素本身。",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 127,
+                                        "offset": 126
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 135,
+                                        "offset": 134
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 135,
+                                "offset": 134
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 135,
+                        "offset": 134
+                    }
+                }
+            },
+            "type": {
+                "type": "UnionType",
+                "elements": [
+                    {
+                        "type": "NameExpression",
+                        "name": "string"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "HTMLCanvasElement"
+                    }
+                ]
+            }
+        },
+        {
+            "title": "property",
+            "name": "coordinates",
+            "lineNumber": 6,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "四个地理坐标表示画布的四个角，使用",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 95,
+                                        "offset": 94
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "[longitude, latitude]",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 95,
+                                        "offset": 94
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 118,
+                                        "offset": 117
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": "坐标对。",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 118,
+                                        "offset": 117
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 125,
+                                        "offset": 124
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 125,
+                                "offset": 124
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 125,
+                        "offset": 124
+                    }
+                }
+            },
+            "type": {
+                "type": "TypeApplication",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Array"
+                },
+                "applications": [
+                    {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "type": "NameExpression",
+                                "name": "number"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "title": "property",
+            "name": "animate",
+            "lineNumber": 7,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "代表该画布的数据源是否被激活。人工画布是静态的（不用在每个框架下去读取像素值） ",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 120,
+                                        "offset": 119
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "animate",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 120,
+                                        "offset": 119
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 129,
+                                        "offset": 128
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " 应当被设置为",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 129,
+                                        "offset": 128
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 147,
+                                        "offset": 146
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "false",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 147,
+                                        "offset": 146
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 154,
+                                        "offset": 153
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " 来增强显示。",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 154,
+                                        "offset": 153
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 178,
+                                        "offset": 177
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 178,
+                                "offset": 177
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 178,
+                        "offset": 177
+                    }
+                }
+            },
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "boolean"
+                }
+            }
+        }
+    ],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "typedef",
+    "name": "CanvasSourceOptions",
+    "type": {
+        "type": "NameExpression",
+        "name": "Object"
+    },
+    "path": [
+        {
+            "name": "CanvasSourceOptions",
+            "kind": "typedef"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "CanvasSourceOptions"
+}

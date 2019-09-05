@@ -1,0 +1,432 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "一个",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 3,
+                                "offset": 2
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "url": "LngLat",
+                        "title": null,
+                        "jsdoc": true,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "LngLat"
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 3,
+                                "offset": 2
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 17,
+                                "offset": 16
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": "对象，或者是表示经度和纬度的两个数字组成的数组，\n也可以是一个具有",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 17,
+                                "offset": 16
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 19,
+                                "offset": 104
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "lng",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 19,
+                                "offset": 104
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 24,
+                                "offset": 109
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": "和",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 24,
+                                "offset": 109
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 29,
+                                "offset": 114
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "lat",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 29,
+                                "offset": 114
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 34,
+                                "offset": 119
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": "或者",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 34,
+                                "offset": 119
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 38,
+                                "offset": 123
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "lon",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 38,
+                                "offset": 123
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 43,
+                                "offset": 128
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": "和",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 43,
+                                "offset": 128
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 48,
+                                "offset": 133
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "lat",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 48,
+                                "offset": 133
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 53,
+                                "offset": 138
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": "属性的对象。",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 53,
+                                "offset": 138
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 65,
+                                "offset": 150
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 65,
+                        "offset": 150
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 2,
+                "column": 65,
+                "offset": 150
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "typedef",
+            "description": null,
+            "lineNumber": 4,
+            "type": {
+                "type": "UnionType",
+                "elements": [
+                    {
+                        "type": "NameExpression",
+                        "name": "LngLat"
+                    },
+                    {
+                        "type": "RecordType",
+                        "fields": [
+                            {
+                                "type": "FieldType",
+                                "key": "lng",
+                                "value": {
+                                    "type": "NameExpression",
+                                    "name": "number"
+                                }
+                            },
+                            {
+                                "type": "FieldType",
+                                "key": "lat",
+                                "value": {
+                                    "type": "NameExpression",
+                                    "name": "number"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "RecordType",
+                        "fields": [
+                            {
+                                "type": "FieldType",
+                                "key": "lon",
+                                "value": {
+                                    "type": "NameExpression",
+                                    "name": "number"
+                                }
+                            },
+                            {
+                                "type": "FieldType",
+                                "key": "lat",
+                                "value": {
+                                    "type": "NameExpression",
+                                    "name": "number"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ArrayType",
+                        "elements": [
+                            {
+                                "type": "NameExpression",
+                                "name": "number"
+                            },
+                            {
+                                "type": "NameExpression",
+                                "name": "number"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name": "LngLatLike"
+        },
+        {
+            "title": "example",
+            "description": "var v1 = new mapboxgl.LngLat(-122.420679, 37.772537);\nvar v2 = [-122.420679, 37.772537];\nvar v3 = {lon: -122.420679, lat: 37.772537};",
+            "lineNumber": 5
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 125,
+            "column": 0
+        },
+        "end": {
+            "line": 134,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 135,
+                "column": 0
+            },
+            "end": {
+                "line": 135,
+                "column": 109
+            }
+        },
+        "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/geo/lng_lat.js",
+        "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/geo/lng_lat.js#L125-L134",
+            "path": "src/geo/lng_lat.js"
+        }
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "var v1 = new mapboxgl.LngLat(-122.420679, 37.772537);\nvar v2 = [-122.420679, 37.772537];\nvar v3 = {lon: -122.420679, lat: 37.772537};"
+        }
+    ],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "typedef",
+    "name": "LngLatLike",
+    "type": {
+        "type": "UnionType",
+        "elements": [
+            {
+                "type": "NameExpression",
+                "name": "LngLat"
+            },
+            {
+                "type": "RecordType",
+                "fields": [
+                    {
+                        "type": "FieldType",
+                        "key": "lng",
+                        "value": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        }
+                    },
+                    {
+                        "type": "FieldType",
+                        "key": "lat",
+                        "value": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "RecordType",
+                "fields": [
+                    {
+                        "type": "FieldType",
+                        "key": "lon",
+                        "value": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        }
+                    },
+                    {
+                        "type": "FieldType",
+                        "key": "lat",
+                        "value": {
+                            "type": "NameExpression",
+                            "name": "number"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "ArrayType",
+                "elements": [
+                    {
+                        "type": "NameExpression",
+                        "name": "number"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                ]
+            }
+        ]
+    },
+    "path": [
+        {
+            "name": "LngLatLike",
+            "kind": "typedef"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "LngLatLike"
+}

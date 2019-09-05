@@ -1,0 +1,531 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Options common to map movement methods that involve animation, such as ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 72,
+                                "offset": 71
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "url": "Map#panBy",
+                        "title": null,
+                        "jsdoc": true,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Map#panBy"
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 72,
+                                "offset": 71
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 89,
+                                "offset": 88
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " and\n",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 89,
+                                "offset": 88
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 1,
+                                "offset": 93
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "url": "Map#easeTo",
+                        "title": null,
+                        "jsdoc": true,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Map#easeTo"
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 1,
+                                "offset": 93
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 19,
+                                "offset": 111
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ", controlling the duration and easing function of the animation. All properties\nare optional.",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 19,
+                                "offset": 111
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 14,
+                                "offset": 204
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3,
+                        "column": 14,
+                        "offset": 204
+                    },
+                    "indent": [
+                        1,
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 3,
+                "column": 14,
+                "offset": 204
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "typedef",
+            "description": null,
+            "lineNumber": 5,
+            "type": {
+                "type": "NameExpression",
+                "name": "Object"
+            },
+            "name": "AnimationOptions"
+        },
+        {
+            "title": "property",
+            "description": "The animation's duration, measured in milliseconds.",
+            "lineNumber": 6,
+            "type": {
+                "type": "NameExpression",
+                "name": "number"
+            },
+            "name": "duration"
+        },
+        {
+            "title": "property",
+            "description": "A function taking a time in the range 0..1 and returning a number where 0 is\n  the initial state and 1 is the final state.",
+            "lineNumber": 7,
+            "type": {
+                "type": "NameExpression",
+                "name": "Function"
+            },
+            "name": "easing"
+        },
+        {
+            "title": "property",
+            "description": "of the target center relative to real map container center at the end of animation.",
+            "lineNumber": 9,
+            "type": {
+                "type": "NameExpression",
+                "name": "PointLike"
+            },
+            "name": "offset"
+        },
+        {
+            "title": "property",
+            "description": "If `false`, no animation will occur.",
+            "lineNumber": 10,
+            "type": {
+                "type": "NameExpression",
+                "name": "boolean"
+            },
+            "name": "animate"
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 46,
+            "column": 0
+        },
+        "end": {
+            "line": 57,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 58,
+                "column": 0
+            },
+            "end": {
+                "line": 63,
+                "column": 2
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/camera.js"
+    },
+    "augments": [],
+    "examples": [],
+    "params": [],
+    "properties": [
+        {
+            "title": "property",
+            "name": "duration",
+            "lineNumber": 6,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "The animation's duration, measured in milliseconds.",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 52,
+                                        "offset": 51
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 52,
+                                "offset": 51
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 52,
+                        "offset": 51
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "number"
+            }
+        },
+        {
+            "title": "property",
+            "name": "easing",
+            "lineNumber": 7,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "A function taking a time in the range 0..1 and returning a number where 0 is\n  the initial state and 1 is the final state.",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 2,
+                                        "column": 46,
+                                        "offset": 122
+                                    },
+                                    "indent": [
+                                        1
+                                    ]
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 46,
+                                "offset": 122
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 46,
+                        "offset": 122
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "Function"
+            }
+        },
+        {
+            "title": "property",
+            "name": "offset",
+            "lineNumber": 9,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "of the target center relative to real map container center at the end of animation.",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 84,
+                                        "offset": 83
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 84,
+                                "offset": 83
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 84,
+                        "offset": 83
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "PointLike"
+            }
+        },
+        {
+            "title": "property",
+            "name": "animate",
+            "lineNumber": 10,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "If ",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 4,
+                                        "offset": 3
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "false",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 4,
+                                        "offset": 3
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 11,
+                                        "offset": 10
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ", no animation will occur.",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 11,
+                                        "offset": 10
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 37,
+                                        "offset": 36
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 37,
+                                "offset": 36
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 37,
+                        "offset": 36
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "boolean"
+            }
+        }
+    ],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "typedef",
+    "name": "AnimationOptions",
+    "type": {
+        "type": "NameExpression",
+        "name": "Object"
+    },
+    "path": [
+        {
+            "name": "AnimationOptions",
+            "kind": "typedef"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "AnimationOptions"
+}

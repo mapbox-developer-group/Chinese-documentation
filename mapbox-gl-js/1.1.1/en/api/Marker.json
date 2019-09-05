@@ -1,0 +1,4309 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Creates a marker component",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 27,
+                                "offset": 26
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 27,
+                        "offset": 26
+                    },
+                    "indent": []
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 1,
+                "column": 27,
+                "offset": 26
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "param",
+            "description": null,
+            "lineNumber": 2,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "name": "options"
+        },
+        {
+            "title": "param",
+            "description": "DOM element to use as a marker. The default is a light blue, droplet-shaped SVG marker.",
+            "lineNumber": 3,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "HTMLElement"
+                }
+            },
+            "name": "options.element"
+        },
+        {
+            "title": "param",
+            "description": "A string indicating the part of the Marker that should be positioned closest to the coordinate set via {@link Marker#setLngLat}.\n  Options are `'center'`, `'top'`, `'bottom'`, `'left'`, `'right'`, `'top-left'`, `'top-right'`, `'bottom-left'`, and `'bottom-right'`.",
+            "lineNumber": 4,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "string"
+                }
+            },
+            "name": "options.anchor",
+            "default": "'center'"
+        },
+        {
+            "title": "param",
+            "description": "The offset in pixels as a {@link PointLike} object to apply relative to the element's center. Negatives indicate left and up.",
+            "lineNumber": 6,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "PointLike"
+                }
+            },
+            "name": "options.offset"
+        },
+        {
+            "title": "param",
+            "description": "The color to use for the default marker if options.element is not provided. The default is light blue.",
+            "lineNumber": 7,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "string"
+                }
+            },
+            "name": "options.color",
+            "default": "'#3FB1CE'"
+        },
+        {
+            "title": "param",
+            "description": "A boolean indicating whether or not a marker is able to be dragged to a new position on the map.",
+            "lineNumber": 8,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "boolean"
+                }
+            },
+            "name": "options.draggable",
+            "default": "false"
+        },
+        {
+            "title": "example",
+            "description": "var marker = new mapboxgl.Marker()\n  .setLngLat([30.5, 50.5])\n  .addTo(map);",
+            "lineNumber": 9
+        },
+        {
+            "title": "see",
+            "description": "[Add custom icons with Markers](https://www.mapbox.com/mapbox-gl-js/example/custom-marker-icons/)",
+            "lineNumber": 13
+        },
+        {
+            "title": "see",
+            "description": "[Create a draggable Marker](https://www.mapbox.com/mapbox-gl-js/example/drag-a-marker/)",
+            "lineNumber": 14
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 25,
+            "column": 0
+        },
+        "end": {
+            "line": 40,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 41,
+                "column": 0
+            },
+            "end": {
+                "line": 485,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+    },
+    "augments": [
+        {
+            "title": "augments",
+            "name": "Evented"
+        }
+    ],
+    "examples": [
+        {
+            "description": "var marker = new mapboxgl.Marker()\n  .setLngLat([30.5, 50.5])\n  .addTo(map);"
+        }
+    ],
+    "params": [
+        {
+            "title": "param",
+            "name": "options",
+            "lineNumber": 2,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "properties": [
+                {
+                    "title": "param",
+                    "name": "options.element",
+                    "lineNumber": 3,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "DOM element to use as a marker. The default is a light blue, droplet-shaped SVG marker.",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 88,
+                                                "offset": 87
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 88,
+                                        "offset": 87
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 88,
+                                "offset": 87
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "OptionalType",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "HTMLElement"
+                        }
+                    }
+                },
+                {
+                    "title": "param",
+                    "name": "options.anchor",
+                    "lineNumber": 4,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "A string indicating the part of the Marker that should be positioned closest to the coordinate set via ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 104,
+                                                "offset": 103
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "Marker#setLngLat",
+                                        "title": null,
+                                        "jsdoc": true,
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "Marker#setLngLat"
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 104,
+                                                "offset": 103
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 128,
+                                                "offset": 127
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ".\n  Options are ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 128,
+                                                "offset": 127
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 15,
+                                                "offset": 143
+                                            },
+                                            "indent": [
+                                                1
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "'center'",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 15,
+                                                "offset": 143
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 25,
+                                                "offset": 153
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ", ",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 25,
+                                                "offset": 153
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 27,
+                                                "offset": 155
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "'top'",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 27,
+                                                "offset": 155
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 34,
+                                                "offset": 162
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ", ",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 34,
+                                                "offset": 162
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 36,
+                                                "offset": 164
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "'bottom'",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 36,
+                                                "offset": 164
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 46,
+                                                "offset": 174
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ", ",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 46,
+                                                "offset": 174
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 48,
+                                                "offset": 176
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "'left'",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 48,
+                                                "offset": 176
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 56,
+                                                "offset": 184
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ", ",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 56,
+                                                "offset": 184
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 58,
+                                                "offset": 186
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "'right'",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 58,
+                                                "offset": 186
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 67,
+                                                "offset": 195
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ", ",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 67,
+                                                "offset": 195
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 69,
+                                                "offset": 197
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "'top-left'",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 69,
+                                                "offset": 197
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 81,
+                                                "offset": 209
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ", ",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 81,
+                                                "offset": 209
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 83,
+                                                "offset": 211
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "'top-right'",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 83,
+                                                "offset": 211
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 96,
+                                                "offset": 224
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ", ",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 96,
+                                                "offset": 224
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 98,
+                                                "offset": 226
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "'bottom-left'",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 98,
+                                                "offset": 226
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 113,
+                                                "offset": 241
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ", and ",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 113,
+                                                "offset": 241
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 119,
+                                                "offset": 247
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "'bottom-right'",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 119,
+                                                "offset": 247
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 135,
+                                                "offset": 263
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ".",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 135,
+                                                "offset": 263
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 136,
+                                                "offset": 264
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 2,
+                                        "column": 136,
+                                        "offset": 264
+                                    },
+                                    "indent": [
+                                        1
+                                    ]
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 136,
+                                "offset": 264
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    },
+                    "default": "'center'"
+                },
+                {
+                    "title": "param",
+                    "name": "options.offset",
+                    "lineNumber": 6,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "The offset in pixels as a ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 27,
+                                                "offset": 26
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "PointLike",
+                                        "title": null,
+                                        "jsdoc": true,
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "PointLike"
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 27,
+                                                "offset": 26
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 44,
+                                                "offset": 43
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " object to apply relative to the element's center. Negatives indicate left and up.",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 44,
+                                                "offset": 43
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 126,
+                                                "offset": 125
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 126,
+                                        "offset": 125
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 126,
+                                "offset": 125
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "OptionalType",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "PointLike"
+                        }
+                    }
+                },
+                {
+                    "title": "param",
+                    "name": "options.color",
+                    "lineNumber": 7,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "The color to use for the default marker if options.element is not provided. The default is light blue.",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 103,
+                                                "offset": 102
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 103,
+                                        "offset": 102
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 103,
+                                "offset": 102
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    },
+                    "default": "'#3FB1CE'"
+                },
+                {
+                    "title": "param",
+                    "name": "options.draggable",
+                    "lineNumber": 8,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "A boolean indicating whether or not a marker is able to be dragged to a new position on the map.",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 97,
+                                                "offset": 96
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 97,
+                                        "offset": 96
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 97,
+                                "offset": 96
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    },
+                    "default": "false"
+                }
+            ]
+        },
+        {
+            "title": "param",
+            "name": "legacyOptions",
+            "lineNumber": 55,
+            "type": {
+                "type": "NameExpression",
+                "name": "Options"
+            }
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/example/custom-marker-icons/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Add custom icons with Markers",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 31,
+                                            "offset": 30
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 98,
+                                    "offset": 97
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 98,
+                            "offset": 97
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 98,
+                    "offset": 97
+                }
+            }
+        },
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/example/drag-a-marker/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Create a draggable Marker",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 27,
+                                            "offset": 26
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 88,
+                                    "offset": 87
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 88,
+                            "offset": 87
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 88,
+                    "offset": 87
+                }
+            }
+        }
+    ],
+    "throws": [],
+    "todos": [],
+    "name": "Marker",
+    "kind": "class",
+    "path": [
+        {
+            "name": "Marker",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Attaches the marker to a map",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 29,
+                                            "offset": 28
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 29,
+                                    "offset": 28
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 29,
+                            "offset": 28
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": null,
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Map"
+                        },
+                        "name": "map"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "`this`",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 193,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 197,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 198,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 213,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "map",
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Map"
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 7,
+                                            "offset": 6
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 7,
+                                    "offset": 6
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "addTo",
+                "kind": "function",
+                "memberof": "Marker",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "addTo",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker#addTo"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Removes the marker from a map",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 30,
+                                            "offset": 29
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 30,
+                                    "offset": 29
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 30,
+                            "offset": 29
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "example",
+                        "description": "var marker = new mapboxgl.Marker().addTo(map);\nmarker.remove();",
+                        "lineNumber": 2
+                    },
+                    {
+                        "title": "returns",
+                        "description": "`this`",
+                        "lineNumber": 5,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 215,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 221,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 222,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 236,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "var marker = new mapboxgl.Marker().addTo(map);\nmarker.remove();"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 7,
+                                            "offset": 6
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 7,
+                                    "offset": 6
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "remove",
+                "kind": "function",
+                "memberof": "Marker",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "remove",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker#remove"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Get the marker's geographical location.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 40,
+                                            "offset": 39
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 40,
+                                    "offset": 39
+                                },
+                                "indent": []
+                            }
+                        },
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "The longitude of the result may differ by a multiple of 360 degrees from the longitude previously\nset by ",
+                                    "position": {
+                                        "start": {
+                                            "line": 3,
+                                            "column": 1,
+                                            "offset": 41
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "column": 8,
+                                            "offset": 146
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "setLngLat",
+                                    "position": {
+                                        "start": {
+                                            "line": 4,
+                                            "column": 8,
+                                            "offset": 146
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "column": 19,
+                                            "offset": 157
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " because ",
+                                    "position": {
+                                        "start": {
+                                            "line": 4,
+                                            "column": 19,
+                                            "offset": 157
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "column": 28,
+                                            "offset": 166
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "Marker",
+                                    "position": {
+                                        "start": {
+                                            "line": 4,
+                                            "column": 28,
+                                            "offset": 166
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "column": 36,
+                                            "offset": 174
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " wraps the anchor longitude across copies of the world to keep\nthe marker on screen.",
+                                    "position": {
+                                        "start": {
+                                            "line": 4,
+                                            "column": 36,
+                                            "offset": 174
+                                        },
+                                        "end": {
+                                            "line": 5,
+                                            "column": 22,
+                                            "offset": 258
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 3,
+                                    "column": 1,
+                                    "offset": 41
+                                },
+                                "end": {
+                                    "line": 5,
+                                    "column": 22,
+                                    "offset": 258
+                                },
+                                "indent": [
+                                    1,
+                                    1
+                                ]
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 5,
+                            "column": 22,
+                            "offset": 258
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": null,
+                        "lineNumber": 7,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 238,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 246,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 247,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 249,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLat"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getLngLat",
+                "kind": "function",
+                "memberof": "Marker",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getLngLat",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker#getLngLat"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Set the marker's geographical position and move it.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 52,
+                                            "offset": 51
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 52,
+                                    "offset": 51
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 52,
+                            "offset": 51
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "`this`",
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 251,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 254,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 255,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 261,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "lnglat",
+                        "lineNumber": 255,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "LngLatLike"
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 7,
+                                            "offset": 6
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 7,
+                                    "offset": 6
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "setLngLat",
+                "kind": "function",
+                "memberof": "Marker",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "setLngLat",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker#setLngLat"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 13,
+                                            "offset": 12
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "Marker",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 13,
+                                            "offset": 12
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 21,
+                                            "offset": 20
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": "'s HTML element.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 21,
+                                            "offset": 20
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 37,
+                                            "offset": 36
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 37,
+                                    "offset": 36
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 37,
+                            "offset": 36
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "element",
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "HTMLElement"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 263,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 266,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 267,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 269,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "element",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 8,
+                                                    "offset": 7
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 8,
+                                            "offset": 7
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 8,
+                                    "offset": 7
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "HTMLElement"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getElement",
+                "kind": "function",
+                "memberof": "Marker",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getElement",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker#getElement"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Binds a Popup to the Marker",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 28,
+                                            "offset": 27
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 28,
+                                    "offset": 27
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 28,
+                            "offset": 27
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": "an instance of the `Popup` class. If undefined or null, any popup\nset on this `Marker` instance is unset",
+                        "lineNumber": 2,
+                        "type": null,
+                        "name": "popup"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "`this`",
+                        "lineNumber": 4,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 271,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 276,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 277,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 304,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "popup",
+                        "lineNumber": 2,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "an instance of the ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 20,
+                                                    "offset": 19
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "Popup",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 20,
+                                                    "offset": 19
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 27,
+                                                    "offset": 26
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " class. If undefined or null, any popup\nset on this ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 27,
+                                                    "offset": 26
+                                                },
+                                                "end": {
+                                                    "line": 2,
+                                                    "column": 13,
+                                                    "offset": 78
+                                                },
+                                                "indent": [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "Marker",
+                                            "position": {
+                                                "start": {
+                                                    "line": 2,
+                                                    "column": 13,
+                                                    "offset": 78
+                                                },
+                                                "end": {
+                                                    "line": 2,
+                                                    "column": 21,
+                                                    "offset": 86
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " instance is unset",
+                                            "position": {
+                                                "start": {
+                                                    "line": 2,
+                                                    "column": 21,
+                                                    "offset": 86
+                                                },
+                                                "end": {
+                                                    "line": 2,
+                                                    "column": 39,
+                                                    "offset": 104
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 39,
+                                            "offset": 104
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 2,
+                                    "column": 39,
+                                    "offset": 104
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NullableType",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Popup"
+                            }
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 7,
+                                            "offset": 6
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 7,
+                                    "offset": 6
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "setPopup",
+                "kind": "function",
+                "memberof": "Marker",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "setPopup",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker#setPopup"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the Popup instance that is bound to the Marker",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 55,
+                                            "offset": 54
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 55,
+                                    "offset": 54
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 55,
+                            "offset": 54
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "popup",
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Popup"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 315,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 318,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 319,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 321,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "popup",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 6,
+                                                    "offset": 5
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 6,
+                                            "offset": 5
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 6,
+                                    "offset": 5
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Popup"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getPopup",
+                "kind": "function",
+                "memberof": "Marker",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getPopup",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker#getPopup"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Opens or closes the bound popup, depending on the current state",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 64,
+                                            "offset": 63
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 64,
+                                    "offset": 63
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 64,
+                            "offset": 63
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "`this`",
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 323,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 326,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 327,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 334,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 7,
+                                            "offset": 6
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 7,
+                                    "offset": 6
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "togglePopup",
+                "kind": "function",
+                "memberof": "Marker",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "togglePopup",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker#togglePopup"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Get the marker's offset.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 25,
+                                            "offset": 24
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 25,
+                                    "offset": 24
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 25,
+                            "offset": 24
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": null,
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Point"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 355,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 358,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 359,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 361,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Point"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getOffset",
+                "kind": "function",
+                "memberof": "Marker",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getOffset",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker#getOffset"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Sets the offset of the marker",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 30,
+                                            "offset": 29
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 30,
+                                    "offset": 29
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 30,
+                            "offset": 29
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": "The offset in pixels as a {@link PointLike} object to apply relative to the element's center. Negatives indicate left and up.",
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "PointLike"
+                        },
+                        "name": "offset"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "`this`",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 363,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 367,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 368,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 372,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "offset",
+                        "lineNumber": 2,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The offset in pixels as a ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 27,
+                                                    "offset": 26
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "link",
+                                            "url": "PointLike",
+                                            "title": null,
+                                            "jsdoc": true,
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "PointLike"
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 27,
+                                                    "offset": 26
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 44,
+                                                    "offset": 43
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " object to apply relative to the element's center. Negatives indicate left and up.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 44,
+                                                    "offset": 43
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 126,
+                                                    "offset": 125
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 126,
+                                            "offset": 125
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 126,
+                                    "offset": 125
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "PointLike"
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 7,
+                                            "offset": 6
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 7,
+                                    "offset": 6
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "setOffset",
+                "kind": "function",
+                "memberof": "Marker",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "setOffset",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker#setOffset"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Sets the ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 10,
+                                            "offset": 9
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "draggable",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 10,
+                                            "offset": 9
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 21,
+                                            "offset": 20
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " property and functionality of the marker",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 21,
+                                            "offset": 20
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 62,
+                                            "offset": 61
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 62,
+                                    "offset": 61
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 62,
+                            "offset": 61
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": "Turns drag functionality on/off",
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "OptionalType",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "boolean"
+                            }
+                        },
+                        "name": "shouldBeDraggable",
+                        "default": "false"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "`this`",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 455,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 459,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 460,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 476,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "shouldBeDraggable",
+                        "lineNumber": 2,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "Turns drag functionality on/off",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 32,
+                                                    "offset": 31
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 32,
+                                            "offset": 31
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 32,
+                                    "offset": 31
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        },
+                        "default": "false"
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 7,
+                                            "offset": 6
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 7,
+                                    "offset": 6
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "setDraggable",
+                "kind": "function",
+                "memberof": "Marker",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "setDraggable",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker#setDraggable"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns true if the marker can be dragged",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 42,
+                                            "offset": 41
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 42,
+                                    "offset": 41
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 42,
+                            "offset": 41
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": null,
+                        "lineNumber": 2,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 478,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 481,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 482,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 484,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "isDraggable",
+                "kind": "function",
+                "memberof": "Marker",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "isDraggable",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker#isDraggable"
+            }
+        ],
+        "events": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Fired when dragging starts",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 27,
+                                            "offset": 26
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 27,
+                                    "offset": 26
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 27,
+                            "offset": 26
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "event",
+                        "description": "dragstart",
+                        "lineNumber": 3
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "Marker",
+                        "lineNumber": 4
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 5
+                    },
+                    {
+                        "title": "type",
+                        "description": null,
+                        "lineNumber": 6,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Object"
+                        }
+                    },
+                    {
+                        "title": "property",
+                        "description": "object that is being dragged",
+                        "lineNumber": 7,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        },
+                        "name": "marker"
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 387,
+                        "column": 12
+                    },
+                    "end": {
+                        "line": 395,
+                        "column": 15
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 396,
+                            "column": 12
+                        },
+                        "end": {
+                            "line": 396,
+                            "column": 46
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [
+                    {
+                        "title": "property",
+                        "name": "marker",
+                        "lineNumber": 7,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "object that is being dragged",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 29,
+                                                    "offset": 28
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 29,
+                                            "offset": 28
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 29,
+                                    "offset": 28
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "event",
+                "name": "dragstart",
+                "memberof": "Marker",
+                "scope": "instance",
+                "type": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                },
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "dragstart",
+                        "kind": "event",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker.event:dragstart"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Fired while dragging",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 21,
+                                            "offset": 20
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 21,
+                                    "offset": 20
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 21,
+                            "offset": 20
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "event",
+                        "description": "drag",
+                        "lineNumber": 3
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "Marker",
+                        "lineNumber": 4
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 5
+                    },
+                    {
+                        "title": "type",
+                        "description": null,
+                        "lineNumber": 6,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Object"
+                        }
+                    },
+                    {
+                        "title": "property",
+                        "description": "object that is being dragged",
+                        "lineNumber": 7,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        },
+                        "name": "marker"
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 399,
+                        "column": 8
+                    },
+                    "end": {
+                        "line": 407,
+                        "column": 11
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 408,
+                            "column": 8
+                        },
+                        "end": {
+                            "line": 408,
+                            "column": 37
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [
+                    {
+                        "title": "property",
+                        "name": "marker",
+                        "lineNumber": 7,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "object that is being dragged",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 29,
+                                                    "offset": 28
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 29,
+                                            "offset": 28
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 29,
+                                    "offset": 28
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "event",
+                "name": "drag",
+                "memberof": "Marker",
+                "scope": "instance",
+                "type": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                },
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "drag",
+                        "kind": "event",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker.event:drag"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Fired when the marker is finished being dragged",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 48,
+                                            "offset": 47
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 48,
+                                    "offset": 47
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 48,
+                            "offset": 47
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "event",
+                        "description": "dragend",
+                        "lineNumber": 3
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "Marker",
+                        "lineNumber": 4
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 5
+                    },
+                    {
+                        "title": "type",
+                        "description": null,
+                        "lineNumber": 6,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Object"
+                        }
+                    },
+                    {
+                        "title": "property",
+                        "description": "object that was dragged",
+                        "lineNumber": 7,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        },
+                        "name": "marker"
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 420,
+                        "column": 12
+                    },
+                    "end": {
+                        "line": 428,
+                        "column": 14
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 429,
+                            "column": 12
+                        },
+                        "end": {
+                            "line": 429,
+                            "column": 44
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/marker.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [
+                    {
+                        "title": "property",
+                        "name": "marker",
+                        "lineNumber": 7,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "object that was dragged",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 24,
+                                                    "offset": 23
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 24,
+                                            "offset": 23
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 24,
+                                    "offset": 23
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Marker"
+                        }
+                    }
+                ],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "event",
+                "name": "dragend",
+                "memberof": "Marker",
+                "scope": "instance",
+                "type": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                },
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "Marker",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "dragend",
+                        "kind": "event",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "Marker.event:dragend"
+            }
+        ],
+        "static": []
+    },
+    "namespace": "Marker"
+}

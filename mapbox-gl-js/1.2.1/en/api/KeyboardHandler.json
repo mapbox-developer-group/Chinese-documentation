@@ -1,0 +1,1359 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "The ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 5,
+                                "offset": 4
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "KeyboardHandler",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 5,
+                                "offset": 4
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 22,
+                                "offset": 21
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " allows the user to zoom, rotate, and pan the map using\nthe following keyboard shortcuts:",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 22,
+                                "offset": 21
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 34,
+                                "offset": 110
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 34,
+                        "offset": 110
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            },
+            {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "loose": false,
+                "children": [
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "=",
+                                        "position": {
+                                            "start": {
+                                                "line": 4,
+                                                "column": 3,
+                                                "offset": 114
+                                            },
+                                            "end": {
+                                                "line": 4,
+                                                "column": 6,
+                                                "offset": 117
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " / ",
+                                        "position": {
+                                            "start": {
+                                                "line": 4,
+                                                "column": 6,
+                                                "offset": 117
+                                            },
+                                            "end": {
+                                                "line": 4,
+                                                "column": 9,
+                                                "offset": 120
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "+",
+                                        "position": {
+                                            "start": {
+                                                "line": 4,
+                                                "column": 9,
+                                                "offset": 120
+                                            },
+                                            "end": {
+                                                "line": 4,
+                                                "column": 12,
+                                                "offset": 123
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ": Increase the zoom level by 1.",
+                                        "position": {
+                                            "start": {
+                                                "line": 4,
+                                                "column": 12,
+                                                "offset": 123
+                                            },
+                                            "end": {
+                                                "line": 4,
+                                                "column": 43,
+                                                "offset": 154
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 4,
+                                        "column": 3,
+                                        "offset": 114
+                                    },
+                                    "end": {
+                                        "line": 4,
+                                        "column": 43,
+                                        "offset": 154
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 4,
+                                "column": 1,
+                                "offset": 112
+                            },
+                            "end": {
+                                "line": 4,
+                                "column": 43,
+                                "offset": 154
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "Shift-=",
+                                        "position": {
+                                            "start": {
+                                                "line": 5,
+                                                "column": 3,
+                                                "offset": 157
+                                            },
+                                            "end": {
+                                                "line": 5,
+                                                "column": 12,
+                                                "offset": 166
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " / ",
+                                        "position": {
+                                            "start": {
+                                                "line": 5,
+                                                "column": 12,
+                                                "offset": 166
+                                            },
+                                            "end": {
+                                                "line": 5,
+                                                "column": 15,
+                                                "offset": 169
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "Shift-+",
+                                        "position": {
+                                            "start": {
+                                                "line": 5,
+                                                "column": 15,
+                                                "offset": 169
+                                            },
+                                            "end": {
+                                                "line": 5,
+                                                "column": 24,
+                                                "offset": 178
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ": Increase the zoom level by 2.",
+                                        "position": {
+                                            "start": {
+                                                "line": 5,
+                                                "column": 24,
+                                                "offset": 178
+                                            },
+                                            "end": {
+                                                "line": 5,
+                                                "column": 55,
+                                                "offset": 209
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 5,
+                                        "column": 3,
+                                        "offset": 157
+                                    },
+                                    "end": {
+                                        "line": 5,
+                                        "column": 55,
+                                        "offset": 209
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 1,
+                                "offset": 155
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 55,
+                                "offset": 209
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "-",
+                                        "position": {
+                                            "start": {
+                                                "line": 6,
+                                                "column": 3,
+                                                "offset": 212
+                                            },
+                                            "end": {
+                                                "line": 6,
+                                                "column": 6,
+                                                "offset": 215
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ": Decrease the zoom level by 1.",
+                                        "position": {
+                                            "start": {
+                                                "line": 6,
+                                                "column": 6,
+                                                "offset": 215
+                                            },
+                                            "end": {
+                                                "line": 6,
+                                                "column": 37,
+                                                "offset": 246
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 6,
+                                        "column": 3,
+                                        "offset": 212
+                                    },
+                                    "end": {
+                                        "line": 6,
+                                        "column": 37,
+                                        "offset": 246
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 6,
+                                "column": 1,
+                                "offset": 210
+                            },
+                            "end": {
+                                "line": 6,
+                                "column": 37,
+                                "offset": 246
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "Shift--",
+                                        "position": {
+                                            "start": {
+                                                "line": 7,
+                                                "column": 3,
+                                                "offset": 249
+                                            },
+                                            "end": {
+                                                "line": 7,
+                                                "column": 12,
+                                                "offset": 258
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ": Decrease the zoom level by 2.",
+                                        "position": {
+                                            "start": {
+                                                "line": 7,
+                                                "column": 12,
+                                                "offset": 258
+                                            },
+                                            "end": {
+                                                "line": 7,
+                                                "column": 43,
+                                                "offset": 289
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 7,
+                                        "column": 3,
+                                        "offset": 249
+                                    },
+                                    "end": {
+                                        "line": 7,
+                                        "column": 43,
+                                        "offset": 289
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 1,
+                                "offset": 247
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 43,
+                                "offset": 289
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "Arrow keys: Pan by 100 pixels.",
+                                        "position": {
+                                            "start": {
+                                                "line": 8,
+                                                "column": 3,
+                                                "offset": 292
+                                            },
+                                            "end": {
+                                                "line": 8,
+                                                "column": 33,
+                                                "offset": 322
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 8,
+                                        "column": 3,
+                                        "offset": 292
+                                    },
+                                    "end": {
+                                        "line": 8,
+                                        "column": 33,
+                                        "offset": 322
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 8,
+                                "column": 1,
+                                "offset": 290
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 33,
+                                "offset": 322
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "Shift+⇢",
+                                        "position": {
+                                            "start": {
+                                                "line": 9,
+                                                "column": 3,
+                                                "offset": 325
+                                            },
+                                            "end": {
+                                                "line": 9,
+                                                "column": 12,
+                                                "offset": 334
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ": Increase the rotation by 15 degrees.",
+                                        "position": {
+                                            "start": {
+                                                "line": 9,
+                                                "column": 12,
+                                                "offset": 334
+                                            },
+                                            "end": {
+                                                "line": 9,
+                                                "column": 50,
+                                                "offset": 372
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 9,
+                                        "column": 3,
+                                        "offset": 325
+                                    },
+                                    "end": {
+                                        "line": 9,
+                                        "column": 50,
+                                        "offset": 372
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 9,
+                                "column": 1,
+                                "offset": 323
+                            },
+                            "end": {
+                                "line": 9,
+                                "column": 50,
+                                "offset": 372
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "Shift+⇠",
+                                        "position": {
+                                            "start": {
+                                                "line": 10,
+                                                "column": 3,
+                                                "offset": 375
+                                            },
+                                            "end": {
+                                                "line": 10,
+                                                "column": 12,
+                                                "offset": 384
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ": Decrease the rotation by 15 degrees.",
+                                        "position": {
+                                            "start": {
+                                                "line": 10,
+                                                "column": 12,
+                                                "offset": 384
+                                            },
+                                            "end": {
+                                                "line": 10,
+                                                "column": 50,
+                                                "offset": 422
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 10,
+                                        "column": 3,
+                                        "offset": 375
+                                    },
+                                    "end": {
+                                        "line": 10,
+                                        "column": 50,
+                                        "offset": 422
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 10,
+                                "column": 1,
+                                "offset": 373
+                            },
+                            "end": {
+                                "line": 10,
+                                "column": 50,
+                                "offset": 422
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "Shift+⇡",
+                                        "position": {
+                                            "start": {
+                                                "line": 11,
+                                                "column": 3,
+                                                "offset": 425
+                                            },
+                                            "end": {
+                                                "line": 11,
+                                                "column": 12,
+                                                "offset": 434
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ": Increase the pitch by 10 degrees.",
+                                        "position": {
+                                            "start": {
+                                                "line": 11,
+                                                "column": 12,
+                                                "offset": 434
+                                            },
+                                            "end": {
+                                                "line": 11,
+                                                "column": 47,
+                                                "offset": 469
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 11,
+                                        "column": 3,
+                                        "offset": 425
+                                    },
+                                    "end": {
+                                        "line": 11,
+                                        "column": 47,
+                                        "offset": 469
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 11,
+                                "column": 1,
+                                "offset": 423
+                            },
+                            "end": {
+                                "line": 11,
+                                "column": 47,
+                                "offset": 469
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "Shift+⇣",
+                                        "position": {
+                                            "start": {
+                                                "line": 12,
+                                                "column": 3,
+                                                "offset": 472
+                                            },
+                                            "end": {
+                                                "line": 12,
+                                                "column": 12,
+                                                "offset": 481
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ": Decrease the pitch by 10 degrees.",
+                                        "position": {
+                                            "start": {
+                                                "line": 12,
+                                                "column": 12,
+                                                "offset": 481
+                                            },
+                                            "end": {
+                                                "line": 12,
+                                                "column": 47,
+                                                "offset": 516
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 12,
+                                        "column": 3,
+                                        "offset": 472
+                                    },
+                                    "end": {
+                                        "line": 12,
+                                        "column": 47,
+                                        "offset": 516
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 12,
+                                "column": 1,
+                                "offset": 470
+                            },
+                            "end": {
+                                "line": 12,
+                                "column": 47,
+                                "offset": 516
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 4,
+                        "column": 1,
+                        "offset": 112
+                    },
+                    "end": {
+                        "line": 12,
+                        "column": 47,
+                        "offset": 516
+                    },
+                    "indent": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 12,
+                "column": 47,
+                "offset": 516
+            }
+        }
+    },
+    "tags": [],
+    "loc": {
+        "start": {
+            "line": 11,
+            "column": 0
+        },
+        "end": {
+            "line": 24,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 25,
+                "column": 0
+            },
+            "end": {
+                "line": 155,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/keyboard.js"
+    },
+    "augments": [],
+    "examples": [],
+    "params": [
+        {
+            "title": "param",
+            "name": "map",
+            "lineNumber": 33,
+            "type": {
+                "type": "NameExpression",
+                "name": "Map"
+            }
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "constructorComment": {
+        "description": "",
+        "tags": [
+            {
+                "title": "private",
+                "description": null,
+                "lineNumber": 1
+            }
+        ],
+        "loc": {
+            "start": {
+                "line": 30,
+                "column": 4
+            },
+            "end": {
+                "line": 32,
+                "column": 7
+            }
+        },
+        "context": {
+            "loc": {
+                "start": {
+                    "line": 33,
+                    "column": 4
+                },
+                "end": {
+                    "line": 40,
+                    "column": 5
+                }
+            },
+            "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/keyboard.js",
+            "sortKey": "!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/index.js:00000003!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/map.js:00000011!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/bind_handlers.js:00000006!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/keyboard.js 00000033",
+            "code": "{\n    _map: Map;\n    _el: HTMLElement;\n    _enabled: boolean;\n\n    /**\n     * @private\n     */\n    constructor(map: Map) {\n        this._map = map;\n        this._el = map.getCanvasContainer();\n\n        bindAll([\n            '_onKeyDown'\n        ], this);\n    }\n\n    /**\n     * Returns a Boolean indicating whether keyboard interaction is enabled.\n     *\n     * @returns {boolean} `true` if keyboard interaction is enabled.\n     */\n    isEnabled() {\n        return !!this._enabled;\n    }\n\n    /**\n     * Enables keyboard interaction.\n     *\n     * @example\n     * map.keyboard.enable();\n     */\n    enable() {\n        if (this.isEnabled()) return;\n        this._el.addEventListener('keydown', this._onKeyDown, false);\n        this._enabled = true;\n    }\n\n    /**\n     * Disables keyboard interaction.\n     *\n     * @example\n     * map.keyboard.disable();\n     */\n    disable() {\n        if (!this.isEnabled()) return;\n        this._el.removeEventListener('keydown', this._onKeyDown);\n        this._enabled = false;\n    }\n\n    _onKeyDown(e: KeyboardEvent) {\n        if (e.altKey || e.ctrlKey || e.metaKey) return;\n\n        let zoomDir = 0;\n        let bearingDir = 0;\n        let pitchDir = 0;\n        let xDir = 0;\n        let yDir = 0;\n\n        switch (e.keyCode) {\n        case 61:\n        case 107:\n        case 171:\n        case 187:\n            zoomDir = 1;\n            break;\n\n        case 189:\n        case 109:\n        case 173:\n            zoomDir = -1;\n            break;\n\n        case 37:\n            if (e.shiftKey) {\n                bearingDir = -1;\n            } else {\n                e.preventDefault();\n                xDir = -1;\n            }\n            break;\n\n        case 39:\n            if (e.shiftKey) {\n                bearingDir = 1;\n            } else {\n                e.preventDefault();\n                xDir = 1;\n            }\n            break;\n\n        case 38:\n            if (e.shiftKey) {\n                pitchDir = 1;\n            } else {\n                e.preventDefault();\n                yDir = -1;\n            }\n            break;\n\n        case 40:\n            if (e.shiftKey) {\n                pitchDir = -1;\n            } else {\n                yDir = 1;\n                e.preventDefault();\n            }\n            break;\n\n        default:\n            return;\n        }\n\n        const map = this._map;\n        const zoom = map.getZoom();\n\n        const easeOptions = {\n            duration: 300,\n            delayEndEvents: 500,\n            easing: easeOut,\n\n            zoom: zoomDir ? Math.round(zoom) + zoomDir * (e.shiftKey ? 2 : 1) : zoom,\n            bearing: map.getBearing() + bearingDir * bearingStep,\n            pitch: map.getPitch() + pitchDir * pitchStep,\n            offset: [-xDir * panStep, -yDir * panStep],\n            center: map.getCenter()\n        };\n\n        map.easeTo(easeOptions, {originalEvent: e});\n    }\n}"
+        },
+        "augments": [],
+        "errors": [],
+        "examples": [],
+        "params": [],
+        "properties": [],
+        "returns": [],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "access": "private"
+    },
+    "name": "KeyboardHandler",
+    "kind": "class",
+    "path": [
+        {
+            "name": "KeyboardHandler",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns a Boolean indicating whether keyboard interaction is enabled.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 70,
+                                            "offset": 69
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 70,
+                                    "offset": 69
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 70,
+                            "offset": 69
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "`true` if keyboard interaction is enabled.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 42,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 46,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 47,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 49,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/keyboard.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "true",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " if keyboard interaction is enabled.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 43,
+                                                    "offset": 42
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 43,
+                                            "offset": 42
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 43,
+                                    "offset": 42
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "isEnabled",
+                "kind": "function",
+                "memberof": "KeyboardHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "KeyboardHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "isEnabled",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "KeyboardHandler#isEnabled"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Enables keyboard interaction.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 30,
+                                            "offset": 29
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 30,
+                                    "offset": 29
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 30,
+                            "offset": 29
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "example",
+                        "description": "map.keyboard.enable();",
+                        "lineNumber": 3
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 51,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 56,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 57,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 61,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/keyboard.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "map.keyboard.enable();"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "enable",
+                "kind": "function",
+                "memberof": "KeyboardHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "KeyboardHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "enable",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "KeyboardHandler#enable"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Disables keyboard interaction.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 31,
+                                            "offset": 30
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 31,
+                                    "offset": 30
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 31,
+                            "offset": 30
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "example",
+                        "description": "map.keyboard.disable();",
+                        "lineNumber": 3
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 63,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 68,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 69,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 73,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/keyboard.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "map.keyboard.disable();"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "disable",
+                "kind": "function",
+                "memberof": "KeyboardHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "KeyboardHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "disable",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "KeyboardHandler#disable"
+            }
+        ],
+        "events": [],
+        "static": []
+    },
+    "namespace": "KeyboardHandler"
+}

@@ -1,0 +1,719 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "A ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 3,
+                                "offset": 2
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "ScaleControl",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 3,
+                                "offset": 2
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 17,
+                                "offset": 16
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " control displays the ratio of a distance on the map to the corresponding distance on the ground.",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 17,
+                                "offset": 16
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 114,
+                                "offset": 113
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 114,
+                        "offset": 113
+                    },
+                    "indent": []
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 1,
+                "column": 114,
+                "offset": 113
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "implements",
+            "description": null,
+            "lineNumber": 3,
+            "type": {
+                "type": "NameExpression",
+                "name": "IControl"
+            }
+        },
+        {
+            "title": "param",
+            "description": null,
+            "lineNumber": 4,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "name": "options"
+        },
+        {
+            "title": "param",
+            "description": "The maximum length of the scale control in pixels.",
+            "lineNumber": 5,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "number"
+                }
+            },
+            "name": "options.maxWidth",
+            "default": "'100'"
+        },
+        {
+            "title": "param",
+            "description": "Unit of the distance (`'imperial'`, `'metric'` or `'nautical'`).",
+            "lineNumber": 6,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "string"
+                }
+            },
+            "name": "options.unit",
+            "default": "'metric'"
+        },
+        {
+            "title": "example",
+            "description": "var scale = new mapboxgl.ScaleControl({\n    maxWidth: 80,\n    unit: 'imperial'\n});\nmap.addControl(scale);\n\nscale.setUnit('metric');",
+            "lineNumber": 7
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 20,
+            "column": 0
+        },
+        "end": {
+            "line": 35,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 36,
+                "column": 0
+            },
+            "end": {
+                "line": 83,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/control/scale_control.js"
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "var scale = new mapboxgl.ScaleControl({\n    maxWidth: 80,\n    unit: 'imperial'\n});\nmap.addControl(scale);\n\nscale.setUnit('metric');"
+        }
+    ],
+    "params": [
+        {
+            "title": "param",
+            "name": "options",
+            "lineNumber": 4,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "properties": [
+                {
+                    "title": "param",
+                    "name": "options.maxWidth",
+                    "lineNumber": 5,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "The maximum length of the scale control in pixels.",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 51,
+                                                "offset": 50
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 51,
+                                        "offset": 50
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 51,
+                                "offset": 50
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    },
+                    "default": "'100'"
+                },
+                {
+                    "title": "param",
+                    "name": "options.unit",
+                    "lineNumber": 6,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "Unit of the distance (",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 23,
+                                                "offset": 22
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "'imperial'",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 23,
+                                                "offset": 22
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 35,
+                                                "offset": 34
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ", ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 35,
+                                                "offset": 34
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 37,
+                                                "offset": 36
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "'metric'",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 37,
+                                                "offset": 36
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 47,
+                                                "offset": 46
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " or ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 47,
+                                                "offset": 46
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 51,
+                                                "offset": 50
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "'nautical'",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 51,
+                                                "offset": 50
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 63,
+                                                "offset": 62
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ").",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 63,
+                                                "offset": 62
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 65,
+                                                "offset": 64
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 65,
+                                        "offset": 64
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 65,
+                                "offset": 64
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    },
+                    "default": "'metric'"
+                }
+            ]
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "name": "ScaleControl",
+    "kind": "class",
+    "path": [
+        {
+            "name": "ScaleControl",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Set the scale's unit of the distance",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 37,
+                                            "offset": 36
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 37,
+                                    "offset": 36
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 37,
+                            "offset": 36
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "param",
+                        "description": "Unit of the distance (`'imperial'`, `'metric'` or `'nautical'`).",
+                        "lineNumber": 3,
+                        "type": null,
+                        "name": "unit"
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 74,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 78,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 79,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 82,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/control/scale_control.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "unit",
+                        "lineNumber": 3,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "Unit of the distance (",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 23,
+                                                    "offset": 22
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "'imperial'",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 23,
+                                                    "offset": 22
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 35,
+                                                    "offset": 34
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": ", ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 35,
+                                                    "offset": 34
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 37,
+                                                    "offset": 36
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "'metric'",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 37,
+                                                    "offset": 36
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 47,
+                                                    "offset": 46
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " or ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 47,
+                                                    "offset": 46
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 51,
+                                                    "offset": 50
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "'nautical'",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 51,
+                                                    "offset": 50
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 63,
+                                                    "offset": 62
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": ").",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 63,
+                                                    "offset": 62
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 65,
+                                                    "offset": 64
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 65,
+                                            "offset": 64
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 65,
+                                    "offset": 64
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Unit"
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "setUnit",
+                "kind": "function",
+                "memberof": "ScaleControl",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "ScaleControl",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "setUnit",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "ScaleControl#setUnit"
+            }
+        ],
+        "events": [],
+        "static": []
+    },
+    "namespace": "ScaleControl"
+}

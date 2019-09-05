@@ -1,0 +1,130 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Gets and sets the maximum number of images (raster tiles, sprites, icons) to load in parallel,\nwhich affects performance in raster-heavy maps. 16 by default.",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 63,
+                                "offset": 157
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 63,
+                        "offset": 157
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 2,
+                "column": 63,
+                "offset": 157
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "var",
+            "description": null,
+            "lineNumber": 4,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            },
+            "name": "maxParallelImageRequests"
+        },
+        {
+            "title": "example",
+            "description": "mapboxgl.maxParallelImageRequests = 10;",
+            "lineNumber": 5
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 94,
+            "column": 4
+        },
+        "end": {
+            "line": 101,
+            "column": 7
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 102,
+                "column": 4
+            },
+            "end": {
+                "line": 104,
+                "column": 5
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/index.js"
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "mapboxgl.maxParallelImageRequests = 10;"
+        }
+    ],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "member",
+    "name": "maxParallelImageRequests",
+    "type": {
+        "type": "NameExpression",
+        "name": "string"
+    },
+    "path": [
+        {
+            "name": "maxParallelImageRequests",
+            "kind": "member"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "maxParallelImageRequests"
+}

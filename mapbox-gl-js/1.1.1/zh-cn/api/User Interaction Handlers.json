@@ -1,0 +1,76 @@
+{
+    "name": "User Interaction Handlers",
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Handlers 为地图提供了多种交互功能 -\n鼠标交互, 触摸交互, 以及其他\n手势交互功能。",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 10,
+                                "offset": 119
+                            },
+                            "indent": [
+                                1,
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3,
+                        "column": 10,
+                        "offset": 119
+                    },
+                    "indent": [
+                        1,
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 4,
+                "column": 1,
+                "offset": 120
+            }
+        }
+    },
+    "kind": "note",
+    "path": [
+        {
+            "name": "User Interaction Handlers",
+            "kind": "note"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "User Interaction Handlers"
+}

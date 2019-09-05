@@ -1,0 +1,1658 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "inlineCode",
+                        "value": "MapMouseEvent",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 16,
+                                "offset": 15
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " is the event type for mouse-related map events.",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 16,
+                                "offset": 15
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 64,
+                                "offset": 63
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 64,
+                        "offset": 63
+                    },
+                    "indent": []
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 1,
+                "column": 64,
+                "offset": 63
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "extends",
+            "description": null,
+            "lineNumber": 2,
+            "type": {
+                "type": "NameExpression",
+                "name": "Object"
+            },
+            "name": "Object"
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 12,
+            "column": 0
+        },
+        "end": {
+            "line": 15,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 16,
+                "column": 0
+            },
+            "end": {
+                "line": 85,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/events.js"
+    },
+    "augments": [
+        {
+            "title": "extends",
+            "description": null,
+            "lineNumber": 2,
+            "type": {
+                "type": "NameExpression",
+                "name": "Object"
+            },
+            "name": "Object"
+        }
+    ],
+    "examples": [],
+    "params": [
+        {
+            "title": "param",
+            "name": "type",
+            "lineNumber": 78,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            }
+        },
+        {
+            "title": "param",
+            "name": "map",
+            "lineNumber": 78,
+            "type": {
+                "type": "NameExpression",
+                "name": "Map"
+            }
+        },
+        {
+            "title": "param",
+            "name": "originalEvent",
+            "lineNumber": 78,
+            "type": {
+                "type": "NameExpression",
+                "name": "MouseEvent"
+            }
+        },
+        {
+            "title": "param",
+            "name": "data",
+            "lineNumber": 78,
+            "type": {
+                "type": "NameExpression",
+                "name": "Object"
+            },
+            "default": "{}"
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "constructorComment": {
+        "description": "",
+        "tags": [
+            {
+                "title": "private",
+                "description": null,
+                "lineNumber": 1
+            }
+        ],
+        "loc": {
+            "start": {
+                "line": 75,
+                "column": 4
+            },
+            "end": {
+                "line": 77,
+                "column": 7
+            }
+        },
+        "context": {
+            "loc": {
+                "start": {
+                    "line": 78,
+                    "column": 4
+                },
+                "end": {
+                    "line": 84,
+                    "column": 5
+                }
+            },
+            "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/events.js",
+            "sortKey": "!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/index.js:00000003!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/map.js:00000021!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/events.js 00000078",
+            "code": "{\n    /**\n     * The event type.\n     */\n    type: 'mousedown'\n        | 'mouseup'\n        | 'click'\n        | 'dblclick'\n        | 'mousemove'\n        | 'mouseover'\n        | 'mouseenter'\n        | 'mouseleave'\n        | 'mouseout'\n        | 'contextmenu';\n\n    /**\n     * The `Map` object that fired the event.\n     */\n    target: Map;\n\n    /**\n     * The DOM event which caused the map event.\n     */\n    originalEvent: MouseEvent;\n\n    /**\n     * The pixel coordinates of the mouse cursor, relative to the map and measured from the top left corner.\n     */\n    point: Point;\n\n    /**\n     * The geographic location on the map of the mouse cursor.\n     */\n    lngLat: LngLat;\n\n    /**\n     * Prevents subsequent default processing of the event by the map.\n     *\n     * Calling this method will prevent the following default map behaviors:\n     *\n     *   * On `mousedown` events, the behavior of {@link DragPanHandler}\n     *   * On `mousedown` events, the behavior of {@link DragRotateHandler}\n     *   * On `mousedown` events, the behavior of {@link BoxZoomHandler}\n     *   * On `dblclick` events, the behavior of {@link DoubleClickZoomHandler}\n     *\n     */\n    preventDefault() {\n        this._defaultPrevented = true;\n    }\n\n    /**\n     * `true` if `preventDefault` has been called.\n     */\n    get defaultPrevented(): boolean {\n        return this._defaultPrevented;\n    }\n\n    _defaultPrevented: boolean;\n\n    /**\n     * @private\n     */\n    constructor(type: string, map: Map, originalEvent: MouseEvent, data: Object = {}) {\n        const point = DOM.mousePos(map.getCanvasContainer(), originalEvent);\n        const lngLat = map.unproject(point);\n        super(type, extend({ point, lngLat, originalEvent }, data));\n        this._defaultPrevented = false;\n        this.target = map;\n    }\n}"
+        },
+        "augments": [],
+        "errors": [],
+        "examples": [],
+        "params": [],
+        "properties": [],
+        "returns": [],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "access": "private"
+    },
+    "name": "MapMouseEvent",
+    "kind": "class",
+    "path": [
+        {
+            "name": "MapMouseEvent",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "The event type.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 16,
+                                            "offset": 15
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 16,
+                                    "offset": 15
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 16,
+                            "offset": 15
+                        }
+                    }
+                },
+                "tags": [],
+                "loc": {
+                    "start": {
+                        "line": 17,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 19,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 20,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 29,
+                            "column": 24
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/events.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "type",
+                "kind": "member",
+                "memberof": "MapMouseEvent",
+                "scope": "instance",
+                "type": {
+                    "type": "UnionType",
+                    "elements": [
+                        {
+                            "type": "StringLiteralType",
+                            "value": "mousedown"
+                        },
+                        {
+                            "type": "StringLiteralType",
+                            "value": "mouseup"
+                        },
+                        {
+                            "type": "StringLiteralType",
+                            "value": "click"
+                        },
+                        {
+                            "type": "StringLiteralType",
+                            "value": "dblclick"
+                        },
+                        {
+                            "type": "StringLiteralType",
+                            "value": "mousemove"
+                        },
+                        {
+                            "type": "StringLiteralType",
+                            "value": "mouseover"
+                        },
+                        {
+                            "type": "StringLiteralType",
+                            "value": "mouseenter"
+                        },
+                        {
+                            "type": "StringLiteralType",
+                            "value": "mouseleave"
+                        },
+                        {
+                            "type": "StringLiteralType",
+                            "value": "mouseout"
+                        },
+                        {
+                            "type": "StringLiteralType",
+                            "value": "contextmenu"
+                        }
+                    ]
+                },
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "MapMouseEvent",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "type",
+                        "kind": "member",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "MapMouseEvent#type"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "The ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 5,
+                                            "offset": 4
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "Map",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 5,
+                                            "offset": 4
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 10,
+                                            "offset": 9
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " object that fired the event.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 10,
+                                            "offset": 9
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 39,
+                                            "offset": 38
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 39,
+                                    "offset": 38
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 39,
+                            "offset": 38
+                        }
+                    }
+                },
+                "tags": [],
+                "loc": {
+                    "start": {
+                        "line": 31,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 33,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 34,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 34,
+                            "column": 16
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/events.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "target",
+                "kind": "member",
+                "memberof": "MapMouseEvent",
+                "scope": "instance",
+                "type": {
+                    "type": "NameExpression",
+                    "name": "Map"
+                },
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "MapMouseEvent",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "target",
+                        "kind": "member",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "MapMouseEvent#target"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "The DOM event which caused the map event.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 42,
+                                            "offset": 41
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 42,
+                                    "offset": 41
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 42,
+                            "offset": 41
+                        }
+                    }
+                },
+                "tags": [],
+                "loc": {
+                    "start": {
+                        "line": 36,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 38,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 39,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 39,
+                            "column": 30
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/events.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "originalEvent",
+                "kind": "member",
+                "memberof": "MapMouseEvent",
+                "scope": "instance",
+                "type": {
+                    "type": "NameExpression",
+                    "name": "MouseEvent"
+                },
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "MapMouseEvent",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "originalEvent",
+                        "kind": "member",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "MapMouseEvent#originalEvent"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "The pixel coordinates of the mouse cursor, relative to the map and measured from the top left corner.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 102,
+                                            "offset": 101
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 102,
+                                    "offset": 101
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 102,
+                            "offset": 101
+                        }
+                    }
+                },
+                "tags": [],
+                "loc": {
+                    "start": {
+                        "line": 41,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 43,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 44,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 44,
+                            "column": 17
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/events.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "point",
+                "kind": "member",
+                "memberof": "MapMouseEvent",
+                "scope": "instance",
+                "type": {
+                    "type": "NameExpression",
+                    "name": "Point"
+                },
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "MapMouseEvent",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "point",
+                        "kind": "member",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "MapMouseEvent#point"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "The geographic location on the map of the mouse cursor.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 56,
+                                            "offset": 55
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 56,
+                                    "offset": 55
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 56,
+                            "offset": 55
+                        }
+                    }
+                },
+                "tags": [],
+                "loc": {
+                    "start": {
+                        "line": 46,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 48,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 49,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 49,
+                            "column": 19
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/events.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "lngLat",
+                "kind": "member",
+                "memberof": "MapMouseEvent",
+                "scope": "instance",
+                "type": {
+                    "type": "NameExpression",
+                    "name": "LngLat"
+                },
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "MapMouseEvent",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "lngLat",
+                        "kind": "member",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "MapMouseEvent#lngLat"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Prevents subsequent default processing of the event by the map.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 64,
+                                            "offset": 63
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 64,
+                                    "offset": 63
+                                },
+                                "indent": []
+                            }
+                        },
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Calling this method will prevent the following default map behaviors:",
+                                    "position": {
+                                        "start": {
+                                            "line": 3,
+                                            "column": 1,
+                                            "offset": 65
+                                        },
+                                        "end": {
+                                            "line": 3,
+                                            "column": 70,
+                                            "offset": 134
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 3,
+                                    "column": 1,
+                                    "offset": 65
+                                },
+                                "end": {
+                                    "line": 3,
+                                    "column": 70,
+                                    "offset": 134
+                                },
+                                "indent": []
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "ordered": false,
+                            "start": null,
+                            "loose": false,
+                            "children": [
+                                {
+                                    "type": "listItem",
+                                    "loose": false,
+                                    "checked": null,
+                                    "children": [
+                                        {
+                                            "type": "paragraph",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "On ",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 5,
+                                                            "column": 5,
+                                                            "offset": 140
+                                                        },
+                                                        "end": {
+                                                            "line": 5,
+                                                            "column": 8,
+                                                            "offset": 143
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "inlineCode",
+                                                    "value": "mousedown",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 5,
+                                                            "column": 8,
+                                                            "offset": 143
+                                                        },
+                                                        "end": {
+                                                            "line": 5,
+                                                            "column": 19,
+                                                            "offset": 154
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "value": " events, the behavior of ",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 5,
+                                                            "column": 19,
+                                                            "offset": 154
+                                                        },
+                                                        "end": {
+                                                            "line": 5,
+                                                            "column": 44,
+                                                            "offset": 179
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "link",
+                                                    "url": "DragPanHandler",
+                                                    "title": null,
+                                                    "jsdoc": true,
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "value": "DragPanHandler"
+                                                        }
+                                                    ],
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 5,
+                                                            "column": 44,
+                                                            "offset": 179
+                                                        },
+                                                        "end": {
+                                                            "line": 5,
+                                                            "column": 66,
+                                                            "offset": 201
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 5,
+                                                    "column": 5,
+                                                    "offset": 140
+                                                },
+                                                "end": {
+                                                    "line": 5,
+                                                    "column": 66,
+                                                    "offset": 201
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 5,
+                                            "column": 1,
+                                            "offset": 136
+                                        },
+                                        "end": {
+                                            "line": 5,
+                                            "column": 66,
+                                            "offset": 201
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "listItem",
+                                    "loose": false,
+                                    "checked": null,
+                                    "children": [
+                                        {
+                                            "type": "paragraph",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "On ",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 6,
+                                                            "column": 5,
+                                                            "offset": 206
+                                                        },
+                                                        "end": {
+                                                            "line": 6,
+                                                            "column": 8,
+                                                            "offset": 209
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "inlineCode",
+                                                    "value": "mousedown",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 6,
+                                                            "column": 8,
+                                                            "offset": 209
+                                                        },
+                                                        "end": {
+                                                            "line": 6,
+                                                            "column": 19,
+                                                            "offset": 220
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "value": " events, the behavior of ",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 6,
+                                                            "column": 19,
+                                                            "offset": 220
+                                                        },
+                                                        "end": {
+                                                            "line": 6,
+                                                            "column": 44,
+                                                            "offset": 245
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "link",
+                                                    "url": "DragRotateHandler",
+                                                    "title": null,
+                                                    "jsdoc": true,
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "value": "DragRotateHandler"
+                                                        }
+                                                    ],
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 6,
+                                                            "column": 44,
+                                                            "offset": 245
+                                                        },
+                                                        "end": {
+                                                            "line": 6,
+                                                            "column": 69,
+                                                            "offset": 270
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 6,
+                                                    "column": 5,
+                                                    "offset": 206
+                                                },
+                                                "end": {
+                                                    "line": 6,
+                                                    "column": 69,
+                                                    "offset": 270
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 6,
+                                            "column": 1,
+                                            "offset": 202
+                                        },
+                                        "end": {
+                                            "line": 6,
+                                            "column": 69,
+                                            "offset": 270
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "listItem",
+                                    "loose": false,
+                                    "checked": null,
+                                    "children": [
+                                        {
+                                            "type": "paragraph",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "On ",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 7,
+                                                            "column": 5,
+                                                            "offset": 275
+                                                        },
+                                                        "end": {
+                                                            "line": 7,
+                                                            "column": 8,
+                                                            "offset": 278
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "inlineCode",
+                                                    "value": "mousedown",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 7,
+                                                            "column": 8,
+                                                            "offset": 278
+                                                        },
+                                                        "end": {
+                                                            "line": 7,
+                                                            "column": 19,
+                                                            "offset": 289
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "value": " events, the behavior of ",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 7,
+                                                            "column": 19,
+                                                            "offset": 289
+                                                        },
+                                                        "end": {
+                                                            "line": 7,
+                                                            "column": 44,
+                                                            "offset": 314
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "link",
+                                                    "url": "BoxZoomHandler",
+                                                    "title": null,
+                                                    "jsdoc": true,
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "value": "BoxZoomHandler"
+                                                        }
+                                                    ],
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 7,
+                                                            "column": 44,
+                                                            "offset": 314
+                                                        },
+                                                        "end": {
+                                                            "line": 7,
+                                                            "column": 66,
+                                                            "offset": 336
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 7,
+                                                    "column": 5,
+                                                    "offset": 275
+                                                },
+                                                "end": {
+                                                    "line": 7,
+                                                    "column": 66,
+                                                    "offset": 336
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 7,
+                                            "column": 1,
+                                            "offset": 271
+                                        },
+                                        "end": {
+                                            "line": 7,
+                                            "column": 66,
+                                            "offset": 336
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "listItem",
+                                    "loose": false,
+                                    "checked": null,
+                                    "children": [
+                                        {
+                                            "type": "paragraph",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "On ",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 8,
+                                                            "column": 5,
+                                                            "offset": 341
+                                                        },
+                                                        "end": {
+                                                            "line": 8,
+                                                            "column": 8,
+                                                            "offset": 344
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "inlineCode",
+                                                    "value": "dblclick",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 8,
+                                                            "column": 8,
+                                                            "offset": 344
+                                                        },
+                                                        "end": {
+                                                            "line": 8,
+                                                            "column": 18,
+                                                            "offset": 354
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "value": " events, the behavior of ",
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 8,
+                                                            "column": 18,
+                                                            "offset": 354
+                                                        },
+                                                        "end": {
+                                                            "line": 8,
+                                                            "column": 43,
+                                                            "offset": 379
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                },
+                                                {
+                                                    "type": "link",
+                                                    "url": "DoubleClickZoomHandler",
+                                                    "title": null,
+                                                    "jsdoc": true,
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "value": "DoubleClickZoomHandler"
+                                                        }
+                                                    ],
+                                                    "position": {
+                                                        "start": {
+                                                            "line": 8,
+                                                            "column": 43,
+                                                            "offset": 379
+                                                        },
+                                                        "end": {
+                                                            "line": 8,
+                                                            "column": 73,
+                                                            "offset": 409
+                                                        },
+                                                        "indent": []
+                                                    }
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 8,
+                                                    "column": 5,
+                                                    "offset": 341
+                                                },
+                                                "end": {
+                                                    "line": 8,
+                                                    "column": 73,
+                                                    "offset": 409
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 8,
+                                            "column": 1,
+                                            "offset": 337
+                                        },
+                                        "end": {
+                                            "line": 8,
+                                            "column": 73,
+                                            "offset": 409
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 5,
+                                    "column": 1,
+                                    "offset": 136
+                                },
+                                "end": {
+                                    "line": 8,
+                                    "column": 73,
+                                    "offset": 409
+                                },
+                                "indent": [
+                                    1,
+                                    1,
+                                    1
+                                ]
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 8,
+                            "column": 73,
+                            "offset": 409
+                        }
+                    }
+                },
+                "tags": [],
+                "loc": {
+                    "start": {
+                        "line": 51,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 61,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 62,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 64,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/events.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "preventDefault",
+                "kind": "function",
+                "memberof": "MapMouseEvent",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "MapMouseEvent",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "preventDefault",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "MapMouseEvent#preventDefault"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "inlineCode",
+                                    "value": "true",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 7,
+                                            "offset": 6
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " if ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 7,
+                                            "offset": 6
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 11,
+                                            "offset": 10
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "preventDefault",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 11,
+                                            "offset": 10
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 27,
+                                            "offset": 26
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " has been called.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 27,
+                                            "offset": 26
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 44,
+                                            "offset": 43
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 44,
+                                    "offset": 43
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 44,
+                            "offset": 43
+                        }
+                    }
+                },
+                "tags": [],
+                "loc": {
+                    "start": {
+                        "line": 66,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 68,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 69,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 71,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/events.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "defaultPrevented",
+                "kind": "member",
+                "memberof": "MapMouseEvent",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "MapMouseEvent",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "defaultPrevented",
+                        "kind": "member",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "MapMouseEvent#defaultPrevented"
+            }
+        ],
+        "events": [],
+        "static": []
+    },
+    "namespace": "MapMouseEvent"
+}

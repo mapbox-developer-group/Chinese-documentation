@@ -1,0 +1,1072 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "包含 HTML 画布内容的数据源。 参考 ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 62,
+                                "offset": 61
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "url": "CanvasSourceOptions",
+                        "title": null,
+                        "jsdoc": true,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "CanvasSourceOptions"
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 62,
+                                "offset": 61
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 89,
+                                "offset": 88
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " 查看更多详细的配置信息。",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 89,
+                                "offset": 88
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 128,
+                                "offset": 127
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 128,
+                        "offset": 127
+                    },
+                    "indent": []
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 1,
+                "column": 128,
+                "offset": 127
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "example",
+            "description": "// add to map\nmap.addSource('some id', {\n   type: 'canvas',\n   canvas: 'idOfMyHTMLCanvas',\n   animate: true,\n   coordinates: [\n       [-76.54, 39.18],\n       [-76.52, 39.18],\n       [-76.52, 39.17],\n       [-76.54, 39.17]\n   ]\n});\n\n// update\nvar mySource = map.getSource('some id');\nmySource.setCoordinates([\n    [-76.54335737228394, 39.18579907229748],\n    [-76.52803659439087, 39.1838364847587],\n    [-76.5295386314392, 39.17683392507606],\n    [-76.54520273208618, 39.17876344106642]\n]);\n\nmap.removeSource('some id');  // remove",
+            "lineNumber": 3
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 33,
+            "column": 0
+        },
+        "end": {
+            "line": 60,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 61,
+                "column": 0
+            },
+            "end": {
+                "line": 235,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/source/canvas_source.js",
+        "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/source/canvas_source.js#L61-L235",
+            "path": "src/source/canvas_source.js"
+        }
+    },
+    "augments": [
+        {
+            "title": "augments",
+            "name": "ImageSource"
+        }
+    ],
+    "examples": [
+        {
+            "description": "// add to map\nmap.addSource('some id', {\n   type: 'canvas',\n   canvas: 'idOfMyHTMLCanvas',\n   animate: true,\n   coordinates: [\n       [-76.54, 39.18],\n       [-76.52, 39.18],\n       [-76.52, 39.17],\n       [-76.54, 39.17]\n   ]\n});\n\n// update\nvar mySource = map.getSource('some id');\nmySource.setCoordinates([\n    [-76.54335737228394, 39.18579907229748],\n    [-76.52803659439087, 39.1838364847587],\n    [-76.5295386314392, 39.17683392507606],\n    [-76.54520273208618, 39.17876344106642]\n]);\n\nmap.removeSource('some id');  // remove"
+        }
+    ],
+    "params": [
+        {
+            "title": "param",
+            "name": "id",
+            "lineNumber": 74,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            }
+        },
+        {
+            "title": "param",
+            "name": "options",
+            "lineNumber": 74,
+            "type": {
+                "type": "NameExpression",
+                "name": "CanvasSourceSpecification"
+            }
+        },
+        {
+            "title": "param",
+            "name": "dispatcher",
+            "lineNumber": 74,
+            "type": {
+                "type": "NameExpression",
+                "name": "Dispatcher"
+            }
+        },
+        {
+            "title": "param",
+            "name": "eventedParent",
+            "lineNumber": 74,
+            "type": {
+                "type": "NameExpression",
+                "name": "Evented"
+            }
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "constructorComment": {
+        "description": "",
+        "tags": [
+            {
+                "title": "private",
+                "description": null,
+                "lineNumber": 1
+            }
+        ],
+        "loc": {
+            "start": {
+                "line": 71,
+                "column": 4
+            },
+            "end": {
+                "line": 73,
+                "column": 7
+            }
+        },
+        "context": {
+            "loc": {
+                "start": {
+                    "line": 74,
+                    "column": 4
+                },
+                "end": {
+                    "line": 97,
+                    "column": 5
+                }
+            },
+            "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/source/canvas_source.js",
+            "sortKey": "!/Users/mapboxchina/projects/mapbox-gl-js/src/index.js:00000011!/Users/mapboxchina/projects/mapbox-gl-js/src/style/style.js:00000015!/Users/mapboxchina/projects/mapbox-gl-js/src/source/source.js:00000008!/Users/mapboxchina/projects/mapbox-gl-js/src/source/canvas_source.js 00000074",
+            "code": "{\n    options: CanvasSourceSpecification;\n    animate: boolean;\n    canvas: HTMLCanvasElement;\n    width: number;\n    height: number;\n    play: () => void;\n    pause: () => void;\n    _playing: boolean;\n\n    /**\n     * @private\n     */\n    constructor(id: string, options: CanvasSourceSpecification, dispatcher: Dispatcher, eventedParent: Evented) {\n        super(id, options, dispatcher, eventedParent);\n\n        // We build in some validation here, since canvas sources aren't included in the style spec:\n        if (!options.coordinates) {\n            this.fire(new ErrorEvent(new ValidationError(`sources.${id}`, null, 'missing required property \"coordinates\"')));\n        } else if (!Array.isArray(options.coordinates) || options.coordinates.length !== 4 ||\n                options.coordinates.some(c => !Array.isArray(c) || c.length !== 2 || c.some(l => typeof l !== 'number'))) {\n            this.fire(new ErrorEvent(new ValidationError(`sources.${id}`, null, '\"coordinates\" property must be an array of 4 longitude/latitude array pairs')));\n        }\n\n        if (options.animate && typeof options.animate !== 'boolean') {\n            this.fire(new ErrorEvent(new ValidationError(`sources.${id}`, null, 'optional \"animate\" property must be a boolean value')));\n        }\n\n        if (!options.canvas) {\n            this.fire(new ErrorEvent(new ValidationError(`sources.${id}`, null, 'missing required property \"canvas\"')));\n        } else if (typeof options.canvas !== 'string' && !(options.canvas instanceof window.HTMLCanvasElement)) {\n            this.fire(new ErrorEvent(new ValidationError(`sources.${id}`, null, '\"canvas\" must be either a string representing the ID of the canvas element from which to read, or an HTMLCanvasElement instance')));\n        }\n\n        this.options = options;\n        this.animate = options.animate !== undefined ? options.animate : true;\n    }\n\n    /**\n     * Enables animation. The image will be copied from the canvas to the map on each frame.\n     * @method play\n     * @instance\n     * @memberof CanvasSource\n     */\n\n    /**\n     * Disables animation. The map will display a static copy of the canvas image.\n     * @method pause\n     * @instance\n     * @memberof CanvasSource\n     */\n\n    load() {\n        if (!this.canvas) {\n            this.canvas = (this.options.canvas instanceof window.HTMLCanvasElement) ?\n                this.options.canvas :\n                window.document.getElementById(this.options.canvas);\n        }\n        this.width = this.canvas.width;\n        this.height = this.canvas.height;\n\n        if (this._hasInvalidDimensions()) {\n            this.fire(new ErrorEvent(new Error('Canvas dimensions cannot be less than or equal to zero.')));\n            return;\n        }\n\n        this.play = function() {\n            this._playing = true;\n            this.map.triggerRepaint();\n        };\n\n        this.pause = function() {\n            if (this._playing) {\n                this.prepare();\n                this._playing = false;\n            }\n        };\n\n        this._finishLoading();\n    }\n\n    /**\n     * Returns the HTML `canvas` element.\n     *\n     * @returns {HTMLCanvasElement} The HTML `canvas` element.\n     */\n    getCanvas() {\n        return this.canvas;\n    }\n\n    onAdd(map: Map) {\n        this.map = map;\n        this.load();\n        if (this.canvas) {\n            if (this.animate) this.play();\n        }\n    }\n\n    onRemove() {\n        this.pause();\n    }\n\n    /**\n     * Sets the canvas's coordinates and re-renders the map.\n     *\n     * @method setCoordinates\n     * @instance\n     * @memberof CanvasSource\n     * @param {Array<Array<number>>} coordinates Four geographical coordinates,\n     *   represented as arrays of longitude and latitude numbers, which define the corners of the canvas.\n     *   The coordinates start at the top left corner of the canvas and proceed in clockwise order.\n     *   They do not have to represent a rectangle.\n     * @returns {CanvasSource} this\n     */\n    // setCoordinates inherited from ImageSource\n\n    prepare() {\n        let resize = false;\n        if (this.canvas.width !== this.width) {\n            this.width = this.canvas.width;\n            resize = true;\n        }\n        if (this.canvas.height !== this.height) {\n            this.height = this.canvas.height;\n            resize = true;\n        }\n\n        if (this._hasInvalidDimensions()) return;\n\n        if (Object.keys(this.tiles).length === 0) return; // not enough data for current position\n\n        const context = this.map.painter.context;\n        const gl = context.gl;\n\n        if (!this.boundsBuffer) {\n            this.boundsBuffer = context.createVertexBuffer(this._boundsArray, rasterBoundsAttributes.members);\n        }\n\n        if (!this.boundsSegments) {\n            this.boundsSegments = SegmentVector.simpleSegment(0, 0, 4, 2);\n        }\n\n        if (!this.texture) {\n            this.texture = new Texture(context, this.canvas, gl.RGBA, { premultiply: true });\n        } else if (resize || this._playing) {\n            this.texture.update(this.canvas, { premultiply: true });\n        }\n\n        for (const w in this.tiles) {\n            const tile = this.tiles[w];\n            if (tile.state !== 'loaded') {\n                tile.state = 'loaded';\n                tile.texture = this.texture;\n            }\n        }\n    }\n\n    serialize(): Object {\n        return {\n            type: 'canvas',\n            coordinates: this.coordinates\n        };\n    }\n\n    hasTransition() {\n        return this._playing;\n    }\n\n    _hasInvalidDimensions() {\n        for (const x of [this.canvas.width, this.canvas.height]) {\n            if (isNaN(x) || x <= 0) return true;\n        }\n        return false;\n    }\n}"
+        },
+        "augments": [],
+        "errors": [],
+        "examples": [],
+        "params": [],
+        "properties": [],
+        "returns": [],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "access": "private"
+    },
+    "name": "CanvasSource",
+    "kind": "class",
+    "path": [
+        {
+            "name": "CanvasSource",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "禁用动态转换。地图会展示一个画布图像的静态拷贝。",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 76,
+                                            "offset": 75
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 76,
+                                    "offset": 75
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 76,
+                            "offset": 75
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "method",
+                        "description": null,
+                        "lineNumber": 2,
+                        "name": "pause"
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 3
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "CanvasSource",
+                        "lineNumber": 4
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 106,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 111,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 113,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 140,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/source/canvas_source.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/source/canvas_source.js#L113-L140",
+                        "path": "src/source/canvas_source.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "function",
+                "name": "pause",
+                "scope": "instance",
+                "memberof": "CanvasSource",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "CanvasSource",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "pause",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "CanvasSource#pause"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "禁用动态转换。图像会从画布拷贝到同一个框架下的地图。",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 86,
+                                            "offset": 85
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 86,
+                                    "offset": 85
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 86,
+                            "offset": 85
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "method",
+                        "description": null,
+                        "lineNumber": 2,
+                        "name": "play"
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 3
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "CanvasSource",
+                        "lineNumber": 4
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 99,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 104,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 113,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 140,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/source/canvas_source.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/source/canvas_source.js#L113-L140",
+                        "path": "src/source/canvas_source.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "function",
+                "name": "play",
+                "scope": "instance",
+                "memberof": "CanvasSource",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "CanvasSource",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "play",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "CanvasSource#play"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "返回 HTML ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 18,
+                                            "offset": 17
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "canvas",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 18,
+                                            "offset": 17
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 26,
+                                            "offset": 25
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " 元素。 ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 26,
+                                            "offset": 25
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 35,
+                                            "offset": 34
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 35,
+                                    "offset": 34
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 35,
+                            "offset": 34
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "HTML  canvas 元素。",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "HTMLCanvasElement"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 142,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 146,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 147,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 149,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/source/canvas_source.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/source/canvas_source.js#L147-L149",
+                        "path": "src/source/canvas_source.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "HTML ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 10,
+                                                    "offset": 9
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "canvas",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 10,
+                                                    "offset": 9
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 18,
+                                                    "offset": 17
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " 元素。",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 18,
+                                                    "offset": 17
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 27,
+                                                    "offset": 26
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 27,
+                                            "offset": 26
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 27,
+                                    "offset": 26
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "HTMLCanvasElement"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getCanvas",
+                "kind": "function",
+                "memberof": "CanvasSource",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "CanvasSource",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getCanvas",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "CanvasSource#getCanvas"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "设置画布坐标并重新渲染地图。",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 54,
+                                            "offset": 53
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 54,
+                                    "offset": 53
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 54,
+                            "offset": 53
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "method",
+                        "description": null,
+                        "lineNumber": 3,
+                        "name": "setCoordinates"
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 4
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "CanvasSource",
+                        "lineNumber": 5
+                    },
+                    {
+                        "title": "param",
+                        "description": "以经纬度数组表示的四个地理坐标 (Array<Array<number>>) ， 用于定义画布的四角。 四个坐标从画布左上角开始，顺时针进行。 不一定代表矩形。",
+                        "lineNumber": 6,
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "TypeApplication",
+                                    "expression": {
+                                        "type": "NameExpression",
+                                        "name": "Array"
+                                    },
+                                    "applications": [
+                                        {
+                                            "type": "NameExpression",
+                                            "name": "number"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "name": "coordinates"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "this",
+                        "lineNumber": 10,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "CanvasSource"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 163,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 174,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 177,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 216,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/source/canvas_source.js",
+                    "github": {
+                        "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/source/canvas_source.js#L177-L216",
+                        "path": "src/source/canvas_source.js"
+                    }
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "coordinates",
+                        "lineNumber": 6,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "以经纬度数组表示的四个地理坐标 (Array<Array<number>>) ， 用于定义画布的四角。 四个坐标从画布左上角开始，顺时针进行。 不一定代表矩形。",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 4,
+                                                    "column": 45,
+                                                    "offset": 267
+                                                },
+                                                "indent": [
+                                                    1,
+                                                    1,
+                                                    1
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "column": 45,
+                                            "offset": 267
+                                        },
+                                        "indent": [
+                                            1,
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 4,
+                                    "column": 45,
+                                    "offset": 267
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "TypeApplication",
+                                    "expression": {
+                                        "type": "NameExpression",
+                                        "name": "Array"
+                                    },
+                                    "applications": [
+                                        {
+                                            "type": "NameExpression",
+                                            "name": "number"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 5,
+                                                    "offset": 4
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 5,
+                                            "offset": 4
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 5,
+                                    "offset": 4
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "CanvasSource"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "function",
+                "name": "setCoordinates",
+                "scope": "instance",
+                "memberof": "CanvasSource",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "CanvasSource",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "setCoordinates",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "CanvasSource#setCoordinates"
+            }
+        ],
+        "events": [],
+        "static": []
+    },
+    "namespace": "CanvasSource"
+}

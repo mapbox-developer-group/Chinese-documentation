@@ -1,0 +1,148 @@
+diff --git a/batfish.config.js b/batfish.config.js
+index 3567c568d..f18d9c31b 100644
+--- a/batfish.config.js
++++ b/batfish.config.js
+@@ -11,6 +11,7 @@ module.exports = () => {
+         browserslist: mapboxAssembly.browsersList,
+         postcssPlugins: mapboxAssembly.postcssPipeline.plugins,
+         stylesheets: [
++            require.resolve('react-lib/dist/main.css'),
+             require.resolve('@mapbox/mbx-assembly/dist/assembly.css'),
+             require.resolve('@mapbox/dr-ui/css/docs-prose.css'),
+             `${__dirname}/docs/components/site.css`,
+diff --git a/docs/components/page_shell.js b/docs/components/page_shell.js
+index 23c741c47..7a76e7e97 100644
+--- a/docs/components/page_shell.js
++++ b/docs/components/page_shell.js
+@@ -1,7 +1,7 @@
+ import React from 'react';
+ import Helmet from 'react-helmet';
+ import { withLocation } from '@mapbox/batfish/modules/with-location';
+-import ReactPageShell from '../../vendor/docs-page-shell/react-page-shell.js';
++import ReactPageShell from '../../vendor/cn-page-shell';
+ // dr-ui components
+ import TopbarSticker from '@mapbox/dr-ui/topbar-sticker';
+ import BackToTopButton from '@mapbox/dr-ui/back-to-top-button';
+@@ -66,7 +66,7 @@ class PageShell extends React.Component {
+             </div>
+         );
+         return {
+-            contentType: "Overview",
++            contentType: "概述",
+             sidebarContent,
+             sidebarStackedOnNarrowScreens: true
+         };
+@@ -223,8 +223,8 @@ class PageShell extends React.Component {
+                         rel="canonical"
+                         href={`https://docs.mapbox.com${this.props.meta.pathname}`}
+                     />
++                    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                 </Helmet>
+-                <div className="shell-header-buffer" />
+                 <TopbarSticker unStickWidth={980}>
+                     <div className="limiter">
+                         <div className="grid grid--gut36 mr-neg36 mr0-mm">
+diff --git a/docs/data/overview-navigation.js b/docs/data/overview-navigation.js
+index 0e4ab212c..5119c4223 100644
+--- a/docs/data/overview-navigation.js
++++ b/docs/data/overview-navigation.js
+@@ -1,14 +1,14 @@
+ export const overviewNavigation = [
+     {
+-        "title": "Introduction",
++        "title": "介绍",
+         "path": "",
+         "subnav": [
+             {
+-                "title": "Quickstart",
++                "title": "快速入门",
+                 "path": "quickstart"
+             },
+             {
+-                "title": "CSP Directives",
++                "title": "CSP 指令",
+                 "path": "csp-directives"
+             },
+             {
+diff --git a/docs/pages/api.js b/docs/pages/api.js
+index bca7d6fa9..43bccab99 100644
+--- a/docs/pages/api.js
++++ b/docs/pages/api.js
+@@ -62,7 +62,7 @@ export default class extends React.Component {
+                     <div className='py6 color-gray txt-s mt-neg24 mb12'>
+                     Current version:{' '}<span className='round bg-gray-faint py3 px6'><a href='https://github.com/mapbox/mapbox-gl-js/releases'>mapbox-gl.js v{version}</a></span>
+                     </div>
+-                    <p>Mapbox GL JS is a JavaScript library that uses WebGL to render interactive maps from <a href="https://www.mapbox.com/help/define-vector-tiles">vector tiles</a> and <a href={prefixUrl('/style-spec')}>Mapbox styles</a>. It is part of the Mapbox GL ecosystem, which includes <a href="https://www.mapbox.com/mobile/">Mapbox Mobile</a>, a compatible renderer written in C++ with bindings for desktop and mobile platforms.</p>
++                    <p>Mapbox GL JS 是一个 JavaScript 库，它使用 WebGL，以 <a href="https://www.mapbox.com/help/define-vector-tiles">vector tiles</a> 和 <a href={prefixUrl('/style-spec')}>Mapbox styles</a> 为来源，将它们渲染成互动式地图。它是 Mapbox GL 生态系统的一部分，其中还包括 <a href="https://www.mapbox.com/mobile/">Mapbox Mobile</a>，它是一个用 C++ 编写的兼容桌面和移动平台的渲染引擎。</p>
+                     <div className='api-section'>
+                         {docs.map((doc, i) => doc.kind === 'note' ?
+                             <Note key={i} {...doc}/> :
+diff --git a/docs/util/list-tabs.js b/docs/util/list-tabs.js
+index bd8fd8585..92382574e 100644
+--- a/docs/util/list-tabs.js
++++ b/docs/util/list-tabs.js
+@@ -1,18 +1,18 @@
+ const tabOrder = {
+     overview: {
+-        title: 'Overview'
++        title: '概述'
+     },
+     api: {
+-        title: 'API Reference'
++        title: 'API 引用'
+     },
+     examples: {
+-        title: 'Examples'
++        title: '示例'
+     },
+     'plugins': {
+-        title: 'Plugins'
++        title: '插件'
+     },
+     'style-spec': {
+-        title: 'Style Specification'
++        title: 'Style 规范'
+     }
+ };
+ 
+diff --git a/package.json b/package.json
+index 5dc2549e3..aa7c794cb 100644
+--- a/package.json
++++ b/package.json
+@@ -33,6 +33,7 @@
+     "pbf": "^3.0.5",
+     "potpack": "^1.0.1",
+     "quickselect": "^2.0.0",
++    "react-lib": "file:../../libs/shared-lib",
+     "rw": "^1.3.3",
+     "supercluster": "^6.0.1",
+     "tinyqueue": "^2.0.0",
+diff --git a/vendor/cn-page-shell.js b/vendor/cn-page-shell.js
+new file mode 100644
+index 000000000..0a5159128
+--- /dev/null
++++ b/vendor/cn-page-shell.js
+@@ -0,0 +1,23 @@
++import React from 'react';
++import { withLocation } from '@mapbox/batfish/modules/with-location';
++
++import {
++  Navi,
++  Footer,
++} from 'react-lib';
++
++class PageShell extends React.Component {
++
++  render() {
++
++    return (
++      <div {...this.props}>
++        <Navi />
++        {this.props.children}
++        <Footer />
++      </div>
++    );
++  }
++}
++
++export default withLocation(PageShell);

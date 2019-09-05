@@ -1,0 +1,86 @@
+{
+    "description": "",
+    "tags": [
+        {
+            "title": "typedef",
+            "description": null,
+            "lineNumber": 1,
+            "type": {
+                "type": "NameExpression",
+                "name": "Object"
+            },
+            "name": "MapBoxZoomEvent"
+        },
+        {
+            "title": "property",
+            "description": null,
+            "lineNumber": 2,
+            "type": {
+                "type": "NameExpression",
+                "name": "MouseEvent"
+            },
+            "name": "originalEvent"
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 217,
+            "column": 0
+        },
+        "end": {
+            "line": 220,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 221,
+                "column": 0
+            },
+            "end": {
+                "line": 227,
+                "column": 2
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/events.js"
+    },
+    "augments": [],
+    "examples": [],
+    "params": [],
+    "properties": [
+        {
+            "title": "property",
+            "name": "originalEvent",
+            "lineNumber": 2,
+            "type": {
+                "type": "NameExpression",
+                "name": "MouseEvent"
+            }
+        }
+    ],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "typedef",
+    "name": "MapBoxZoomEvent",
+    "type": {
+        "type": "NameExpression",
+        "name": "Object"
+    },
+    "path": [
+        {
+            "name": "MapBoxZoomEvent",
+            "kind": "typedef"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "MapBoxZoomEvent"
+}

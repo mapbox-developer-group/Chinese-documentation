@@ -1,0 +1,462 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Test whether the browser ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 26,
+                                "offset": 25
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "title": null,
+                        "url": "https://www.mapbox.com/help/mapbox-browser-support/#mapbox-gl-js",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "supports Mapbox GL JS",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 27,
+                                        "offset": 26
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 48,
+                                        "offset": 47
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 26,
+                                "offset": 25
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 115,
+                                "offset": 114
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ".",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 115,
+                                "offset": 114
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 116,
+                                "offset": 115
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 116,
+                        "offset": 115
+                    },
+                    "indent": []
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 1,
+                "column": 116,
+                "offset": 115
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "function",
+            "description": null,
+            "lineNumber": 3,
+            "name": "supported"
+        },
+        {
+            "title": "param",
+            "description": null,
+            "lineNumber": 4,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "name": "options"
+        },
+        {
+            "title": "param",
+            "description": "If `true`,\n  the function will return `false` if the performance of Mapbox GL JS would\n  be dramatically worse than expected (e.g. a software WebGL renderer would be used).",
+            "lineNumber": 5,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "boolean"
+                }
+            },
+            "name": "options.failIfMajorPerformanceCaveat",
+            "default": "false"
+        },
+        {
+            "title": "return",
+            "description": null,
+            "lineNumber": 8,
+            "type": {
+                "type": "NameExpression",
+                "name": "boolean"
+            }
+        },
+        {
+            "title": "example",
+            "description": "mapboxgl.supported() // = true",
+            "lineNumber": 9
+        },
+        {
+            "title": "see",
+            "description": "[Check for browser support](https://www.mapbox.com/mapbox-gl-js/example/check-for-support/)",
+            "lineNumber": 11
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 132,
+            "column": 0
+        },
+        "end": {
+            "line": 144,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 158,
+                "column": 0
+            },
+            "end": {
+                "line": 158,
+                "column": 24
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/index.js"
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "mapboxgl.supported() // = true"
+        }
+    ],
+    "params": [
+        {
+            "title": "param",
+            "name": "options",
+            "lineNumber": 4,
+            "type": {
+                "type": "OptionalType",
+                "expression": {
+                    "type": "NameExpression",
+                    "name": "Object"
+                }
+            },
+            "properties": [
+                {
+                    "title": "param",
+                    "name": "options.failIfMajorPerformanceCaveat",
+                    "lineNumber": 5,
+                    "description": {
+                        "type": "root",
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "If ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 4,
+                                                "offset": 3
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "true",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 4,
+                                                "offset": 3
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 10,
+                                                "offset": 9
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": ",\n  the function will return ",
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 10,
+                                                "offset": 9
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 28,
+                                                "offset": 38
+                                            },
+                                            "indent": [
+                                                1
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "false",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 28,
+                                                "offset": 38
+                                            },
+                                            "end": {
+                                                "line": 2,
+                                                "column": 35,
+                                                "offset": 45
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " if the performance of Mapbox GL JS would\n  be dramatically worse than expected (e.g. a software WebGL renderer would be used).",
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 35,
+                                                "offset": 45
+                                            },
+                                            "end": {
+                                                "line": 3,
+                                                "column": 86,
+                                                "offset": 172
+                                            },
+                                            "indent": [
+                                                1
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 3,
+                                        "column": 86,
+                                        "offset": 172
+                                    },
+                                    "indent": [
+                                        1,
+                                        1
+                                    ]
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 86,
+                                "offset": 172
+                            }
+                        }
+                    },
+                    "type": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    },
+                    "default": "false"
+                }
+            ]
+        }
+    ],
+    "properties": [],
+    "returns": [
+        {
+            "description": {
+                "type": "root",
+                "children": [],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    }
+                }
+            },
+            "title": "returns",
+            "type": {
+                "type": "NameExpression",
+                "name": "boolean"
+            }
+        }
+    ],
+    "sees": [
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/example/check-for-support/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Check for browser support",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 27,
+                                            "offset": 26
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 92,
+                                    "offset": 91
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 92,
+                            "offset": 91
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 92,
+                    "offset": 91
+                }
+            }
+        }
+    ],
+    "throws": [],
+    "todos": [],
+    "kind": "function",
+    "name": "supported",
+    "path": [
+        {
+            "name": "supported",
+            "kind": "function"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "supported"
+}

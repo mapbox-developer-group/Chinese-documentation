@@ -1,0 +1,193 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "当前使用的Mapbox GL JS 版本说明位于",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 52,
+                                "offset": 51
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "package.json",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 52,
+                                "offset": 51
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 66,
+                                "offset": 65
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ",\n",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 66,
+                                "offset": 65
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 1,
+                                "offset": 67
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "CHANGELOG.md",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 1,
+                                "offset": 67
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 15,
+                                "offset": 81
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ", 和 GitHub release中。",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 15,
+                                "offset": 81
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 40,
+                                "offset": 106
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 40,
+                        "offset": 106
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 2,
+                "column": 40,
+                "offset": 106
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "var",
+            "description": null,
+            "lineNumber": 4,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            },
+            "name": "version"
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 125,
+            "column": 0
+        },
+        "end": {
+            "line": 130,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 158,
+                "column": 0
+            },
+            "end": {
+                "line": 158,
+                "column": 24
+            }
+        },
+        "file": "/Users/mapboxchina/projects/mapbox-gl-js/src/index.js",
+        "github": {
+            "url": "https://git@github.com/:mapbox/mapbox-gl-js/blob/43037cd3064d8900cdbf34eaf225053e12da17c1/src/index.js#L158-L158",
+            "path": "src/index.js"
+        }
+    },
+    "augments": [],
+    "examples": [],
+    "params": [],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "kind": "member",
+    "name": "version",
+    "type": {
+        "type": "NameExpression",
+        "name": "string"
+    },
+    "path": [
+        {
+            "name": "version",
+            "kind": "member"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [],
+        "events": [],
+        "static": []
+    },
+    "namespace": "version"
+}

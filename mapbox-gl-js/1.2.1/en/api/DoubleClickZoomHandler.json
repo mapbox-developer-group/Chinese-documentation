@@ -1,0 +1,826 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "The ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 5,
+                                "offset": 4
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "DoubleClickZoomHandler",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 5,
+                                "offset": 4
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 29,
+                                "offset": 28
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " allows the user to zoom the map at a point by\ndouble clicking or double tapping.",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 29,
+                                "offset": 28
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 35,
+                                "offset": 109
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 35,
+                        "offset": 109
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 2,
+                "column": 35,
+                "offset": 109
+            }
+        }
+    },
+    "tags": [],
+    "loc": {
+        "start": {
+            "line": 12,
+            "column": 0
+        },
+        "end": {
+            "line": 15,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 16,
+                "column": 0
+            },
+            "end": {
+                "line": 137,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/dblclick_zoom.js"
+    },
+    "augments": [],
+    "examples": [],
+    "params": [
+        {
+            "title": "param",
+            "name": "map",
+            "lineNumber": 26,
+            "type": {
+                "type": "NameExpression",
+                "name": "Map"
+            }
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "constructorComment": {
+        "description": "",
+        "tags": [
+            {
+                "title": "private",
+                "description": null,
+                "lineNumber": 1
+            }
+        ],
+        "loc": {
+            "start": {
+                "line": 23,
+                "column": 4
+            },
+            "end": {
+                "line": 25,
+                "column": 7
+            }
+        },
+        "context": {
+            "loc": {
+                "start": {
+                    "line": 26,
+                    "column": 4
+                },
+                "end": {
+                    "line": 33,
+                    "column": 5
+                }
+            },
+            "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/dblclick_zoom.js",
+            "sortKey": "!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/index.js:00000003!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/map.js:00000011!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/bind_handlers.js:00000007!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/dblclick_zoom.js 00000026",
+            "code": "{\n    _map: Map;\n    _enabled: boolean;\n    _active: boolean;\n    _tapped: ?TimeoutID;\n    _tappedPoint: ?Point;\n\n    /**\n     * @private\n     */\n    constructor(map: Map) {\n        this._map = map;\n\n        bindAll([\n            '_onDblClick',\n            '_onZoomEnd'\n        ], this);\n    }\n\n    /**\n     * Returns a Boolean indicating whether the \"double click to zoom\" interaction is enabled.\n     *\n     * @returns {boolean} `true` if the \"double click to zoom\" interaction is enabled.\n     */\n    isEnabled() {\n        return !!this._enabled;\n    }\n\n    /**\n     * Returns a Boolean indicating whether the \"double click to zoom\" interaction is active, i.e. currently being used.\n     *\n     * @returns {boolean} `true` if the \"double click to zoom\" interaction is active.\n     */\n    isActive() {\n        return !!this._active;\n    }\n\n    /**\n     * Enables the \"double click to zoom\" interaction.\n     *\n     * @example\n     * map.doubleClickZoom.enable();\n     */\n    enable() {\n        if (this.isEnabled()) return;\n        this._enabled = true;\n    }\n\n    /**\n     * Disables the \"double click to zoom\" interaction.\n     *\n     * @example\n     * map.doubleClickZoom.disable();\n     */\n    disable() {\n        if (!this.isEnabled()) return;\n        this._enabled = false;\n    }\n\n    onTouchStart(e: MapTouchEvent) {\n        if (!this.isEnabled()) return;\n        if (e.points.length > 1) return;\n\n        if (!this._tapped) {\n            this._tappedPoint = e.points[0];\n            this._tapped = setTimeout(() => { this._tapped = null; this._tappedPoint = null; }, 300);\n        } else {\n            const newTap = e.points[0];\n            const firstTap = this._tappedPoint;\n\n            if (firstTap && firstTap.dist(newTap) <= maxDist) {\n                e.originalEvent.preventDefault(); // prevent duplicate zoom on dblclick\n\n                const onTouchEnd = () => { // ignore the touchend event, as it has no point we can zoom to\n                    if (this._tapped) { // make sure we are still within the timeout window\n                        this._zoom(e); // pass the original touchstart event, with the tapped point\n                    }\n                    this._map.off('touchcancel', onTouchCancel);\n                    this._resetTapped();\n                };\n\n                const onTouchCancel = () => {\n                    this._map.off('touchend', onTouchEnd);\n                    this._resetTapped();\n                };\n\n                this._map.once('touchend', onTouchEnd);\n                this._map.once('touchcancel', onTouchCancel);\n\n            } else { // touches are too far apart, don't zoom\n                this._resetTapped();\n            }\n        }\n    }\n\n    _resetTapped() {\n        clearTimeout(this._tapped);\n        this._tapped = null;\n        this._tappedPoint = null;\n    }\n\n    onDblClick(e: MapMouseEvent) {\n        if (!this.isEnabled()) return;\n        e.originalEvent.preventDefault();\n        this._zoom(e);\n    }\n\n    _zoom(e: MapMouseEvent | MapTouchEvent) {\n        this._active = true;\n        this._map.on('zoomend', this._onZoomEnd);\n        this._map.zoomTo(\n            this._map.getZoom() + (e.originalEvent.shiftKey ? -1 : 1),\n            {around: e.lngLat},\n            e\n        );\n    }\n\n    _onZoomEnd() {\n        this._active = false;\n        this._map.off('zoomend', this._onZoomEnd);\n    }\n}"
+        },
+        "augments": [],
+        "errors": [],
+        "examples": [],
+        "params": [],
+        "properties": [],
+        "returns": [],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "access": "private"
+    },
+    "name": "DoubleClickZoomHandler",
+    "kind": "class",
+    "path": [
+        {
+            "name": "DoubleClickZoomHandler",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns a Boolean indicating whether the \"double click to zoom\" interaction is enabled.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 88,
+                                            "offset": 87
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 88,
+                                    "offset": 87
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 88,
+                            "offset": 87
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "`true` if the \"double click to zoom\" interaction is enabled.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 35,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 39,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 40,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 42,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/dblclick_zoom.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "true",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " if the \"double click to zoom\" interaction is enabled.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 61,
+                                                    "offset": 60
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 61,
+                                            "offset": 60
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 61,
+                                    "offset": 60
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "isEnabled",
+                "kind": "function",
+                "memberof": "DoubleClickZoomHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "DoubleClickZoomHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "isEnabled",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "DoubleClickZoomHandler#isEnabled"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns a Boolean indicating whether the \"double click to zoom\" interaction is active, i.e. currently being used.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 114,
+                                            "offset": 113
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 114,
+                                    "offset": 113
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 114,
+                            "offset": 113
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "`true` if the \"double click to zoom\" interaction is active.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 44,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 48,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 49,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 51,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/dblclick_zoom.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "true",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " if the \"double click to zoom\" interaction is active.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 7,
+                                                    "offset": 6
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 60,
+                                                    "offset": 59
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 60,
+                                            "offset": 59
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 60,
+                                    "offset": 59
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "boolean"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "isActive",
+                "kind": "function",
+                "memberof": "DoubleClickZoomHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "DoubleClickZoomHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "isActive",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "DoubleClickZoomHandler#isActive"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Enables the \"double click to zoom\" interaction.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 48,
+                                            "offset": 47
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 48,
+                                    "offset": 47
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 48,
+                            "offset": 47
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "example",
+                        "description": "map.doubleClickZoom.enable();",
+                        "lineNumber": 3
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 53,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 58,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 59,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 62,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/dblclick_zoom.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "map.doubleClickZoom.enable();"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "enable",
+                "kind": "function",
+                "memberof": "DoubleClickZoomHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "DoubleClickZoomHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "enable",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "DoubleClickZoomHandler#enable"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Disables the \"double click to zoom\" interaction.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 49,
+                                            "offset": 48
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 49,
+                                    "offset": 48
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 49,
+                            "offset": 48
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "example",
+                        "description": "map.doubleClickZoom.disable();",
+                        "lineNumber": 3
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 64,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 69,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 70,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 73,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/ui/handler/dblclick_zoom.js"
+                },
+                "augments": [],
+                "examples": [
+                    {
+                        "description": "map.doubleClickZoom.disable();"
+                    }
+                ],
+                "params": [],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "disable",
+                "kind": "function",
+                "memberof": "DoubleClickZoomHandler",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "DoubleClickZoomHandler",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "disable",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "DoubleClickZoomHandler#disable"
+            }
+        ],
+        "events": [],
+        "static": []
+    },
+    "namespace": "DoubleClickZoomHandler"
+}

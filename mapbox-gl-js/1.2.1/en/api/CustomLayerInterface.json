@@ -1,0 +1,3448 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Interface for custom style layers. This is a specification for\nimplementers to model: it is not an exported method or class.",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 62,
+                                "offset": 124
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 62,
+                        "offset": 124
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Custom layers allow a user to render directly into the map's GL context using the map's camera.\nThese layers can be added between any regular layers using ",
+                        "position": {
+                            "start": {
+                                "line": 4,
+                                "column": 1,
+                                "offset": 126
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 60,
+                                "offset": 281
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "url": "Map#addLayer",
+                        "title": null,
+                        "jsdoc": true,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Map#addLayer"
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 60,
+                                "offset": 281
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 80,
+                                "offset": 301
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ".",
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 80,
+                                "offset": 301
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 81,
+                                "offset": 302
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 4,
+                        "column": 1,
+                        "offset": 126
+                    },
+                    "end": {
+                        "line": 5,
+                        "column": 81,
+                        "offset": 302
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "Custom layers must have a unique ",
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 1,
+                                "offset": 304
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 34,
+                                "offset": 337
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "id",
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 34,
+                                "offset": 337
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 38,
+                                "offset": 341
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " and must have the ",
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 38,
+                                "offset": 341
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 57,
+                                "offset": 360
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "type",
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 57,
+                                "offset": 360
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 63,
+                                "offset": 366
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " of ",
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 63,
+                                "offset": 366
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 67,
+                                "offset": 370
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "\"custom\"",
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 67,
+                                "offset": 370
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 77,
+                                "offset": 380
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ".\nThey must implement ",
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 77,
+                                "offset": 380
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 21,
+                                "offset": 402
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "render",
+                        "position": {
+                            "start": {
+                                "line": 8,
+                                "column": 21,
+                                "offset": 402
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 29,
+                                "offset": 410
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " and may implement ",
+                        "position": {
+                            "start": {
+                                "line": 8,
+                                "column": 29,
+                                "offset": 410
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 48,
+                                "offset": 429
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "prerender",
+                        "position": {
+                            "start": {
+                                "line": 8,
+                                "column": 48,
+                                "offset": 429
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 59,
+                                "offset": 440
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ", ",
+                        "position": {
+                            "start": {
+                                "line": 8,
+                                "column": 59,
+                                "offset": 440
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 61,
+                                "offset": 442
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "onAdd",
+                        "position": {
+                            "start": {
+                                "line": 8,
+                                "column": 61,
+                                "offset": 442
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 68,
+                                "offset": 449
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " and ",
+                        "position": {
+                            "start": {
+                                "line": 8,
+                                "column": 68,
+                                "offset": 449
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 73,
+                                "offset": 454
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "onRemove",
+                        "position": {
+                            "start": {
+                                "line": 8,
+                                "column": 73,
+                                "offset": 454
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 83,
+                                "offset": 464
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ".\nThey can trigger rendering using ",
+                        "position": {
+                            "start": {
+                                "line": 8,
+                                "column": 83,
+                                "offset": 464
+                            },
+                            "end": {
+                                "line": 9,
+                                "column": 34,
+                                "offset": 499
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "url": "Map#triggerRepaint",
+                        "title": null,
+                        "jsdoc": true,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Map#triggerRepaint"
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 9,
+                                "column": 34,
+                                "offset": 499
+                            },
+                            "end": {
+                                "line": 9,
+                                "column": 60,
+                                "offset": 525
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": "\nand they should appropriately handle ",
+                        "position": {
+                            "start": {
+                                "line": 9,
+                                "column": 60,
+                                "offset": 525
+                            },
+                            "end": {
+                                "line": 10,
+                                "column": 38,
+                                "offset": 563
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "url": "Map.event:webglcontextlost",
+                        "title": null,
+                        "jsdoc": true,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Map.event:webglcontextlost"
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 10,
+                                "column": 38,
+                                "offset": 563
+                            },
+                            "end": {
+                                "line": 10,
+                                "column": 72,
+                                "offset": 597
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " and\n",
+                        "position": {
+                            "start": {
+                                "line": 10,
+                                "column": 72,
+                                "offset": 597
+                            },
+                            "end": {
+                                "line": 11,
+                                "column": 1,
+                                "offset": 602
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "url": "Map.event:webglcontextrestored",
+                        "title": null,
+                        "jsdoc": true,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Map.event:webglcontextrestored"
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 11,
+                                "column": 1,
+                                "offset": 602
+                            },
+                            "end": {
+                                "line": 11,
+                                "column": 39,
+                                "offset": 640
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": ".",
+                        "position": {
+                            "start": {
+                                "line": 11,
+                                "column": 39,
+                                "offset": 640
+                            },
+                            "end": {
+                                "line": 11,
+                                "column": 40,
+                                "offset": 641
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 7,
+                        "column": 1,
+                        "offset": 304
+                    },
+                    "end": {
+                        "line": 11,
+                        "column": 40,
+                        "offset": 641
+                    },
+                    "indent": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            },
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "The ",
+                        "position": {
+                            "start": {
+                                "line": 13,
+                                "column": 1,
+                                "offset": 643
+                            },
+                            "end": {
+                                "line": 13,
+                                "column": 5,
+                                "offset": 647
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "renderingMode",
+                        "position": {
+                            "start": {
+                                "line": 13,
+                                "column": 5,
+                                "offset": 647
+                            },
+                            "end": {
+                                "line": 13,
+                                "column": 20,
+                                "offset": 662
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " property controls whether the layer is treated as a ",
+                        "position": {
+                            "start": {
+                                "line": 13,
+                                "column": 20,
+                                "offset": 662
+                            },
+                            "end": {
+                                "line": 13,
+                                "column": 73,
+                                "offset": 715
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "\"2d\"",
+                        "position": {
+                            "start": {
+                                "line": 13,
+                                "column": 73,
+                                "offset": 715
+                            },
+                            "end": {
+                                "line": 13,
+                                "column": 79,
+                                "offset": 721
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " or ",
+                        "position": {
+                            "start": {
+                                "line": 13,
+                                "column": 79,
+                                "offset": 721
+                            },
+                            "end": {
+                                "line": 13,
+                                "column": 83,
+                                "offset": 725
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "inlineCode",
+                        "value": "\"3d\"",
+                        "position": {
+                            "start": {
+                                "line": 13,
+                                "column": 83,
+                                "offset": 725
+                            },
+                            "end": {
+                                "line": 13,
+                                "column": 89,
+                                "offset": 731
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " map layer. Use:",
+                        "position": {
+                            "start": {
+                                "line": 13,
+                                "column": 89,
+                                "offset": 731
+                            },
+                            "end": {
+                                "line": 13,
+                                "column": 105,
+                                "offset": 747
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 13,
+                        "column": 1,
+                        "offset": 643
+                    },
+                    "end": {
+                        "line": 13,
+                        "column": 105,
+                        "offset": 747
+                    },
+                    "indent": []
+                }
+            },
+            {
+                "type": "list",
+                "ordered": false,
+                "start": null,
+                "loose": false,
+                "children": [
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "\"renderingMode\": \"3d\"",
+                                        "position": {
+                                            "start": {
+                                                "line": 14,
+                                                "column": 3,
+                                                "offset": 750
+                                            },
+                                            "end": {
+                                                "line": 14,
+                                                "column": 26,
+                                                "offset": 773
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " to use the depth buffer and share it with other layers",
+                                        "position": {
+                                            "start": {
+                                                "line": 14,
+                                                "column": 26,
+                                                "offset": 773
+                                            },
+                                            "end": {
+                                                "line": 14,
+                                                "column": 81,
+                                                "offset": 828
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 14,
+                                        "column": 3,
+                                        "offset": 750
+                                    },
+                                    "end": {
+                                        "line": 14,
+                                        "column": 81,
+                                        "offset": 828
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 14,
+                                "column": 1,
+                                "offset": 748
+                            },
+                            "end": {
+                                "line": 14,
+                                "column": 81,
+                                "offset": 828
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "listItem",
+                        "loose": false,
+                        "checked": null,
+                        "children": [
+                            {
+                                "type": "paragraph",
+                                "children": [
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "\"renderingMode\": \"2d\"",
+                                        "position": {
+                                            "start": {
+                                                "line": 15,
+                                                "column": 3,
+                                                "offset": 831
+                                            },
+                                            "end": {
+                                                "line": 15,
+                                                "column": 26,
+                                                "offset": 854
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " to add a layer with no depth. If you need to use the depth buffer for a ",
+                                        "position": {
+                                            "start": {
+                                                "line": 15,
+                                                "column": 26,
+                                                "offset": 854
+                                            },
+                                            "end": {
+                                                "line": 15,
+                                                "column": 99,
+                                                "offset": 927
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "inlineCode",
+                                        "value": "\"2d\"",
+                                        "position": {
+                                            "start": {
+                                                "line": 15,
+                                                "column": 99,
+                                                "offset": 927
+                                            },
+                                            "end": {
+                                                "line": 15,
+                                                "column": 105,
+                                                "offset": 933
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "text",
+                                        "value": " layer you must use an offscreen\nframebuffer and ",
+                                        "position": {
+                                            "start": {
+                                                "line": 15,
+                                                "column": 105,
+                                                "offset": 933
+                                            },
+                                            "end": {
+                                                "line": 16,
+                                                "column": 19,
+                                                "offset": 984
+                                            },
+                                            "indent": [
+                                                3
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "link",
+                                        "url": "CustomLayerInterface#prerender",
+                                        "title": null,
+                                        "jsdoc": true,
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "CustomLayerInterface#prerender"
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 16,
+                                                "column": 19,
+                                                "offset": 984
+                                            },
+                                            "end": {
+                                                "line": 16,
+                                                "column": 57,
+                                                "offset": 1022
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 15,
+                                        "column": 3,
+                                        "offset": 831
+                                    },
+                                    "end": {
+                                        "line": 16,
+                                        "column": 57,
+                                        "offset": 1022
+                                    },
+                                    "indent": [
+                                        3
+                                    ]
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 15,
+                                "column": 1,
+                                "offset": 829
+                            },
+                            "end": {
+                                "line": 16,
+                                "column": 57,
+                                "offset": 1022
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 14,
+                        "column": 1,
+                        "offset": 748
+                    },
+                    "end": {
+                        "line": 16,
+                        "column": 57,
+                        "offset": 1022
+                    },
+                    "indent": [
+                        1,
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 16,
+                "column": 57,
+                "offset": 1022
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "interface",
+            "description": "CustomLayerInterface",
+            "lineNumber": 18
+        },
+        {
+            "title": "property",
+            "description": "A unique layer id.",
+            "lineNumber": 19,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            },
+            "name": "id"
+        },
+        {
+            "title": "property",
+            "description": "The layer's type. Must be `\"custom\"`.",
+            "lineNumber": 20,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            },
+            "name": "type"
+        },
+        {
+            "title": "property",
+            "description": "Either `\"2d\"` or `\"3d\"`. Defaults to `\"2d\"`.",
+            "lineNumber": 21,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            },
+            "name": "renderingMode"
+        },
+        {
+            "title": "example",
+            "description": "// Custom layer implemented as ES6 class\nclass NullIslandLayer {\n    constructor() {\n        this.id = 'null-island';\n        this.type = 'custom';\n        this.renderingMode = '2d';\n    }\n\n    onAdd(map, gl) {\n        const vertexSource = `\n        uniform mat4 u_matrix;\n        void main() {\n            gl_Position = u_matrix * vec4(0.5, 0.5, 0.0, 1.0);\n            gl_PointSize = 20.0;\n        }`;\n\n        const fragmentSource = `\n        void main() {\n            gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);\n        }`;\n\n        const vertexShader = gl.createShader(gl.VERTEX_SHADER);\n        gl.shaderSource(vertexShader, vertexSource);\n        gl.compileShader(vertexShader);\n        const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);\n        gl.shaderSource(fragmentShader, fragmentSource);\n        gl.compileShader(fragmentShader);\n\n        this.program = gl.createProgram();\n        gl.attachShader(this.program, vertexShader);\n        gl.attachShader(this.program, fragmentShader);\n        gl.linkProgram(this.program);\n    }\n\n    render(gl, matrix) {\n        gl.useProgram(this.program);\n        gl.uniformMatrix4fv(gl.getUniformLocation(this.program, \"u_matrix\"), false, matrix);\n        gl.drawArrays(gl.POINTS, 0, 1);\n    }\n}\n\nmap.on('load', function() {\n    map.addLayer(new NullIslandLayer());\n});",
+            "lineNumber": 22
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 10,
+            "column": 0
+        },
+        "end": {
+            "line": 77,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 149,
+                "column": 0
+            },
+            "end": {
+                "line": 157,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/style/style_layer/custom_style_layer.js"
+    },
+    "augments": [],
+    "examples": [
+        {
+            "description": "// Custom layer implemented as ES6 class\nclass NullIslandLayer {\n    constructor() {\n        this.id = 'null-island';\n        this.type = 'custom';\n        this.renderingMode = '2d';\n    }\n\n    onAdd(map, gl) {\n        const vertexSource = `\n        uniform mat4 u_matrix;\n        void main() {\n            gl_Position = u_matrix * vec4(0.5, 0.5, 0.0, 1.0);\n            gl_PointSize = 20.0;\n        }`;\n\n        const fragmentSource = `\n        void main() {\n            gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);\n        }`;\n\n        const vertexShader = gl.createShader(gl.VERTEX_SHADER);\n        gl.shaderSource(vertexShader, vertexSource);\n        gl.compileShader(vertexShader);\n        const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);\n        gl.shaderSource(fragmentShader, fragmentSource);\n        gl.compileShader(fragmentShader);\n\n        this.program = gl.createProgram();\n        gl.attachShader(this.program, vertexShader);\n        gl.attachShader(this.program, fragmentShader);\n        gl.linkProgram(this.program);\n    }\n\n    render(gl, matrix) {\n        gl.useProgram(this.program);\n        gl.uniformMatrix4fv(gl.getUniformLocation(this.program, \"u_matrix\"), false, matrix);\n        gl.drawArrays(gl.POINTS, 0, 1);\n    }\n}\n\nmap.on('load', function() {\n    map.addLayer(new NullIslandLayer());\n});"
+        }
+    ],
+    "params": [],
+    "properties": [
+        {
+            "title": "property",
+            "name": "id",
+            "lineNumber": 19,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "A unique layer id.",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 19,
+                                        "offset": 18
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 19,
+                                "offset": 18
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 19,
+                        "offset": 18
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            }
+        },
+        {
+            "title": "property",
+            "name": "type",
+            "lineNumber": 20,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "The layer's type. Must be ",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 27,
+                                        "offset": 26
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "\"custom\"",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 27,
+                                        "offset": 26
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 37,
+                                        "offset": 36
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ".",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 37,
+                                        "offset": 36
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 38,
+                                        "offset": 37
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 38,
+                                "offset": 37
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 38,
+                        "offset": 37
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            }
+        },
+        {
+            "title": "property",
+            "name": "renderingMode",
+            "lineNumber": 21,
+            "description": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Either ",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 8,
+                                        "offset": 7
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "\"2d\"",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 8,
+                                        "offset": 7
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 14,
+                                        "offset": 13
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " or ",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 14,
+                                        "offset": 13
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 18,
+                                        "offset": 17
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "\"3d\"",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 18,
+                                        "offset": 17
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 24,
+                                        "offset": 23
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ". Defaults to ",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 24,
+                                        "offset": 23
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 38,
+                                        "offset": 37
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "\"2d\"",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 38,
+                                        "offset": 37
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 44,
+                                        "offset": 43
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ".",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 44,
+                                        "offset": 43
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 45,
+                                        "offset": 44
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 45,
+                                "offset": 44
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 45,
+                        "offset": 44
+                    }
+                }
+            },
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            }
+        }
+    ],
+    "returns": [],
+    "sees": [],
+    "throws": [],
+    "todos": [],
+    "interface": true,
+    "name": "CustomLayerInterface",
+    "path": [
+        {
+            "name": "CustomLayerInterface"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Called during a render frame allowing the layer to draw into the GL context.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 77,
+                                            "offset": 76
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 77,
+                                    "offset": 76
+                                },
+                                "indent": []
+                            }
+                        },
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "The layer can assume blending and depth state is set to allow the layer to properly\nblend and clip other layers. The layer cannot make any other assumptions about the\ncurrent GL state.",
+                                    "position": {
+                                        "start": {
+                                            "line": 3,
+                                            "column": 1,
+                                            "offset": 78
+                                        },
+                                        "end": {
+                                            "line": 5,
+                                            "column": 18,
+                                            "offset": 262
+                                        },
+                                        "indent": [
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 3,
+                                    "column": 1,
+                                    "offset": 78
+                                },
+                                "end": {
+                                    "line": 5,
+                                    "column": 18,
+                                    "offset": 262
+                                },
+                                "indent": [
+                                    1,
+                                    1
+                                ]
+                            }
+                        },
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "If the layer needs to render to a texture, it should implement the ",
+                                    "position": {
+                                        "start": {
+                                            "line": 7,
+                                            "column": 1,
+                                            "offset": 264
+                                        },
+                                        "end": {
+                                            "line": 7,
+                                            "column": 68,
+                                            "offset": 331
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "prerender",
+                                    "position": {
+                                        "start": {
+                                            "line": 7,
+                                            "column": 68,
+                                            "offset": 331
+                                        },
+                                        "end": {
+                                            "line": 7,
+                                            "column": 79,
+                                            "offset": 342
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " method\nto do this and only use the ",
+                                    "position": {
+                                        "start": {
+                                            "line": 7,
+                                            "column": 79,
+                                            "offset": 342
+                                        },
+                                        "end": {
+                                            "line": 8,
+                                            "column": 29,
+                                            "offset": 378
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "render",
+                                    "position": {
+                                        "start": {
+                                            "line": 8,
+                                            "column": 29,
+                                            "offset": 378
+                                        },
+                                        "end": {
+                                            "line": 8,
+                                            "column": 37,
+                                            "offset": 386
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " method for drawing directly into the main framebuffer.",
+                                    "position": {
+                                        "start": {
+                                            "line": 8,
+                                            "column": 37,
+                                            "offset": 386
+                                        },
+                                        "end": {
+                                            "line": 8,
+                                            "column": 92,
+                                            "offset": 441
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 7,
+                                    "column": 1,
+                                    "offset": 264
+                                },
+                                "end": {
+                                    "line": 8,
+                                    "column": 92,
+                                    "offset": 441
+                                },
+                                "indent": [
+                                    1
+                                ]
+                            }
+                        },
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "The blend function is set to ",
+                                    "position": {
+                                        "start": {
+                                            "line": 10,
+                                            "column": 1,
+                                            "offset": 443
+                                        },
+                                        "end": {
+                                            "line": 10,
+                                            "column": 30,
+                                            "offset": 472
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA)",
+                                    "position": {
+                                        "start": {
+                                            "line": 10,
+                                            "column": 30,
+                                            "offset": 472
+                                        },
+                                        "end": {
+                                            "line": 10,
+                                            "column": 76,
+                                            "offset": 518
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": ". This expects\ncolors to be provided in premultiplied alpha form where the ",
+                                    "position": {
+                                        "start": {
+                                            "line": 10,
+                                            "column": 76,
+                                            "offset": 518
+                                        },
+                                        "end": {
+                                            "line": 11,
+                                            "column": 61,
+                                            "offset": 593
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "r",
+                                    "position": {
+                                        "start": {
+                                            "line": 11,
+                                            "column": 61,
+                                            "offset": 593
+                                        },
+                                        "end": {
+                                            "line": 11,
+                                            "column": 64,
+                                            "offset": 596
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": ", ",
+                                    "position": {
+                                        "start": {
+                                            "line": 11,
+                                            "column": 64,
+                                            "offset": 596
+                                        },
+                                        "end": {
+                                            "line": 11,
+                                            "column": 66,
+                                            "offset": 598
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "g",
+                                    "position": {
+                                        "start": {
+                                            "line": 11,
+                                            "column": 66,
+                                            "offset": 598
+                                        },
+                                        "end": {
+                                            "line": 11,
+                                            "column": 69,
+                                            "offset": 601
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " and ",
+                                    "position": {
+                                        "start": {
+                                            "line": 11,
+                                            "column": 69,
+                                            "offset": 601
+                                        },
+                                        "end": {
+                                            "line": 11,
+                                            "column": 74,
+                                            "offset": 606
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "b",
+                                    "position": {
+                                        "start": {
+                                            "line": 11,
+                                            "column": 74,
+                                            "offset": 606
+                                        },
+                                        "end": {
+                                            "line": 11,
+                                            "column": 77,
+                                            "offset": 609
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " values are already\nmultiplied by the ",
+                                    "position": {
+                                        "start": {
+                                            "line": 11,
+                                            "column": 77,
+                                            "offset": 609
+                                        },
+                                        "end": {
+                                            "line": 12,
+                                            "column": 19,
+                                            "offset": 647
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "a",
+                                    "position": {
+                                        "start": {
+                                            "line": 12,
+                                            "column": 19,
+                                            "offset": 647
+                                        },
+                                        "end": {
+                                            "line": 12,
+                                            "column": 22,
+                                            "offset": 650
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " value. If you are unable to provide colors in premultiplied form you\nmay want to change the blend function to\n",
+                                    "position": {
+                                        "start": {
+                                            "line": 12,
+                                            "column": 22,
+                                            "offset": 650
+                                        },
+                                        "end": {
+                                            "line": 14,
+                                            "column": 1,
+                                            "offset": 761
+                                        },
+                                        "indent": [
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "gl.blendFuncSeparate(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA, gl.ONE, gl.ONE_MINUS_SRC_ALPHA)",
+                                    "position": {
+                                        "start": {
+                                            "line": 14,
+                                            "column": 1,
+                                            "offset": 761
+                                        },
+                                        "end": {
+                                            "line": 14,
+                                            "column": 93,
+                                            "offset": 853
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": ".",
+                                    "position": {
+                                        "start": {
+                                            "line": 14,
+                                            "column": 93,
+                                            "offset": 853
+                                        },
+                                        "end": {
+                                            "line": 14,
+                                            "column": 94,
+                                            "offset": 854
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 10,
+                                    "column": 1,
+                                    "offset": 443
+                                },
+                                "end": {
+                                    "line": 14,
+                                    "column": 94,
+                                    "offset": 854
+                                },
+                                "indent": [
+                                    1,
+                                    1,
+                                    1,
+                                    1
+                                ]
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 14,
+                            "column": 94,
+                            "offset": 854
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "function",
+                        "description": null,
+                        "lineNumber": 16,
+                        "name": null
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "CustomLayerInterface",
+                        "lineNumber": 17
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 18
+                    },
+                    {
+                        "title": "name",
+                        "description": null,
+                        "lineNumber": 19,
+                        "name": "render"
+                    },
+                    {
+                        "title": "param",
+                        "description": "The map's gl context.",
+                        "lineNumber": 20,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "WebGLRenderingContext"
+                        },
+                        "name": "gl"
+                    },
+                    {
+                        "title": "param",
+                        "description": "The map's camera matrix. It projects spherical mercator\ncoordinates to gl coordinates. The spherical mercator coordinate `[0, 0]` represents the\ntop left corner of the mercator world and `[1, 1]` represents the bottom right corner. When\nthe `renderingMode` is `\"3d\"`, the z coordinate is conformal. A box with identical x, y, and z\nlengths in mercator units would be rendered as a cube. {@link MercatorCoordinate}.fromLatLng\ncan be used to project a `LngLat` to a mercator coordinate.",
+                        "lineNumber": 21,
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "NameExpression",
+                                    "name": "number"
+                                }
+                            ]
+                        },
+                        "name": "matrix"
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 121,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 148,
+                        "column": 3
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 149,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 157,
+                            "column": 1
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/style/style_layer/custom_style_layer.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "gl",
+                        "lineNumber": 20,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The map's gl context.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 22,
+                                                    "offset": 21
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 22,
+                                            "offset": 21
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 22,
+                                    "offset": 21
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "WebGLRenderingContext"
+                        }
+                    },
+                    {
+                        "title": "param",
+                        "name": "matrix",
+                        "lineNumber": 21,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The map's camera matrix. It projects spherical mercator\ncoordinates to gl coordinates. The spherical mercator coordinate ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 2,
+                                                    "column": 66,
+                                                    "offset": 121
+                                                },
+                                                "indent": [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "[0, 0]",
+                                            "position": {
+                                                "start": {
+                                                    "line": 2,
+                                                    "column": 66,
+                                                    "offset": 121
+                                                },
+                                                "end": {
+                                                    "line": 2,
+                                                    "column": 74,
+                                                    "offset": 129
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " represents the\ntop left corner of the mercator world and ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 2,
+                                                    "column": 74,
+                                                    "offset": 129
+                                                },
+                                                "end": {
+                                                    "line": 3,
+                                                    "column": 43,
+                                                    "offset": 187
+                                                },
+                                                "indent": [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "[1, 1]",
+                                            "position": {
+                                                "start": {
+                                                    "line": 3,
+                                                    "column": 43,
+                                                    "offset": 187
+                                                },
+                                                "end": {
+                                                    "line": 3,
+                                                    "column": 51,
+                                                    "offset": 195
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " represents the bottom right corner. When\nthe ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 3,
+                                                    "column": 51,
+                                                    "offset": 195
+                                                },
+                                                "end": {
+                                                    "line": 4,
+                                                    "column": 5,
+                                                    "offset": 241
+                                                },
+                                                "indent": [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "renderingMode",
+                                            "position": {
+                                                "start": {
+                                                    "line": 4,
+                                                    "column": 5,
+                                                    "offset": 241
+                                                },
+                                                "end": {
+                                                    "line": 4,
+                                                    "column": 20,
+                                                    "offset": 256
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " is ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 4,
+                                                    "column": 20,
+                                                    "offset": 256
+                                                },
+                                                "end": {
+                                                    "line": 4,
+                                                    "column": 24,
+                                                    "offset": 260
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "\"3d\"",
+                                            "position": {
+                                                "start": {
+                                                    "line": 4,
+                                                    "column": 24,
+                                                    "offset": 260
+                                                },
+                                                "end": {
+                                                    "line": 4,
+                                                    "column": 30,
+                                                    "offset": 266
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": ", the z coordinate is conformal. A box with identical x, y, and z\nlengths in mercator units would be rendered as a cube. ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 4,
+                                                    "column": 30,
+                                                    "offset": 266
+                                                },
+                                                "end": {
+                                                    "line": 5,
+                                                    "column": 56,
+                                                    "offset": 387
+                                                },
+                                                "indent": [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "link",
+                                            "url": "MercatorCoordinate",
+                                            "title": null,
+                                            "jsdoc": true,
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "MercatorCoordinate"
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 5,
+                                                    "column": 56,
+                                                    "offset": 387
+                                                },
+                                                "end": {
+                                                    "line": 5,
+                                                    "column": 82,
+                                                    "offset": 413
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": ".fromLatLng\ncan be used to project a ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 5,
+                                                    "column": 82,
+                                                    "offset": 413
+                                                },
+                                                "end": {
+                                                    "line": 6,
+                                                    "column": 26,
+                                                    "offset": 450
+                                                },
+                                                "indent": [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "LngLat",
+                                            "position": {
+                                                "start": {
+                                                    "line": 6,
+                                                    "column": 26,
+                                                    "offset": 450
+                                                },
+                                                "end": {
+                                                    "line": 6,
+                                                    "column": 34,
+                                                    "offset": 458
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " to a mercator coordinate.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 6,
+                                                    "column": 34,
+                                                    "offset": 458
+                                                },
+                                                "end": {
+                                                    "line": 6,
+                                                    "column": 60,
+                                                    "offset": 484
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 6,
+                                            "column": 60,
+                                            "offset": 484
+                                        },
+                                        "indent": [
+                                            1,
+                                            1,
+                                            1,
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 6,
+                                    "column": 60,
+                                    "offset": 484
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "NameExpression",
+                                    "name": "number"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "function",
+                "memberof": "CustomLayerInterface",
+                "scope": "instance",
+                "name": "render",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "CustomLayerInterface"
+                    },
+                    {
+                        "name": "render",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "CustomLayerInterface#render"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Optional method called during a render frame to allow a layer to prepare resources or render into a texture.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 109,
+                                            "offset": 108
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 109,
+                                    "offset": 108
+                                },
+                                "indent": []
+                            }
+                        },
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "The layer cannot make any assumptions about the current GL state and must bind a framebuffer before rendering.",
+                                    "position": {
+                                        "start": {
+                                            "line": 3,
+                                            "column": 1,
+                                            "offset": 110
+                                        },
+                                        "end": {
+                                            "line": 3,
+                                            "column": 111,
+                                            "offset": 220
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 3,
+                                    "column": 1,
+                                    "offset": 110
+                                },
+                                "end": {
+                                    "line": 3,
+                                    "column": 111,
+                                    "offset": 220
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3,
+                            "column": 111,
+                            "offset": 220
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "function",
+                        "description": null,
+                        "lineNumber": 5,
+                        "name": null
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "CustomLayerInterface",
+                        "lineNumber": 6
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 7
+                    },
+                    {
+                        "title": "name",
+                        "description": null,
+                        "lineNumber": 8,
+                        "name": "prerender"
+                    },
+                    {
+                        "title": "param",
+                        "description": "The map's gl context.",
+                        "lineNumber": 9,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "WebGLRenderingContext"
+                        },
+                        "name": "gl"
+                    },
+                    {
+                        "title": "param",
+                        "description": "The map's camera matrix. It projects spherical mercator\ncoordinates to gl coordinates. The mercator coordinate `[0, 0]` represents the\ntop left corner of the mercator world and `[1, 1]` represents the bottom right corner. When\nthe `renderingMode` is `\"3d\"`, the z coordinate is conformal. A box with identical x, y, and z\nlengths in mercator units would be rendered as a cube. {@link MercatorCoordinate}.fromLatLng\ncan be used to project a `LngLat` to a mercator coordinate.",
+                        "lineNumber": 10,
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "NameExpression",
+                                    "name": "number"
+                                }
+                            ]
+                        },
+                        "name": "matrix"
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 103,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 119,
+                        "column": 3
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 149,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 157,
+                            "column": 1
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/style/style_layer/custom_style_layer.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "gl",
+                        "lineNumber": 9,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The map's gl context.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 22,
+                                                    "offset": 21
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 22,
+                                            "offset": 21
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 22,
+                                    "offset": 21
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "WebGLRenderingContext"
+                        }
+                    },
+                    {
+                        "title": "param",
+                        "name": "matrix",
+                        "lineNumber": 10,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The map's camera matrix. It projects spherical mercator\ncoordinates to gl coordinates. The mercator coordinate ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 2,
+                                                    "column": 56,
+                                                    "offset": 111
+                                                },
+                                                "indent": [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "[0, 0]",
+                                            "position": {
+                                                "start": {
+                                                    "line": 2,
+                                                    "column": 56,
+                                                    "offset": 111
+                                                },
+                                                "end": {
+                                                    "line": 2,
+                                                    "column": 64,
+                                                    "offset": 119
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " represents the\ntop left corner of the mercator world and ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 2,
+                                                    "column": 64,
+                                                    "offset": 119
+                                                },
+                                                "end": {
+                                                    "line": 3,
+                                                    "column": 43,
+                                                    "offset": 177
+                                                },
+                                                "indent": [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "[1, 1]",
+                                            "position": {
+                                                "start": {
+                                                    "line": 3,
+                                                    "column": 43,
+                                                    "offset": 177
+                                                },
+                                                "end": {
+                                                    "line": 3,
+                                                    "column": 51,
+                                                    "offset": 185
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " represents the bottom right corner. When\nthe ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 3,
+                                                    "column": 51,
+                                                    "offset": 185
+                                                },
+                                                "end": {
+                                                    "line": 4,
+                                                    "column": 5,
+                                                    "offset": 231
+                                                },
+                                                "indent": [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "renderingMode",
+                                            "position": {
+                                                "start": {
+                                                    "line": 4,
+                                                    "column": 5,
+                                                    "offset": 231
+                                                },
+                                                "end": {
+                                                    "line": 4,
+                                                    "column": 20,
+                                                    "offset": 246
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " is ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 4,
+                                                    "column": 20,
+                                                    "offset": 246
+                                                },
+                                                "end": {
+                                                    "line": 4,
+                                                    "column": 24,
+                                                    "offset": 250
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "\"3d\"",
+                                            "position": {
+                                                "start": {
+                                                    "line": 4,
+                                                    "column": 24,
+                                                    "offset": 250
+                                                },
+                                                "end": {
+                                                    "line": 4,
+                                                    "column": 30,
+                                                    "offset": 256
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": ", the z coordinate is conformal. A box with identical x, y, and z\nlengths in mercator units would be rendered as a cube. ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 4,
+                                                    "column": 30,
+                                                    "offset": 256
+                                                },
+                                                "end": {
+                                                    "line": 5,
+                                                    "column": 56,
+                                                    "offset": 377
+                                                },
+                                                "indent": [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "link",
+                                            "url": "MercatorCoordinate",
+                                            "title": null,
+                                            "jsdoc": true,
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "value": "MercatorCoordinate"
+                                                }
+                                            ],
+                                            "position": {
+                                                "start": {
+                                                    "line": 5,
+                                                    "column": 56,
+                                                    "offset": 377
+                                                },
+                                                "end": {
+                                                    "line": 5,
+                                                    "column": 82,
+                                                    "offset": 403
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": ".fromLatLng\ncan be used to project a ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 5,
+                                                    "column": 82,
+                                                    "offset": 403
+                                                },
+                                                "end": {
+                                                    "line": 6,
+                                                    "column": 26,
+                                                    "offset": 440
+                                                },
+                                                "indent": [
+                                                    1
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "LngLat",
+                                            "position": {
+                                                "start": {
+                                                    "line": 6,
+                                                    "column": 26,
+                                                    "offset": 440
+                                                },
+                                                "end": {
+                                                    "line": 6,
+                                                    "column": 34,
+                                                    "offset": 448
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " to a mercator coordinate.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 6,
+                                                    "column": 34,
+                                                    "offset": 448
+                                                },
+                                                "end": {
+                                                    "line": 6,
+                                                    "column": 60,
+                                                    "offset": 474
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 6,
+                                            "column": 60,
+                                            "offset": 474
+                                        },
+                                        "indent": [
+                                            1,
+                                            1,
+                                            1,
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 6,
+                                    "column": 60,
+                                    "offset": 474
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "NameExpression",
+                                    "name": "number"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "function",
+                "memberof": "CustomLayerInterface",
+                "scope": "instance",
+                "name": "prerender",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "CustomLayerInterface"
+                    },
+                    {
+                        "name": "prerender",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "CustomLayerInterface#prerender"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Optional method called when the layer has been removed from the Map with ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 74,
+                                            "offset": 73
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "link",
+                                    "url": "Map#removeLayer",
+                                    "title": null,
+                                    "jsdoc": true,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "Map#removeLayer"
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 74,
+                                            "offset": 73
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 97,
+                                            "offset": 96
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": ". This\ngives the layer a chance to clean up gl resources and event listeners.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 97,
+                                            "offset": 96
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 71,
+                                            "offset": 173
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 2,
+                                    "column": 71,
+                                    "offset": 173
+                                },
+                                "indent": [
+                                    1
+                                ]
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 2,
+                            "column": 71,
+                            "offset": 173
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "function",
+                        "description": null,
+                        "lineNumber": 4,
+                        "name": null
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "CustomLayerInterface",
+                        "lineNumber": 5
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 6
+                    },
+                    {
+                        "title": "name",
+                        "description": null,
+                        "lineNumber": 7,
+                        "name": "onRemove"
+                    },
+                    {
+                        "title": "param",
+                        "description": "The Map this custom layer was just added to.",
+                        "lineNumber": 8,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Map"
+                        },
+                        "name": "map"
+                    },
+                    {
+                        "title": "param",
+                        "description": "The gl context for the map.",
+                        "lineNumber": 9,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "WebGLRenderingContext"
+                        },
+                        "name": "gl"
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 91,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 101,
+                        "column": 3
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 149,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 157,
+                            "column": 1
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/style/style_layer/custom_style_layer.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "map",
+                        "lineNumber": 8,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The Map this custom layer was just added to.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 45,
+                                                    "offset": 44
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 45,
+                                            "offset": 44
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 45,
+                                    "offset": 44
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Map"
+                        }
+                    },
+                    {
+                        "title": "param",
+                        "name": "gl",
+                        "lineNumber": 9,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The gl context for the map.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 28,
+                                                    "offset": 27
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 28,
+                                            "offset": 27
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 28,
+                                    "offset": 27
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "WebGLRenderingContext"
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "function",
+                "memberof": "CustomLayerInterface",
+                "scope": "instance",
+                "name": "onRemove",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "CustomLayerInterface"
+                    },
+                    {
+                        "name": "onRemove",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "CustomLayerInterface#onRemove"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Optional method called when the layer has been added to the Map with ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 70,
+                                            "offset": 69
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "link",
+                                    "url": "Map#addLayer",
+                                    "title": null,
+                                    "jsdoc": true,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "Map#addLayer"
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 70,
+                                            "offset": 69
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 90,
+                                            "offset": 89
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": ". This\ngives the layer a chance to initialize gl resources and register event listeners.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 90,
+                                            "offset": 89
+                                        },
+                                        "end": {
+                                            "line": 2,
+                                            "column": 82,
+                                            "offset": 177
+                                        },
+                                        "indent": [
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 2,
+                                    "column": 82,
+                                    "offset": 177
+                                },
+                                "indent": [
+                                    1
+                                ]
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 2,
+                            "column": 82,
+                            "offset": 177
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "function",
+                        "description": null,
+                        "lineNumber": 4,
+                        "name": null
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "CustomLayerInterface",
+                        "lineNumber": 5
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 6
+                    },
+                    {
+                        "title": "name",
+                        "description": null,
+                        "lineNumber": 7,
+                        "name": "onAdd"
+                    },
+                    {
+                        "title": "param",
+                        "description": "The Map this custom layer was just added to.",
+                        "lineNumber": 8,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Map"
+                        },
+                        "name": "map"
+                    },
+                    {
+                        "title": "param",
+                        "description": "The gl context for the map.",
+                        "lineNumber": 9,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "WebGLRenderingContext"
+                        },
+                        "name": "gl"
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 79,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 89,
+                        "column": 3
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 149,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 157,
+                            "column": 1
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/style/style_layer/custom_style_layer.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "map",
+                        "lineNumber": 8,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The Map this custom layer was just added to.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 45,
+                                                    "offset": 44
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 45,
+                                            "offset": 44
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 45,
+                                    "offset": 44
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "Map"
+                        }
+                    },
+                    {
+                        "title": "param",
+                        "name": "gl",
+                        "lineNumber": 9,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The gl context for the map.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 28,
+                                                    "offset": 27
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 28,
+                                            "offset": 27
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 28,
+                                    "offset": 27
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "WebGLRenderingContext"
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "function",
+                "memberof": "CustomLayerInterface",
+                "scope": "instance",
+                "name": "onAdd",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "CustomLayerInterface"
+                    },
+                    {
+                        "name": "onAdd",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "CustomLayerInterface#onAdd"
+            }
+        ],
+        "events": [],
+        "static": []
+    },
+    "namespace": "CustomLayerInterface"
+}

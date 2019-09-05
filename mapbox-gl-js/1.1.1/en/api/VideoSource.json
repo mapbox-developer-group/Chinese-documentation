@@ -1,0 +1,894 @@
+{
+    "description": {
+        "type": "root",
+        "children": [
+            {
+                "type": "paragraph",
+                "children": [
+                    {
+                        "type": "text",
+                        "value": "A data source containing video.\n(See the ",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 10,
+                                "offset": 41
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "link",
+                        "title": null,
+                        "url": "https://www.mapbox.com/mapbox-gl-style-spec/#sources-video",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Style Specification",
+                                "position": {
+                                    "start": {
+                                        "line": 2,
+                                        "column": 11,
+                                        "offset": 42
+                                    },
+                                    "end": {
+                                        "line": 2,
+                                        "column": 30,
+                                        "offset": 61
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 10,
+                                "offset": 41
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 91,
+                                "offset": 122
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "value": " for detailed documentation of options.)",
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 91,
+                                "offset": 122
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 131,
+                                "offset": 162
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 131,
+                        "offset": 162
+                    },
+                    "indent": [
+                        1
+                    ]
+                }
+            }
+        ],
+        "position": {
+            "start": {
+                "line": 1,
+                "column": 1,
+                "offset": 0
+            },
+            "end": {
+                "line": 2,
+                "column": 131,
+                "offset": 162
+            }
+        }
+    },
+    "tags": [
+        {
+            "title": "example",
+            "description": "// add to map\nmap.addSource('some id', {\n   type: 'video',\n   url: [\n       'https://www.mapbox.com/blog/assets/baltimore-smoke.mp4',\n       'https://www.mapbox.com/blog/assets/baltimore-smoke.webm'\n   ],\n   coordinates: [\n       [-76.54, 39.18],\n       [-76.52, 39.18],\n       [-76.52, 39.17],\n       [-76.54, 39.17]\n   ]\n});\n\n// update\nvar mySource = map.getSource('some id');\nmySource.setCoordinates([\n    [-76.54335737228394, 39.18579907229748],\n    [-76.52803659439087, 39.1838364847587],\n    [-76.5295386314392, 39.17683392507606],\n    [-76.54520273208618, 39.17876344106642]\n]);\n\nmap.removeSource('some id');  // remove",
+            "lineNumber": 4
+        },
+        {
+            "title": "see",
+            "description": "[Add a video](https://www.mapbox.com/mapbox-gl-js/example/video-on-a-map/)",
+            "lineNumber": 30
+        }
+    ],
+    "loc": {
+        "start": {
+            "line": 16,
+            "column": 0
+        },
+        "end": {
+            "line": 47,
+            "column": 3
+        }
+    },
+    "context": {
+        "loc": {
+            "start": {
+                "line": 48,
+                "column": 0
+            },
+            "end": {
+                "line": 171,
+                "column": 1
+            }
+        },
+        "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/source/video_source.js"
+    },
+    "augments": [
+        {
+            "title": "augments",
+            "name": "ImageSource"
+        }
+    ],
+    "examples": [
+        {
+            "description": "// add to map\nmap.addSource('some id', {\n   type: 'video',\n   url: [\n       'https://www.mapbox.com/blog/assets/baltimore-smoke.mp4',\n       'https://www.mapbox.com/blog/assets/baltimore-smoke.webm'\n   ],\n   coordinates: [\n       [-76.54, 39.18],\n       [-76.52, 39.18],\n       [-76.52, 39.17],\n       [-76.54, 39.17]\n   ]\n});\n\n// update\nvar mySource = map.getSource('some id');\nmySource.setCoordinates([\n    [-76.54335737228394, 39.18579907229748],\n    [-76.52803659439087, 39.1838364847587],\n    [-76.5295386314392, 39.17683392507606],\n    [-76.54520273208618, 39.17876344106642]\n]);\n\nmap.removeSource('some id');  // remove"
+        }
+    ],
+    "params": [
+        {
+            "title": "param",
+            "name": "id",
+            "lineNumber": 57,
+            "type": {
+                "type": "NameExpression",
+                "name": "string"
+            }
+        },
+        {
+            "title": "param",
+            "name": "options",
+            "lineNumber": 57,
+            "type": {
+                "type": "NameExpression",
+                "name": "VideoSourceSpecification"
+            }
+        },
+        {
+            "title": "param",
+            "name": "dispatcher",
+            "lineNumber": 57,
+            "type": {
+                "type": "NameExpression",
+                "name": "Dispatcher"
+            }
+        },
+        {
+            "title": "param",
+            "name": "eventedParent",
+            "lineNumber": 57,
+            "type": {
+                "type": "NameExpression",
+                "name": "Evented"
+            }
+        }
+    ],
+    "properties": [],
+    "returns": [],
+    "sees": [
+        {
+            "type": "root",
+            "children": [
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "link",
+                            "title": null,
+                            "url": "https://www.mapbox.com/mapbox-gl-js/example/video-on-a-map/",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Add a video",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 2,
+                                            "offset": 1
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 13,
+                                            "offset": 12
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 75,
+                                    "offset": 74
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 75,
+                            "offset": 74
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 75,
+                    "offset": 74
+                }
+            }
+        }
+    ],
+    "throws": [],
+    "todos": [],
+    "constructorComment": {
+        "description": "",
+        "tags": [
+            {
+                "title": "private",
+                "description": null,
+                "lineNumber": 1
+            }
+        ],
+        "loc": {
+            "start": {
+                "line": 54,
+                "column": 4
+            },
+            "end": {
+                "line": 56,
+                "column": 7
+            }
+        },
+        "context": {
+            "loc": {
+                "start": {
+                    "line": 57,
+                    "column": 4
+                },
+                "end": {
+                    "line": 62,
+                    "column": 5
+                }
+            },
+            "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/source/video_source.js",
+            "sortKey": "!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/index.js:00000011!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/style/style.js:00000015!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/source/source.js:00000006!/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/source/video_source.js 00000057",
+            "code": "{\n    options: VideoSourceSpecification;\n    urls: Array<string>;\n    video: HTMLVideoElement;\n    roundZoom: boolean;\n\n    /**\n     * @private\n     */\n    constructor(id: string, options: VideoSourceSpecification, dispatcher: Dispatcher, eventedParent: Evented) {\n        super(id, options, dispatcher, eventedParent);\n        this.roundZoom = true;\n        this.type = 'video';\n        this.options = options;\n    }\n\n    load() {\n        const options = this.options;\n\n        this.urls = [];\n        for (const url of options.urls) {\n            this.urls.push(this.map._requestManager.transformRequest(url, ResourceType.Source).url);\n        }\n\n        getVideo(this.urls, (err, video) => {\n            if (err) {\n                this.fire(new ErrorEvent(err));\n            } else if (video) {\n                this.video = video;\n                this.video.loop = true;\n\n                // Start repainting when video starts playing. hasTransition() will then return\n                // true to trigger additional frames as long as the videos continues playing.\n                this.video.addEventListener('playing', () => {\n                    this.map.triggerRepaint();\n                });\n\n                if (this.map) {\n                    this.video.play();\n                }\n\n                this._finishLoading();\n            }\n        });\n    }\n\n    /**\n     * Returns the HTML `video` element.\n     *\n     * @returns {HTMLVideoElement} The HTML `video` element.\n     */\n    getVideo() {\n        return this.video;\n    }\n\n    onAdd(map: Map) {\n        if (this.map) return;\n        this.map = map;\n        this.load();\n        if (this.video) {\n            this.video.play();\n            this.setCoordinates(this.coordinates);\n        }\n    }\n\n    /**\n     * Sets the video's coordinates and re-renders the map.\n     *\n     * @method setCoordinates\n     * @instance\n     * @memberof VideoSource\n     * @param {Array<Array<number>>} coordinates Four geographical coordinates,\n     *   represented as arrays of longitude and latitude numbers, which define the corners of the video.\n     *   The coordinates start at the top left corner of the video and proceed in clockwise order.\n     *   They do not have to represent a rectangle.\n     * @returns {VideoSource} this\n     */\n    // setCoordinates inherited from ImageSource\n\n    prepare() {\n        if (Object.keys(this.tiles).length === 0 || this.video.readyState < 2) {\n            return; // not enough data for current position\n        }\n\n        const context = this.map.painter.context;\n        const gl = context.gl;\n\n        if (!this.boundsBuffer) {\n            this.boundsBuffer = context.createVertexBuffer(this._boundsArray, rasterBoundsAttributes.members);\n        }\n\n        if (!this.boundsSegments) {\n            this.boundsSegments = SegmentVector.simpleSegment(0, 0, 4, 2);\n        }\n\n        if (!this.texture) {\n            this.texture = new Texture(context, this.video, gl.RGBA);\n            this.texture.bind(gl.LINEAR, gl.CLAMP_TO_EDGE);\n        } else if (!this.video.paused) {\n            this.texture.bind(gl.LINEAR, gl.CLAMP_TO_EDGE);\n            gl.texSubImage2D(gl.TEXTURE_2D, 0, 0, 0, gl.RGBA, gl.UNSIGNED_BYTE, this.video);\n        }\n\n        for (const w in this.tiles) {\n            const tile = this.tiles[w];\n            if (tile.state !== 'loaded') {\n                tile.state = 'loaded';\n                tile.texture = this.texture;\n            }\n        }\n    }\n\n    serialize() {\n        return {\n            type: 'video',\n            urls: this.urls,\n            coordinates: this.coordinates\n        };\n    }\n\n    hasTransition() {\n        return this.video && !this.video.paused;\n    }\n}"
+        },
+        "augments": [],
+        "errors": [],
+        "examples": [],
+        "params": [],
+        "properties": [],
+        "returns": [],
+        "sees": [],
+        "throws": [],
+        "todos": [],
+        "access": "private"
+    },
+    "name": "VideoSource",
+    "kind": "class",
+    "path": [
+        {
+            "name": "VideoSource",
+            "kind": "class"
+        }
+    ],
+    "members": {
+        "global": [],
+        "inner": [],
+        "instance": [
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Returns the HTML ",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 18,
+                                            "offset": 17
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "inlineCode",
+                                    "value": "video",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 18,
+                                            "offset": 17
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 25,
+                                            "offset": 24
+                                        },
+                                        "indent": []
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "value": " element.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 25,
+                                            "offset": 24
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 34,
+                                            "offset": 33
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 34,
+                                    "offset": 33
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 34,
+                            "offset": 33
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "returns",
+                        "description": "The HTML `video` element.",
+                        "lineNumber": 3,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "HTMLVideoElement"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 94,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 98,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 99,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 101,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/source/video_source.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "The HTML ",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 10,
+                                                    "offset": 9
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "inlineCode",
+                                            "value": "video",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 10,
+                                                    "offset": 9
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 17,
+                                                    "offset": 16
+                                                },
+                                                "indent": []
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "value": " element.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 17,
+                                                    "offset": 16
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 26,
+                                                    "offset": 25
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 26,
+                                            "offset": 25
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 26,
+                                    "offset": 25
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "HTMLVideoElement"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "name": "getVideo",
+                "kind": "function",
+                "memberof": "VideoSource",
+                "scope": "instance",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "VideoSource",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "getVideo",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "VideoSource#getVideo"
+            },
+            {
+                "description": {
+                    "type": "root",
+                    "children": [
+                        {
+                            "type": "paragraph",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "value": "Sets the video's coordinates and re-renders the map.",
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 53,
+                                            "offset": 52
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 53,
+                                    "offset": 52
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 1,
+                            "column": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 1,
+                            "column": 53,
+                            "offset": 52
+                        }
+                    }
+                },
+                "tags": [
+                    {
+                        "title": "method",
+                        "description": null,
+                        "lineNumber": 3,
+                        "name": "setCoordinates"
+                    },
+                    {
+                        "title": "instance",
+                        "description": null,
+                        "lineNumber": 4
+                    },
+                    {
+                        "title": "memberof",
+                        "description": "VideoSource",
+                        "lineNumber": 5
+                    },
+                    {
+                        "title": "param",
+                        "description": "Four geographical coordinates,\n  represented as arrays of longitude and latitude numbers, which define the corners of the video.\n  The coordinates start at the top left corner of the video and proceed in clockwise order.\n  They do not have to represent a rectangle.",
+                        "lineNumber": 6,
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "TypeApplication",
+                                    "expression": {
+                                        "type": "NameExpression",
+                                        "name": "Array"
+                                    },
+                                    "applications": [
+                                        {
+                                            "type": "NameExpression",
+                                            "name": "number"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "name": "coordinates"
+                    },
+                    {
+                        "title": "returns",
+                        "description": "this",
+                        "lineNumber": 10,
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "VideoSource"
+                        }
+                    }
+                ],
+                "loc": {
+                    "start": {
+                        "line": 113,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 124,
+                        "column": 7
+                    }
+                },
+                "context": {
+                    "loc": {
+                        "start": {
+                            "line": 127,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 158,
+                            "column": 5
+                        }
+                    },
+                    "file": "/Users/mapboxchina/projects/cn-web-minlab/docs/mapbox-gl-js/src/source/video_source.js"
+                },
+                "augments": [],
+                "examples": [],
+                "params": [
+                    {
+                        "title": "param",
+                        "name": "coordinates",
+                        "lineNumber": 6,
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "Four geographical coordinates,\n  represented as arrays of longitude and latitude numbers, which define the corners of the video.\n  The coordinates start at the top left corner of the video and proceed in clockwise order.\n  They do not have to represent a rectangle.",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 4,
+                                                    "column": 45,
+                                                    "offset": 265
+                                                },
+                                                "indent": [
+                                                    1,
+                                                    1,
+                                                    1
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 4,
+                                            "column": 45,
+                                            "offset": 265
+                                        },
+                                        "indent": [
+                                            1,
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 4,
+                                    "column": 45,
+                                    "offset": 265
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "TypeApplication",
+                            "expression": {
+                                "type": "NameExpression",
+                                "name": "Array"
+                            },
+                            "applications": [
+                                {
+                                    "type": "TypeApplication",
+                                    "expression": {
+                                        "type": "NameExpression",
+                                        "name": "Array"
+                                    },
+                                    "applications": [
+                                        {
+                                            "type": "NameExpression",
+                                            "name": "number"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "properties": [],
+                "returns": [
+                    {
+                        "description": {
+                            "type": "root",
+                            "children": [
+                                {
+                                    "type": "paragraph",
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "value": "this",
+                                            "position": {
+                                                "start": {
+                                                    "line": 1,
+                                                    "column": 1,
+                                                    "offset": 0
+                                                },
+                                                "end": {
+                                                    "line": 1,
+                                                    "column": 5,
+                                                    "offset": 4
+                                                },
+                                                "indent": []
+                                            }
+                                        }
+                                    ],
+                                    "position": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 1,
+                                            "offset": 0
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 5,
+                                            "offset": 4
+                                        },
+                                        "indent": []
+                                    }
+                                }
+                            ],
+                            "position": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 1,
+                                    "offset": 0
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 5,
+                                    "offset": 4
+                                }
+                            }
+                        },
+                        "title": "returns",
+                        "type": {
+                            "type": "NameExpression",
+                            "name": "VideoSource"
+                        }
+                    }
+                ],
+                "sees": [],
+                "throws": [],
+                "todos": [],
+                "kind": "function",
+                "name": "setCoordinates",
+                "scope": "instance",
+                "memberof": "VideoSource",
+                "members": {
+                    "global": [],
+                    "inner": [],
+                    "instance": [],
+                    "events": [],
+                    "static": []
+                },
+                "path": [
+                    {
+                        "name": "VideoSource",
+                        "kind": "class"
+                    },
+                    {
+                        "name": "setCoordinates",
+                        "kind": "function",
+                        "scope": "instance"
+                    }
+                ],
+                "namespace": "VideoSource#setCoordinates"
+            }
+        ],
+        "events": [],
+        "static": []
+    },
+    "namespace": "VideoSource"
+}
